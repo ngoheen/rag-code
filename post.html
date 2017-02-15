@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Post</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/1-style-3.css" rel="stylesheet">
+    <link href="1-lightgallery-2.css" rel="stylesheet">
+    <link href="css/1-extra.css" rel="stylesheet">
+<style>
+.ad-widget {
+    margin: auto auto 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align:center;
+}
+img.ad {
+    float: none;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+    width: 300px;
+}
+.col-fixed-300 {
+    float: left;
+    height: 100%;
+    margin-left: 25px;
+    margin-right: 15px;
+    width: 300px;
+}
+.col-fixed-300 .widget {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.flexy-post {
+    float: left;
+    width: auto;
+    /*padding-left: 15px;*/
+    width: calc( 100% - 340px);
+}
+.flexy-post img {
+    width: 100%;
+}
+.flexy-post img + p {
+    margin-top: 25px;
+}
+.comment.row:nth-child(odd) {
+    background: rgb(236,236,236);
+}
+.comment.row {
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.leaveacomment textarea {
+    height: 200px;
+    margin-bottom: 15px;
+}
+/* breakpoint for right column needs to be between these numbers */
+@media (max-width: 767px) and (min-width:660px) {
+    .col-fixed-300 .col-sm-6 {
+        width: 50%;
+    }
+   
+}
+@media (max-width: 991px) {
+     .col-fixed-300 {
+        float: left;
+        margin-left: 0;
+        width: 100%;
+    } 
+    .ad-widget {background:rgb(236,236,236);}
+    .col-fixed-300 .widget img {
+        height: auto;
+        text-align: center;
+        width: 100%;
+    } 
+    .col-fixed-300 .ad-img img {
+        max-width: 300px;
+        margin: auto;
+    }
+    
+    .ad-img div {
+        background: rgb(236,236,236);
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    .col-fixed-300 .widget {
+        text-align: left;
+    }
+    .flexy-post {
+        float: none;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        width: calc(100% - 30px);
+    }
+}
+#example_video_1 {
+    max-width: 100%;
+}
+h2 {
+    margin: 30px 0 20px;
+}
+h5 {
+    margin-bottom: 0;
+    }
+h5+h5{
+    margin-bottom: 20px;
+}
+.widget .bottom-more-link {
+    float: right;
+    margin-top: 5px;
+    text-align: right;
+}
+@media (max-width: 659px) {
+    .col-fixed-300 {
+        float: none;
+        text-align: center;
+    }
+    .col-fixed-300 .col-md-12.col-sm-6 {
+        float: none;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .col-fixed-300 .col-md-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.navbar-toggle {
+    padding-left: 0;
+}
+</style>
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<div class="wrapper">
+    <header class="header sides">
+        <div class="container htop">
+            <div class="col-md-8 col-sm-7">
+                <div class="logo pull-left">
+                    <a href="index.html"><img src="images/header-logo@1x.png"></a>
+                </div>
+                <div class="slogan visible-md">A Des Moines Register tradition since 1973</div>
+            </div>
+            <div class="col-md-4 col-sm-5 text-right">
+                <div class="hcart pull-left">
+                    <a href="cart.html"><i class="custom-icon custom-icon-ico-cart"></i> 3 items - $164,50</a>
+                    <div class="dropdown">
+                        <nav>
+                            <ul class="hcart-list">
+                                <li>
+                                    <a href="product.html" class="fig pull-left"><img src="http://media.aisconverse.com/camaro/imgs/img-cart-popup-1.jpg" alt=""></a>
+                                    <div class="block">
+                                        <a href="product.html">Koppel 417 Crhonograph</a>
+                                        <div class="cost">1 x $67,50</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="fig pull-left"><img src="http://media.aisconverse.com/camaro/imgs/img-cart-popup-2.jpg" alt=""></a>
+                                    <div class="block">
+                                        <a href="product.html">Georg Teapot</a>
+                                        <div class="cost">2 x $39,00</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="product.html" class="fig pull-left"><img src="http://media.aisconverse.com/camaro/imgs/img-cart-popup-3.jpg" alt=""></a>
+                                    <div class="block">
+                                        <a href="product.html">Glow Candelholder</a>
+                                        <div class="cost">1 x $19,00</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="hcart-total">
+                            <a href="cart.html" class="btn btn-default">Cart</a>
+                            <div class="total">Total - <ins>$164,50</ins></div>
+                        </div>
+                    </div>
+                </div>
+                <a href="" data-popup="login" class="a-login btn btn-primary pull-right">Login</a>
+            </div>
+        </div>
+        <div class="hbottom right-pos border-top">
+            <div class="container">
+                <div class="col-md-1 col-sm-1 iconmenu pull-right text-right">
+                    <a href="" class="a-search"><i class="custom-icon custom-icon-ico-search"></i></a>
+                </div>
+               
+                <div class="col-sm-11 mainmenu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <nav>
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                               
+                                <li class="dropdown dropdown-menutable">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">The Ride</a>
+                                    <div class="menutable dropdown-menu">
+                                        <div class="divtable">
+                                            <div class="col-md-2">
+                                                <h4>General</h4>
+                                                <ul>
+                                                   <li><a href="about_1.html">General Information</a></li>
+                                                    <li><a href="about_2.html">FAQs</a></li>
+                                                    <li><a href="about_3.html">RAGBRAI History</a></li>
+                                                    <li><a href="about_4.html">RAGBRAI Expo</a></li>
+                                                    <li><a href="about_5.html">Contact</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Route</h4>
+                                                <ul>
+                                                    <li><a href="">2016 Host Communities</a></li>
+                                                    <li><a href="">2016 Route Maps</a></li>
+                                                    <li><a href="">2016 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Host Communities</a></li>
+                                                    <li><a href="">2015 Route Maps</a></li>
+                                                    <li><a href="">2015 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Interactive Route Map</a></li>
+                                                    <li><a href="">Past Overnight Towns Grid</a></li>
+                                                    <li><a href="">GeoBike Profiles</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Services</h4>
+                                                <ul>
+                                                     <li><a href="gallery_1.html">Charter Services</a></li>
+                                                    <li><a href="gallery_2.html">Bike and Luggage Shipping</a></li>
+                                                    <li><a href="gallery_3.html">Airport Shuttles</a></li>
+                                                    <li><a href="gallery_4.html">Bike Shops</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Training</h4>
+                                                <ul>
+                                                    <li><a href="services_1.html">Training Blog</a></li>
+                                                    <li><a href="services_2.html">Training</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Safety</h4>
+                                                <ul>
+                                                    <li><a href="team_1.html">RIDE RIGHT Brochures</a></li>
+                                                    <li><a href="team_2.html">Iowa State Patrol</a></li>
+                                                    <li><a href="team_2.html">Rider Safety</a></li>
+                                                    <li><a href="team_2.html">Driver Safety</a></li>
+                                                    <li><a href="team_2.html">Road Signs</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li><a href="">Register</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a  href="#">Videos</a></li>
+                                <li><a href="#">Podcasts</a></li>
+                                <li><a href="#">Events/Expo</a></li>
+                                <li class="dropdown dropdown-menushop">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Shop</a>
+                                    <div class="menushop dropdown-menu">
+                                        <!--<div class="divtable">-->
+                                        <div class="col-md-3 col-sm-4">
+                                            <h4>Catalog</h4>
+                                            <ul>
+                                                <li><a href="catalog_grid.html">Catalog Grid</a></li>
+                                                <li><a href="catalog_grid_sidebar.html">Catalog Grid Right Sidebar</a></li>
+                                                <li><a href="catalog_grid_sidebar_2.html">Catalog Grid Left Sidebar</a></li>
+                                                <li><a href="catalog_list.html">Catalog List</a></li>
+                                                <li><a href="catalog_list_sidebar.html">Catalog List Right Sidebar</a></li>
+                                                <li><a href="catalog_list_sidebar_2.html">Catalog List Left Sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3 col-sm-4">
+                                            <h4>Pages</h4>
+                                            <ul>
+                                                <li><a href="product.html">Product Page</a></li>
+                                                <li><a href="cart.html">Shopping Cart</a></li>
+                                                <li><a href="cart_empty.html">Shopping Cart Empty</a></li>
+                                                <li><a href="checkout.html">Proceed to Checkout</a></li>
+                                                <li><a href="confirmation.html">Confirmation Page</a></li>
+                                                <li><a href="compare.html">Compare Page</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3 category-imgs hidden-sm">
+                                            <ul>
+                                                <li id="img-briefcases">
+                                                    <a href="catalog_list_sidebar.html">
+                                                        <img src="http://media.aisconverse.com/camaro/imgs/bag-1-2.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li id="img-totes">
+                                                    <a href="catalog_grid_sidebar_2.html">
+                                                        <img src="http://media.aisconverse.com/camaro/imgs/bag-5-2.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li id="img-luggage">
+                                                    <a href="catalog_grid.html">
+                                                        <img src="http://media.aisconverse.com/camaro/imgs/bag-9-2.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li id="img-technology">
+                                                    <a href="catalog_grid_sidebar.html">
+                                                        <img src="http://media.aisconverse.com/camaro/imgs/bag-3-2.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li id="img-leather">
+                                                    <a href="catalog_list_sidebar_2.html">
+                                                        <img src="http://media.aisconverse.com/camaro/imgs/img-watches.jpg" alt="">
+                                                    </a>
+                                                </li>
+                                                <li id="img-laptops">
+                                                    <a href="catalog_list.html"><img src="http://media.aisconverse.com/camaro/imgs/bag-4.jpg" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3 col-sm-4">
+                                            <h4>Categories</h4>
+                                            <ul class="shop-category">
+                                                <li><a href="catalog_list_sidebar.html" data-img="img-briefcases">Briefcases &amp; Satchels</a></li>
+                                                <li><a href="catalog_grid_sidebar_2.html" data-img="img-totes">Totes &amp; Messengers </a></li>
+                                                <li><a href="catalog_grid.html" data-img="img-luggage">Luggage</a></li>
+                                                <li><a href="catalog_grid_sidebar.html" data-img="img-technology">Technology</a></li>
+                                                <li><a href="catalog_list_sidebar_2.html" data-img="img-leather">Leather Accessories</a></li>
+                                                <li><a href="catalog_list.html" data-img="img-laptops">Laptops Bags</a></li>
+                                            </ul>
+                                        </div>
+                                        <!--</div>-->
+                                    </div>
+                                </li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form action="/">
+                        <div class="col-sm-6 col-sm-offset-3 col-xs-10">
+                            <input type="text" autofocus placeholder="Start typing...">
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <a href="" class="sclose"><i class="custom-icon custom-icon-lightclose"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+    <div class="border-top"></div>
+        <div class="container post">
+            <div class="row">
+                 <!-- POST -->
+                <div class="flexy-post">
+                    <p>
+                        <a href="blog_masonry.html" class="grey a-back">Back to the Blog</a>
+                    </p>
+                    <h1>RAGBRAI XLV: Take it easy, go north</h1>
+                    <div class="byline">
+                        <p class="post-inf grey pull-left">
+                            <span class="date">23 March, 2014</span> -
+                            <a href="about_me.html" class="grey">Lucas Grundmeier</a> -
+                            <a href="#comments" class="grey internal">3 comments</a>
+                        </p>
+                        <div class="pull-right">
+                            <span class="twit"><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                            <span class="face"><a class="grey" href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                            <span class="more-social"><a class="grey" href=""><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></span>
+                        </div>
+                    
+                        <ul class="byline-social">
+                            <li><a class="grey" href="">Google +</a></li>
+                            <li><a class="grey" href="">Pinterest</a></li>
+                            <li><a class="grey" href="">Tumblr</a></li>
+                            <li><a class="grey" href="">Instagram</a></li>
+                            <li><a class="grey" href="">Email</a></li>
+                            <li><a class="grey" href="">Print</a></li>
+                        </ul>
+                    </div>
+                    <img src="images/post-image.jpg">
+                    <p>After 44 trips east across Iowa, organizers of the Register’s Annual Great Bicycle Ride Across Iowa have plenty of nostalgia to draw on – and their plans still manage some novelty, too.</p>
+                    <p>RAGBRAI XLV this July will go where the ride hasn’t overnighted in four decades – into extreme northeast Iowa’s Driftless Area, the sole spot in Iowa missed by glaciers that once covered and flattened out the state. And the ride will begin in Orange City, a first-time overnight host.</p>
+                    <p>The eight overnight towns that will welcome thousands upon thousands of cyclists were announced Saturday night at a RAGBRAI party in downtown Des Moines. The ride runs from July 23 to 29.</p>
+                    <p>Organizers said the 411 miles and 13,078 feet of climb are both the third-easiest totals in RAGBRAI history.</p>
+                    
+                    <p><video id="example_video_1" data-poster="videos/towns.jpg" controls class="vjs-default-skin" src="videos/towns.mp4" allowfullscreen></video></p>
+                    
+                    <p>The seven days of cycling, after the initial gathering in Orange City, will take Iowans and visitors from across the country and around the world past acres of fields and through dozens of Iowa towns (the complete route will be announced in March), where they will see local claims to fame, devour meats and desserts and other victuals, and experience hospitality from residents seeing their communities grow fourfold or more in a few hours.</p>
+                    <h2 class="light">A Quick Look</h2>
+                  
+                   
+                    <h5>Saturday, July 22</h5>
+                    <h5>Orange City</h5>
+                    <p><b>In the news:</b> The contentious fight between Des Moines Water Works and rural Iowa over farm runoff included <a href="">an attempt at common ground in Orange City.</a></p>
+
+                    <p><b>Population:</b> 6,004</p>
+
+                    <p>Starting town</p>
+
+                    <p><b>History:</b> First time as host; Orange City was a pass-through town in 1975, 1993, 1996, 2002, 2005 and 2012</p>
+
+                    <h5>Sunday, July 23</h5>
+                    <h5>Spencer</h5>
+                    <p><b>In the news:</b> An athlete’s tragic death set up <a href="">a moment of sportsmanship</a> recognized as one of the state’s most inspirational in 2016.</p>
+                    
+                    <p><b>Population:</b> 11,233</p>
+                    <p><b>Mileage (from Orange City):</b> 59.5; climb of 1,283 feet</p>
+                    <p><b>History: </b>Fifth overnight visit, previous ones were in 1979, 1990, 1999 and 2007</p>
+                    
+                    
+                    <div class="comments" id="comments">
+                        <h3>3 Comments</h3>
+
+                        <!-- .comment -->
+                        <div class="comment row">
+                            <div class="col-md-1 col-xs-2 ava">
+                                <a href="team_person.html">
+                                    <img src="images/generic.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-11 col-xs-10">
+                                <div>
+                                    <a href="#">Susana Jacobs</a>,  <span class="date grey">Jul. 12, 2017 at 20:48 pm</span>
+                                </div>
+                                <p>Pagination provides the user with a natural break from reading or scanning the contents of the dataset, and allows them to reevaluate whether they wish to continue looking through more data, or navigate away from the page.</p>
+                            </div>
+                        </div>
+
+                        <!-- .comment -->
+                        <div class="comment row">
+                            <div class="col-md-1 col-xs-2 ava">
+                                <a href="team_person.html">
+                                    <img src="images/post-user-2.jpg">
+                                </a>
+                            </div>
+                            <div class="col-md-10 col-sm-8 col-xs-10">
+                                <div>
+                                    <a href="#">Maria Kerr</a>,  <span class="date grey">Jul. 12, 2017 at 22:43 pm</span>
+                                </div>
+                                <p>Break the complete dataset of items into smaller sequential parts and show these on separate sequential pages. </p>
+                            </div>
+                        </div>
+
+                        <!-- .comment -->
+                        <div class="comment row">
+                            <div class="col-md-1 col-xs-2 ava">
+                                <a href="team_person.html">
+                                    <img src="images/post-user-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-11 col-xs-10">
+                                <div>
+                                    <a href="#">Bill Scott</a>,  <span class="date grey">Sept. 02, 2017 at 12:47 pm</span>
+                                </div>
+                                <p>First and foremost, pagination parts large datasets into smaller bits that are manageable for the user to read and cope with. Secondly, pagination controls conveys</p>
+                            </div>
+                        </div>
+
+                        <!-- Leave a comment -->
+                        <div class="leaveacomment row" id="commentform">
+                            <div class="col-md-12">
+                                <h3>Leave a Comment</h3>
+                                <h4>Logged in as Joe Zombowski. <a href="">Log out?</a></h4>
+                                <form action="/">
+                                    <textarea name="message" id="comment-form-comment"></textarea>                                  
+                                    <input type="submit" class="btn btn-primary btn-validation btn-wd" value="Post comment">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.post -->
+                
+                 <!-- BLOGBAR -->
+                <div class="col-fixed-300">
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="ad-widget">
+                            <img src="images/ad.jpg" class="ad">
+                        </div>
+                    </div>
+                    <!-- widget -->
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="widget">
+                            <h3 class="widget-title"">Latest Gallery</h3>
+                            <img src="images/latest-gal.jpg">
+                            <div class="bottom-more-link"><a href="">More Galleries</a></div>
+                        </div>
+                    </div>
+                    <!-- /.widget -->
+                    
+                    <!-- widget -->
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="widget">
+                            <h3 class="widget-title">Latest Video</h3>
+                            <img src="images/bus-vid.jpg" style="display:block;">
+                            <div style="clear:both"></div>
+                            <div class="bottom-more-link"><a href="">More Videos</a></div>
+                        </div>
+                    </div>
+                    <!-- /.widget -->
+
+                    <!-- widget -->
+                    <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="widget">
+                        <h3>Tags Cloud</h3>
+                        <div class="tagcloud">
+                            <a href="">Orange</a>
+                            <a href="">Spencer</a>
+                            <a href="">Algona</a>
+                            <a href="">Clear Lake</a>
+                            <a href="">Charles City</a>
+                            <a href="">Cresco</a>
+                            <a href="">Food</a>
+                            <a href="">Waukon</a>
+                            <a href="">Lansing</a>
+                            <a href="">Livestrong</a>
+                            <a href="">Mileage</a>
+                            <a href="">Photos</a>
+                            <a href="">Spider-man</a>
+                            <a href="">Podcasts</a>
+                            <a href="">Videos</a>
+                           
+                        </div>
+                    </div>
+                    </div>
+                    <!-- /.widget -->
+
+                    <!-- widget -->
+                     <div class="col-xs-12 col-sm-6 col-md-12">
+                        <div class="widget">
+                        <table class="table-calendar">
+                            <caption class="text-left">
+                                <h3>September 2014</h3>
+                            </caption>
+                            <thead>
+                            <tr>
+                                <th scope="col" title="Monday">M</th>
+                                <th scope="col" title="Tuesday">T</th>
+                                <th scope="col" title="Wednesday">W</th>
+                                <th scope="col" title="Thursday">T</th>
+                                <th scope="col" title="Friday">F</th>
+                                <th scope="col" title="Saturday">S</th>
+                                <th scope="col" title="Sunday">S</th>
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                                <td colspan="3">&nbsp;</td>
+                                <td class="pad">&nbsp;</td>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            <tr>
+                                <td colspan="1" class="pad">&nbsp;</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td id="today">7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td><a href="" class="color">10</a></td>
+                                <td><a href="" class="color">11</a></td>
+                                <td>12</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td><a href="" class="color">22</a></td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td class="pad" colspan="3">&nbsp;</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                    <!-- /.widget -->
+
+                   
+                </div>
+                <!-- /.blogbar -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <!-- CONTAINER -->
+    <div class="container foorow-1 foorow">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 fabout">
+                <h3><a href="about_1.html">Facebook Feed</a></h3>
+                <ul class="twitter-list">
+                    <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date">June 18, 2014</div></li>
+                        <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date">June 18, 2014</div></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="elements_recent_works.html">Twitter Feed</a></h3>
+                <ul class="twitter-list">
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas</p>
+                        <div class="date">June 18, 2014</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Mellentesque habitant morbi tristique senectus et netus et malesuada <a href="">goo.gl/A65qt</a> enim eleifend felis pretium</p>
+                        <div class="date">September 8, 2014</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="sitemap.html">Newsletter</a></h3>
+                <div id="feedback-form">
+                    <form action="http://aisconverse.us8.list-manage.com/subscribe/post?u=86ec31fd6b7533ccaa2435111&amp;id=a1293dd461" method="post">
+                        <input name="EMAIL" placeholder="Your Email" required type="email" class="pull-left">
+                        <button type="submit" class="btn btn-default pull-right">Ok</button>
+                    </form>
+                    <div class="success-block"></div>
+                    <p>Sign up for the latest RAGBRAI news and notes. (If there is no news in a day, you won't receive an email.)</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- /.container -->   
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="row foorow-2 foorow">
+            <div class="col-sm-4">
+                <h3><a href="events_1.html">Upcoming Events</a></h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">January 21, 2017 - RAGBRAI Route Announcement Party</a></p>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">May 20, 2017 - PIGTAILS at Prairie Trail</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">June 17, 2017 - BACooN Ride 4</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 22, 2017 - RAGBRAI Expo</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 23-29, 2017 - RAGBRAI XLV</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3>Forum Topics</h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">Best Tenderloin Ever</a></p>
+                        <div class="date">2 days, 17 hours ago</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div><p><a href="">Smartphone App that would be very helpful for RAGBRAI groups</a></p>
+                        <div class="date">11 hours, 50 minutes ago</div>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div><p><a href="">Rides for Partial Route</a></p>
+                        <div class="date">5 days, 22 hours ago</div>
+                    </li>
+                </ul>
+            </div>
+   
+        </div>
+
+        <div class="row foorow-3 foorow">
+            <div class="col-md-6 col-sm-7">
+                <a href="index.html" class="logo">RAGBRAI</a>
+                <p>&copy; 2016 RAGBRAI. <a href="">Terms of Service</a> | <a href="">Privacy Policy</a></p>
+            </div>
+            <div class="col-md-6 col-sm-5">
+                <ul class="social pull-right">
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-tumblr-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+<!-- /.footer -->
+
+<!-- Popup: Login -->
+<div class="block-popup popup plogin" id="login">
+    <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
+    <h3 class="text-center">Login to account</h3>
+    <form action="/" class="loginform">
+        <div class="formwrap">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control login-password" placeholder="Password" id="login-password">
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Remember me
+            </label>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-default block btn-validation">Login</button>
+            <a href="">Forgot password?</a>
+        </div>
+    </form>
+    <div class="footlogin highlight text-center">
+        <ul class="social">
+            <li><a href="" class="fa fa-facebook-square"></a></li>
+            <li><a href="" class="fa fa-twitter"></a></li>
+            <li><a href="" class="fa fa-google-plus-square"></a></li>
+        </ul>
+        <p>Or login with your social account</p>
+    </div>
+    <a href="privacy_policy.html" class="a-privacy text-center">Privacy Policy</a>
+</div>
+<!-- /.popup -->
+
+
+<!-- ScrollTop Button -->
+<a href="#" class="scrolltop">
+    <i class="custom-icon custom-icon-scrolltop"></i>
+</a>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.plugins.js"></script>
+<script src="js/jquery.ba-outside-events.min.js"></script>
+<script src="js/custom-3.js"></script>
+</body>
+</html>
