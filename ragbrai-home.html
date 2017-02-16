@@ -24,7 +24,7 @@
 <div class="wrapper">
 
     <!-- HEADER -->
-      <header class="header sides">
+    <header class="header sides">
         <div class="container htop">
             <div class="col-md-8 col-sm-7 padding-left-0">
                 <div class="logo pull-left">
@@ -255,7 +255,7 @@
                     <div class="bg my-about"></div>
                        <div class="container vmiddle">
                             <div class="row">
-                                <div class="col-md-4 col-sm-10 col-sm-offset-1">
+                                <div class="col-md-4 col-md-offset-1 col-sm-10">
                                     <h1 class="slide-title">Catch our All-New RAGBRAI XLV Merchandise!</h1>
                                     <p class="color-ccc">Sweatshirts, men's and women's tees, and long sleeve tees available now in the RAGBRAI Shop!</p>
                                     <button type="button" class="btn btn-default btn-lg">Start Shopping</button>
@@ -268,7 +268,7 @@
                     <div class="container vmiddle">
                         <div class="row">
                             <!--<div class="col-sm-4">-->
-                            <div class="col-md-4 col-sm-10 col-sm-offset-1 vmiddle">
+                            <div class="col-md-4 col-md-offset-1  col-sm-10">
                                 <h1 class="slide-title">All Aboard!</h1>
                                 <p class="color-ccc">Join us on our cruise from Missouri to Mississippi! Click the button, below, to get started!</p>
                                 <button type="button" class="btn btn-default btn-lg">Register Now</button>
@@ -281,7 +281,7 @@
                     <div class="container vmiddle">
                         <div class="row">
                             <!--<div class="col-sm-4 col-sm-offset-4  col-xs-8 col-xs-offset-2">-->
-                            <div class="col-md-4 col-sm-10 col-sm-offset-1">
+                            <div class="col-md-4 col-sm-10 col-md-offset-1">
                                 <h1 class="slide-title">Explore. Bike. Discover.</h1>
                                 <p class="color-ccc">Introducing the 2017 RAGBRAI XLV Logo!</p>
                             </div>
@@ -373,9 +373,9 @@
         </div>
         <!-- /.container -->
         <div class="border-top"></div>
-         <!-- CONTAINER: Photo Slider -->
-       <!-- CONTAINER: Photo Slider -->
-        <div class="container popupslider magnific-wrap" style="padding-top:35px;">
+        
+        <!-- CONTAINER: Photo Slider -->
+        <div class="container popupslider magnific-wrap">
             <div class="row">
                 <h1 class="section-title">Photos</h1>
                 <div id="photos">
@@ -529,15 +529,23 @@
         <!-- Videos -->
         <div class="border-top"></div>
          <!-- CONTAINER: Video Slider -->
-        <div class="container popupslider magnific-wrap" style="padding-top:35px;">
+        <div class="container popupslider magnific-wrap">
             <div class="row">
                 <h1 class="section-title">Videos</h1>
                 <div id="photos">
                     <div class="owl-carousel">
                         <div class="item">
-                            <a href="https://www.youtube.com/watch?v=kMhw5MFYU0s" title="Becoming" class="mask magnific-video">
-                                <h3>RAGBRAI Day 7 photos: Washington to Muscatine</h3>
-                            </a>
+                            <div style="display:none;" id="video1">
+                                <video class="lg-video-object lg-html5" controls preload="auto">
+                                    <source src="videos/quicktowns.mp4" type="video/mp4">
+                                    Your browser does not support HTML5 video.
+                                </video>
+                            </div>
+                            <div id="html5-videos" class="list-unstyled row videogallery">
+                                <img src="videos/towns.jpg">
+                                <a class="mask" data-poster="videos/towns.jpg" data-sub-html="<h4>Take a closer look at where the 2017 RAGBRAI route will go.</h4>" data-html="#video1" data-gallery="#videogal1">
+                                <h3>Get to know the RAGBRAI 2017 overnight towns</h3></a>
+                            </div>
                         </div>
                         <div class="item">
                             <img src="images/team-buses.jpg" alt="">
@@ -604,11 +612,11 @@
                 <h1 class="section-title" style="margin-bottom:20px;">Check These Out</h1>
                 <ul class="sponsor" data-auto="false" data-fx="slide">
                     <li><a href="clients_1.html"><img src="images/party.jpg" alt=""></a></li>
-                    <li><a href="clients_2.html"><img src="images/expo.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/expo-logo.jpg" alt=""></a></li>
                     <li><a href="clients_1.html"><img src="images/bacon-ride.jpg" alt=""></a></li>
                     <li><a href="clients_2.html"><img src="images/pigtails.jpg" alt=""></a></li>
                     <li><a href="clients_1.html"><img src="images/party.jpg" alt=""></a></li>
-                    <li><a href="clients_2.html"><img src="images/expo.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/expo-logo.jpg" alt=""></a></li>
                     <li><a href="clients_1.html"><img src="images/bacon-ride.jpg" alt=""></a></li>
                     <li><a href="clients_2.html"><img src="images/pigtails.jpg" alt=""></a></li>
                 </ul>
@@ -784,10 +792,17 @@
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.plugins.js"></script>
-<script src="js/custom.js"></script>
-
-<script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.js"></script>
-<!--<script src="js/OwlCarousel2-2.2.0/src/js/owl.navigation.js"></script>-->
+<script src="js/1-custom-3.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="lightGallery-master/demo/js/1-lightgallery.js"></script>
+<script src="lightGallery-master/demo/js/lg-fullscreen.js"></script>
+<script src="lightGallery-master/demo/js/lg-video.js"></script>
+<script src="lightGallery-master/demo/js/lg-zoom.js"></script>
+<script src="lightGallery-master/demo/js/lg-hash.js"></script>
+<script src="lightGallery-master/demo/js/1-lg-share-2.js"></script>
+<script src="js/lightbox-script.js"></script>
+<!--<script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.js"></script>
+<script src="js/OwlCarousel2-2.2.0/src/js/owl.navigation.js"></script>-->
 <script>
 $(document).ready(function() {
     $('#photos .owl-carousel, #videos .owl-carousel').owlCarousel({
@@ -816,7 +831,19 @@ $(document).ready(function() {
                 }
             }
         })
-          })
-        </script>
+});
+</script>
+<script>
+$('.lg-video-object').parent().click(function () {
+    console.log($(this));
+    if($(this).children(".lg-video-object").get(0).paused){
+        $(this).children(".lg-video-object").get(0).play();
+        $(this).children(".playpause").fadeOut();
+    }else{
+        $(this).children(".lg-video-object").get(0).pause();
+        $(this).children(".playpause").fadeIn();
+    }
+});
+</script>
 </body>
 </html>

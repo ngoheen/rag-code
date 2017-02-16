@@ -2887,7 +2887,7 @@ a.a-menu {
 }
 
 
-category-imgs li {
+.category-imgs li {
     display:none;
     text-align:center;
     font-size:1px;
@@ -4984,6 +4984,7 @@ li:hover .mask > *,
 
 .gallery .row {
     margin:0;
+    margin: 0 -15px;
 }
 
 .gallery [class*=col-] {
