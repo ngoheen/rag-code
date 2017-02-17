@@ -255,7 +255,7 @@
                     <div class="bg my-about"></div>
                        <div class="container vmiddle">
                             <div class="row">
-                                <div class="col-md-4 col-md-offset-1 col-sm-10">
+                                <div class="col-md-4 col-md-offset-1 col-sm-12">
                                     <h1 class="slide-title">Catch our All-New RAGBRAI XLV Merchandise!</h1>
                                     <p class="color-ccc">Sweatshirts, men's and women's tees, and long sleeve tees available now in the RAGBRAI Shop!</p>
                                     <button type="button" class="btn btn-default btn-lg">Start Shopping</button>
@@ -268,7 +268,7 @@
                     <div class="container vmiddle">
                         <div class="row">
                             <!--<div class="col-sm-4">-->
-                            <div class="col-md-4 col-md-offset-1  col-sm-10">
+                            <div class="col-md-4 col-md-offset-1  col-sm-12">
                                 <h1 class="slide-title">All Aboard!</h1>
                                 <p class="color-ccc">Join us on our cruise from Missouri to Mississippi! Click the button, below, to get started!</p>
                                 <button type="button" class="btn btn-default btn-lg">Register Now</button>
@@ -281,7 +281,7 @@
                     <div class="container vmiddle">
                         <div class="row">
                             <!--<div class="col-sm-4 col-sm-offset-4  col-xs-8 col-xs-offset-2">-->
-                            <div class="col-md-4 col-sm-10 col-md-offset-1">
+                            <div class="col-md-4 col-sm-12 col-md-offset-1">
                                 <h1 class="slide-title">Explore. Bike. Discover.</h1>
                                 <p class="color-ccc">Introducing the 2017 RAGBRAI XLV Logo!</p>
                             </div>
@@ -438,6 +438,8 @@
                 </div>
             </div>
         </div>
+        <!-- /.photo slider -->
+        
         <div class="container cdescription">
             <div class="row">
                 <div class="bottom-more col-sm-2 col-sm-offset-10 text-right"><a href="">More Galleries</a></div>
@@ -833,17 +835,6 @@ $(document).ready(function() {
         })
 });
 </script>
-<script>
-$('.lg-video-object').parent().click(function () {
-    console.log($(this));
-    if($(this).children(".lg-video-object").get(0).paused){
-        $(this).children(".lg-video-object").get(0).play();
-        $(this).children(".playpause").fadeOut();
-    }else{
-        $(this).children(".lg-video-object").get(0).pause();
-        $(this).children(".playpause").fadeIn();
-    }
-});
-</script>
+
 </body>
 </html>

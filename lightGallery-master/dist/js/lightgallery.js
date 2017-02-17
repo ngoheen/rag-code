@@ -1237,7 +1237,7 @@
         var _this = this;
         var mousedown = false;
         this.$outer.find('.lg-close').on('click.lg', function() {
-        console.log('clicked');
+        console.log('clicked close');
             _this.destroy();
         });
 

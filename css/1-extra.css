@@ -462,10 +462,10 @@ span.more-social:hover {
     margin-top: 10px
 }
 .oneslider .arrow.prev {
-    left: 10px;
+    left: 30px;
 }
 .oneslider .arrow.next {
-    right: 10px;
+    right: 30px;
 }
 .fabout .twitter-list .date {
     margin-left: 0;
@@ -510,7 +510,8 @@ span.more-social:hover {
     .navbar-header {
         float: none;
     }
-    .navbar-left,.navbar-right {
+    .navbar-left,
+    .navbar-right {
         float: none !important;
     }
     .navbar-toggle {
@@ -531,7 +532,7 @@ span.more-social:hover {
         float: none !important;
         margin-top: 7.5px;
     }
-    .navbar-nav >li {
+    .navbar-nav > li {
         float: none;
     }
     .navbar-nav>li>a {
@@ -543,6 +544,12 @@ span.more-social:hover {
     }
     .bg {
         max-width: 960px;
+    }
+    .oneslider .arrow.prev {
+        left: 10px;
+    }
+    .oneslider .arrow.next {
+        right: 10px;
     }
 }
 
@@ -631,7 +638,7 @@ span.more-social:hover {
         margin-top: 50px;
         text-align: right !important;
     }
-    #events. owl-carousel,
+    #events. .owl-carousel,
     #sponsors .owl-carousel {
         width: calc(100% - 30px);
         margin: 0 15px;

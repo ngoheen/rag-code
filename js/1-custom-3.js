@@ -2,7 +2,7 @@
     'use strict';
     var pluginName = "Camaro",
         defaults = {
-            sliderFx: 'crossfade',		// Slider effect. Can be 'slide', 'fade', 'crossfade'
+            sliderFx: 'slide',		// Slider effect. Can be 'slide', 'fade', 'crossfade'
             sliderInterval: 8000,		// Interval
             speedAnimation: 600,        // Default speed of the animation
             countdownTo: '2017/07/23',          // Change this in the format: 'YYYY/MM/DD'
@@ -890,7 +890,7 @@
                     },
                     auto: false,
                     scroll: {
-                        fx: 'crossfade',
+                        fx: 'slide',
                         onBefore: function() {
                             var pos = $(this).triggerHandler( 'currentPosition' );
                             instance.thumbsSlider.find('a').removeClass( 'selected' );
@@ -1057,17 +1057,29 @@
                     slidewrap.carouFredSel({
                         infinite: (typeof sliderCircular) ? sliderCircular : true,
                         circular: (typeof sliderCircular) ? sliderCircular : true,
-                        width: '100%',
+                        //width: '100%',
+                        align: 'center',
+                        items: {
+                            visible: 3
+                        },
                         auto : sliderAuto ? sliderAuto : false,
                         scroll : {
-                            fx : sliderFx ? sliderFx : 'crossfade',
+                            fx : sliderFx ? sliderFx : 'slide',
                             duration : instance.options.speedAnimation,
-                            timeoutDuration : instance.options.sliderInterval
+                            timeoutDuration : instance.options.sliderInterval//,
+                            //items: 3
                         },
-
-                        swipe : {
-                            onTouch : true,
-                            onMouse : false
+                         swipe: {
+                            onMouse: true,
+                            onTouch: true,
+                            options: {
+                                //exluded element list, less <a>
+                                excludedElements: "button, input, select, textarea, .noSwipe",
+                                //trigger <a> on tap
+                                tap: function(event, target) {
+                                    $(target).parent().trigger('click');
+                                }
+                            }
                         },
                         prev : $(sliderPrefix + e).find('.prev'),
                         next : $(sliderPrefix + e).find('.next'),
@@ -1115,11 +1127,14 @@
                     $this.attr('id', 'oneslider-'+e);
 
                     slidewrap.carouFredSel({
+                        align: 'center',
+                        visible: 3,
                         responsive: true,
                         auto : sliderAuto ? sliderAuto : false,
                         scroll : {
-                            fx : sliderFx ? sliderFx : 'crossfade',
+                            fx : sliderFx ? sliderFx : 'slide',
                             duration : instance.options.speedAnimation,
+                            easing: 'swing',
                             timeoutDuration : 10000
                         },
                         items : {
@@ -1127,10 +1142,22 @@
                             height  : 'auto',
                             width   : 870
                         },
-                        swipe : {
-                            onTouch : true,
-                            onMouse : false
+                        swipe: {
+                            onMouse: true,
+                            onTouch: true,
+                            options: {
+                                //exluded element list, less <a>
+                                excludedElements: "button, input, select, textarea, .noSwipe",
+                                //trigger <a> on tap
+                                tap: function(event, target) {
+                                    $(target).parent().trigger('click');
+                                }
+                            }
                         },
+                        //swipe : {
+                         //   onTouch : true,
+                         //   onMouse : false
+                        //},
                         prev : $(onesliderPrefix + e).find('.prev'),
                         next : $(onesliderPrefix + e).find('.next'),
                         pagination : {
@@ -1144,7 +1171,9 @@
                         }
                     }).parent().css('margin', 'auto');
                 });
+                
             }
+           
         },
         chars: function(){
             var instance = this;
@@ -1437,7 +1466,7 @@ $(document).ready(function(){
     var expandsocial = $('.byline .more-social').on('click',function(event){
         event.stopPropagation();
         event.preventDefault();
-        console.log('clicked');
+        console.log('clicked social menu');
         $('.byline-social').slideToggle();
     });
     $(".byline-social").bind( "clickoutside", function(event){

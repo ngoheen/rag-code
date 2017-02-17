@@ -2836,15 +2836,15 @@ a.a-menu {
 .menutable {
     background-color: #252525;
     display: none;
-    left: 15px !important;
+    left: 0 !important;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
     position: absolute;
-    right: 15px !important;
+    right: 0 !important;
     text-align: left;
     top: 97px;
-    width: calc( 100% - 30px );
+    width: 100%;
     max-width: 1200px;
     z-index: 9;
 }
@@ -2861,10 +2861,10 @@ a.a-menu {
     background-color:#252525;
     position:absolute;
     top:97px;
-    left:15px !important;
-    right:15px !important;
+    left:0 !important;
+    right:0 !important;
     margin: auto;
-    width: calc(100% - 30px);
+    width: 100%;
     max-width: 1200px;
     z-index:9;
     padding-top:0;

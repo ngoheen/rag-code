@@ -4,12 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>RAGBRAI</title>
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/1-style-3.css" rel="stylesheet">
     <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
     <link rel="stylesheet" href="css/1-extra.css">
+<style>
+.slider li.item {
+    float: left;
+    height: 263px;
+    width: auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 263px;
+    z-index: 1;
+}
+</style>
+
+
 </head>
 <body>
 
@@ -247,7 +260,7 @@
     <!-- HOME -->
     <div class="home highlight darker">
         <!-- ONESLIDER -->
-        <div class="oneslider">
+        <div class="oneslider" data-fx="slide" data-auto="true">
             <ul>
                 <li class="large-size overlay">
                     <div class="bg my-about"></div>
@@ -290,7 +303,6 @@
             <div class="slidebar">
                 <a href="#" class="arrow prev"><i class="custom-icon custom-icon-arrow-prev"></i></a>
                 <a href="#" class="arrow next"><i class="custom-icon custom-icon-arrow-next"></i></a>
-                <nav class="pagination"></nav>
             </div>
         </div>
         <!-- /.oneslider -->
@@ -299,96 +311,20 @@
 
     <!-- CONTENT -->
     <div class="content">
-
-        <!-- CONTAINER -->
-        <div class="big-container">
-            <div class="countdown-row text-center">
-                <h3 class="countdown-title">RAGBRAI XLV Countdown - <br class="visible-xs">July 23-29, 2017</h3>
-                <div id="countdown"></div>
-            </div>
-        </div>
-        
-        <!-- /.container -->
-
-        <!-- CONTAINER: Sponsor Logos -->
-        <div class="container slider logos">
-           <div class="row">
-                <h1 class="section-title margin-bottom-20">Friends of RAGBRAI</h1>
-                <ul class="sponsor" data-auto="true" data-fx="slide">
-                    <li><a href="clients_1.html"><img src="images/bikelaw.png" alt=""></a></li>
-                    <li><a href="clients_2.html"><img src="images/caboose.png" alt=""></a></li>
-                    <li><a href="clients_3.html"><img src="images/primal.png" alt=""></a></li>
-                    <li><a href="clients_4.html"><img src="images/dynamics.png" alt=""></a></li>
-                    <li><a href="clients_5.html"><img src="images/register.png" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="slidebar" style="padding-bottom:50px;">
-                <a href="#" class="arrow prev"><i class="custom-icon custom-icon-arrow-prev"></i></a>
-                <a href="#" class="arrow next"><i class="custom-icon custom-icon-arrow-next"></i></a>
-                <nav class="pagination" style="margin-top:15px;"></nav>
-            </div>
-        </div>
-        <!-- /.container -->
-
-        <!-- CONTAINER: announcement -->
-        <div class="announcement">
-            <div class="container">
-                <div class="row text-center">
-                    <div class="col-xs-12 col-md-7 col-sm-9 col-md-offset-2">
-                        <p class="lead">Registration for the 2017 event is now open. Sign up today!</p>
-                    </div>
-                    <div class="col-xs-12 col-md-1 col-sm-3 text-center">
-                        <a class="btn btn-default" href="contact_2.html">Sign up <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- CONTAINER: posts -->
-        <div class="posts container">
-            <div class="row">   
-                <h1 class="section-title">Latest Posts</h1>
-                <div class="flexy">
-                    <div class="col-sm-6 col-xs-12">
-                        <img src="images/announce.jpg">
-                        <p class="text-left hp-title">Only 50 Days ’til the RAGBRAI Route Announcement Party!</p>
-                    </div>
-                    <div class="col-sm-6 col-xs-12">
-                        <img src="images/hills.jpg">
-                        <p class="text-left hp-title">Guess the Route Contest is Now Open for RAGBRAI XLV!</p>
-                    </div>
-                </div>
-        
-                <!-- the poster ad -->
-                <div class="col-fixed-300">
-                    <img src="images/ad.jpg">
-                    <div class="more-posts"><a href="">More Blog Posts</a></div>
-                </div>
-                
-               
-                <!-- end poster ad -->
-            </div> 
-        </div>
-        <!-- /.container -->
-        <div class="border-top"></div>
-        
-        <!-- CONTAINER: Photo Slider -->
-        <div class="container slider magnific-wrap">
+        <div class="container popupslider slider magnific-wrap" style="margin-bottom: 30px;">
             <div class="row">
                 <h1 class="section-title">Photos</h1>
-                <div id="photos">
-                    
-                        <div class="item blightgallery">
-                            <img src="photos/gallery17/announce_1.jpg" alt="">
+                <ul id="photos">
+                    <li class="item blightgallery">   
+                        <img src="photos/gallery17/announce_1.jpg" alt="">
                              <a class="mask" href="photos/gallery17/announce_1.jpg" data-sub-html="The 2017 RAGBRAI route has been announced, and will stop overnight in Orange City, Spencer, Algona, Clear Lake, Charles City, Cresco, Waukon and end in Lansing. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-1">
                         <h3>Photos from the 2017 Route Announcement Party</h3>
                     </a>    
                     <a href="photos/gallery17/announce_2.jpg" data-gallery="#seventeen-1" data-sub-html="Brian Duffey, bassist for The Nadas, performs during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"  data-description="Buy image"></a>
                     <a href="photos/gallery17/announce_3.jpg" data-gallery="#seventeen-1" data-sub-html="Members of RAGBRAI riding team Team Fohty, from left, Mark Giffin, Suzanne Felix, and Marty MacDonnell, pose for a selfie while dancing to The Nadas during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
                     <a href="photos/gallery17/announce_4.jpg" data-gallery="#seventeen-1" data-sub-html="Members of the COPS team take the stage during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
-                        </div>
-                        
-                        <div class="item blightgallery">
+                </li>
+                <li class="item blightgallery"> 
                             <img src="photos/gallery17/bus1.jpg" alt="">
                             <a class="mask" href="photos/gallery17/bus1.jpg" data-sub-html="Omaha-based Team Pump is a 1959 school bus, and one of the oldest operating team busses in RAGBRAI. The paint job was done by an Omaha high school graffiti class. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-2">
                                 <h3>Team Buses</h3>
@@ -396,143 +332,32 @@
                             <a href="photos/gallery17/bus2.jpg" data-sub-html="Omaha-based Team Pump is a 1959 school bus, and one of the oldest operating team busses in RAGBRAI. The paint job was done by an Omaha high school graffiti class. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-2"></a>
                             <a href="photos/gallery17/bus3.jpg" data-sub-html="Omaha-based Team Pump is a 1959 school bus, and one of the oldest operating team busses in RAGBRAI. The paint job was done by an Omaha high school graffiti class. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-2"></a>
                             <a href="photos/gallery17/bus4.jpg" data-sub-html="Omaha-based Team Pump is a 1959 school bus, and one of the oldest operating team busses in RAGBRAI. The paint job was done by an Omaha high school graffiti class. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-2"></a>
-                        </div>
-                        <div class="item blightgallery">
-                             <img src="photos/gallery17/lance1.jpg" alt="">
-                           <a class="mask" href="photos/gallery17/lance1.jpg" data-sub-html="Lance Armstrong and Jimmie Johnson talk before riding the RAGBRAI route to Ottumwa on Thursday, July 28, 2016 in Centerville. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3">
-                                <h3>Lance Armstrong and friends</h3>
-                            </a>
-                            <a href="photos/gallery17/lance2.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
-                            <a href="photos/gallery17/lance3.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
-                            <a href="photos/gallery17/lance4.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, T.J. Juskiewicz, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-4.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-4.jpg" title="Life" class="magnific mask">
-                                <h3>Life</h3>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-5.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-5.jpg" title="Chatoyant" class="magnific mask">
-                                <h3>Chatoyant</h3>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-6.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-6.jpg" title="Sky High" class="magnific mask">
-                                <h3>Sky High</h3>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-7.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-7.jpg" title="Bookstore" class="magnific mask">
-                                <h3>Bookstore</h3>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-8.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-8.jpg" title="Steiner" class="magnific mask">
-                                <h3>Steiner</h3>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <img src="http://media.aisconverse.com/camaro/imgs/about-preview-9.jpg" alt="">
-                            <a href="http://media.aisconverse.com/camaro/imgs/about-9.jpg" title="Night city" class="magnific mask">
-                                <h3>Night city</h3>
-                            </a>
-                        </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="container cdescription">
-            <div class="row">
-                <div class="bottom-more col-sm-2 col-sm-offset-10 text-right"><a href="">More Galleries</a></div>
-            </div>
-        </div>
-        
-        <div class="border-top"></div>
-        
-        <!-- TABS -->
-        
-        <div class="tabs plain">
-            <ul class="container nav nav-tabs text-center">
-                <li class="active"><a href="#featured" data-toggle="tab"><span>Featured</span></a></li>
-                <li><a href="#new" data-toggle="tab"><span>New</span></a></li>
-                <li><a href="#bestsellers" data-toggle="tab"><span>Best Sellers</span></a></li>
-                <li><a href="#sale" data-toggle="tab"><span>Sale</span></a></li>
+                        </li>
+                <li class="item blightgallery">
+                    <img src="photos/gallery17/lance1.jpg" alt="">
+                    <a class="mask" href="photos/gallery17/lance1.jpg" data-sub-html="Lance Armstrong and Jimmie Johnson talk before riding the RAGBRAI route to Ottumwa on Thursday, July 28, 2016 in Centerville. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3">
+                        <h3>Lance Armstrong and friends</h3>
+                    </a>
+                    <a href="photos/gallery17/lance2.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
+                    <a href="photos/gallery17/lance3.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
+                    <a href="photos/gallery17/lance4.jpg" data-sub-html="From left, Matt Kenseth, Dave Ellsweig, Lance Armstrong, T.J. Juskiewicz, Jimmie Johnson and the pilots that got them to town pose for a photo in front of Centerville's freedom rock before riding RAGBRAI on Thursday, July 28, 2016. BRIAN POWERS/THE DES MOINES REGI" data-gallery="#seventeen-3"></a>
+                </li>
+                <li class="item blightgallery">   
+                    <img src="photos/gallery17/announce_1.jpg" alt="">
+                    <a class="mask" href="photos/gallery17/announce_1.jpg" data-sub-html="The 2017 RAGBRAI route has been announced, and will stop overnight in Orange City, Spencer, Algona, Clear Lake, Charles City, Cresco, Waukon and end in Lansing. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-1">
+                        <h3>Photos from the 2017 Route Announcement Party</h3>
+                    </a>    
+                    <a href="photos/gallery17/announce_2.jpg" data-gallery="#seventeen-1" data-sub-html="Brian Duffey, bassist for The Nadas, performs during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"  data-description="Buy image"></a>
+                    <a href="photos/gallery17/announce_3.jpg" data-gallery="#seventeen-1" data-sub-html="Members of RAGBRAI riding team Team Fohty, from left, Mark Giffin, Suzanne Felix, and Marty MacDonnell, pose for a selfie while dancing to The Nadas during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
+                    <a href="photos/gallery17/announce_4.jpg" data-gallery="#seventeen-1" data-sub-html="Members of the COPS team take the stage during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
+                </li>
             </ul>
-             <div class="highlight white">
-                <div class="container tab-content">
-                    <div class="tab-pane fade in active" id="featured">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 text-center">
-                                <img src="images/shirt1.jpg">
-                                <h1 class="shop-item">2017 Women's Logo Tee</h1>
-                                <p class="grey">$15.00</p>
-                            </div>
-                            <div class="col-md-3 col-sm-6 text-center">
-                                 <img src="images/shirt2.jpg">
-                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
-                                <p class="grey">$20.00</p>
-                            </div>
-                            <div class="col-md-3 col-sm-6 text-center">
-                                <div class="sticker sticker-new">new</div>
-                                <img src="images/shirt3.jpg">
-                                <h1 class="shop-item">2017 Women's Logo Tee</h1>
-                                <p class="grey">$15.00</p>
-                            </div>
-                             <div class="col-md-3 col-sm-6 text-center">
-                                <div class="sticker sticker-sale">sale</div>
-                                 <img src="images/shirt4.png">
-                                <h1 class="shop-item">2014 Souvenir T-Shirt</h1>
-                                <p class="grey">$6.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="new">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h2>Our strategy</h2>
-                                <p class="grey">The customer value of cross-selling</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Personal touch</h3>
-                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Opportunities</h3>
-                                <p>Morbi tristique senectus et netus et malesuada famesac turpis egestas. Non enim eleifend felis pretium feugiat. Vivamus quis mi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bestsellers">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h2>Our methodology</h2>
-                                <p class="grey">Requirements</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Analysis and design</h3>
-                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Support</h3>
-                                <p>Dummy text of the printing and typesetting industry. Mellentesque habitant morbi tristique senectus et netus et malesuada famesac turpis egestas.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="sale">content</div>
-                </div>
             </div>
-            <div class="container cdescription" style="padding-top: 0;margin-top: 0;padding-bottom: 0;">
-                <div class="row">
-                    <div class="col-sm-2 col-sm-offset-10 more-products" style="padding-bottom: 0;"><a href="">More Products</a></div>
-                </div>
+            <div class="slidebar" style="padding-bottom: 15px;">
+                <nav class="pagination"></nav>
             </div>
         </div>
-        <!-- /.tabs -->
+   
     </div>
     <!-- /.content -->
 </div>
@@ -695,61 +520,19 @@
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.plugins.js"></script>
-<script src="js/jquery.ba-outside-events.min.js"></script>
 <script src="js/1-custom-3.js"></script>
 <script src="js/jquery.touchSwipe.js"></script>
-<script src="js/owl.carousel.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-<script src="lightGallery-master/dist/js/lightgallery.js"></script>
+<script src="lightGallery-master/demo/js/lightgallery.js"></script>
 <script src="lightGallery-master/demo/js/lg-fullscreen.js"></script>
 <script src="lightGallery-master/demo/js/lg-video.js"></script>
 <script src="lightGallery-master/demo/js/lg-zoom.js"></script>
 <script src="lightGallery-master/demo/js/lg-hash.js"></script>
 <script src="lightGallery-master/demo/js/lg-share-3.js"></script>
-<!--<script src="js/videopopup.js"></script>-->
 <script src="js/lightbox-script.js"></script>
+<!--<script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.js"></script>
+<script src="js/OwlCarousel2-2.2.0/src/js/owl.navigation.js"></script>-->
 
-<script>
-$(document).ready(function() {
-    $('#photos .owl-carousel, #videos .owl-carousel').owlCarousel({
-    loop: true,
-            nav: false,
-            navText: false,
-            margin: 0,
-            responsiveClass: true,
-            slideBy: 'page',
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: false
-                },
-                576: {
-                    items: 2,
-                    center: true,
-                    nav: false
-                },
-                992: {
-                    items: 3,
-                    nav: false,
-                },
-                1330: {
-                    nav: true
-                }
-            }
-        })
-});
-</script>
-<!--<script>
-    $(function () {
-        $('#vidBox').VideoPopUp({
-            backgroundColor: "#17212a",
-            opener: "video1",
-            maxweight: "340",
-            idvideo: "v1",
-            pausevideo: true
-        });
-    });
-</script>-->
+
 </body>
 </html>

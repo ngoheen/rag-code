@@ -68,7 +68,7 @@
         $('li.more-social').on('click', function(event){
             event.stopPropagation();
             event.preventDefault();
-            console.log('clicked');
+            console.log('clicked social');
             $('.expand-social').slideToggle();
         });
         //this.core.$outer.find('.lg').append('<div id="lg-dropdown-overlay"></div>');
