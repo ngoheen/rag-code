@@ -1859,7 +1859,9 @@ a:hover .custom-icon-scrolltop {
 .highlight.darker {
     background-color:#F2F2F2;
 }
-
+.home.highlight.darker {
+    background-color:#fff;
+}
 .bg-sand{
     background-color: #E3DCD3;
 }
@@ -4889,7 +4891,7 @@ li:hover .mask > *,
     font-size:1px;
     width:100%;
     line-height:1;
-    margin:45px auto 0;
+    margin: 35px auto 0;
     position: relative;
 }
 

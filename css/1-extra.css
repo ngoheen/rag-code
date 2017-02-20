@@ -219,6 +219,9 @@ ul.footer-list li p {
 .container.slider.logos .slidebar {
     padding-bottom: 50px;
 }
+.slidebar .pagination {
+    display: block;
+}
 .container.slider.logos .slidebar .pagination {
     margin-top:15px;
 }
@@ -425,12 +428,12 @@ ul.footer-list li p {
     padding-top: 0;
 }
 .container.cdescription {
-    margin-top: -70px;
+    /*margin-top: -70px;*/
     padding-top: 0;
     padding-bottom: 30px;
 }
 .more-posts {
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: right;
     width: 100%;
 }
@@ -471,7 +474,7 @@ span.more-social:hover {
     margin-left: 0;
 }
 .container.popupslider.magnific-wrap {
-    padding-top: 35px;
+    padding-top: 5px;
 }
 .section-title.sponsor {
     margin-bottom:20px;
@@ -814,7 +817,6 @@ span.more-social:hover {
 }
 
 .buy-btn a {
-    background: #e7543d;
     color: #fff;
     display: inline-block;
     font-size: 16px;

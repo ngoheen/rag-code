@@ -1057,7 +1057,7 @@
                     slidewrap.carouFredSel({
                         infinite: (typeof sliderCircular) ? sliderCircular : true,
                         circular: (typeof sliderCircular) ? sliderCircular : true,
-                        //width: '100%',
+                        width: '100%',
                         align: 'center',
                         items: {
                             visible: 3
