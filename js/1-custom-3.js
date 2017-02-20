@@ -3,8 +3,8 @@
     var pluginName = "Camaro",
         defaults = {
             sliderFx: 'slide',		// Slider effect. Can be 'slide', 'fade', 'crossfade'
-            sliderInterval: 8000,		// Interval
-            speedAnimation: 600,        // Default speed of the animation
+            sliderInterval: 15000,		// Interval
+            speedAnimation: 1000,        // Default speed of the animation
             countdownTo: '2017/07/23',          // Change this in the format: 'YYYY/MM/DD'
             successText: 'You have successfully subscribed', // text after successful subscribing
             errorText: 'Please, enter a valid email', // text, if email is invalid
@@ -1042,7 +1042,6 @@
         },
         sliders: function(){
             var instance = this;
-
             if (instance.slider.length > 0){
                 instance.slider.each(function(e){
                     var $this = $(this),
@@ -1057,11 +1056,16 @@
                     slidewrap.carouFredSel({
                         infinite: (typeof sliderCircular) ? sliderCircular : true,
                         circular: (typeof sliderCircular) ? sliderCircular : true,
+                       // responsive: true,
                         width: '100%',
                         align: 'center',
-                        items: {
-                            visible: 3
-                        },
+                        items: 3,
+                        /*items: {
+                           visible:{
+                            min: 1,
+                            max: 4
+                            }
+                        },*/
                         auto : sliderAuto ? sliderAuto : false,
                         scroll : {
                             fx : sliderFx ? sliderFx : 'slide',
@@ -1073,7 +1077,7 @@
                             onMouse: true,
                             onTouch: true,
                             options: {
-                                //exluded element list, less <a>
+                                //excluded element list, less <a>
                                 excludedElements: "button, input, select, textarea, .noSwipe",
                                 //trigger <a> on tap
                                 tap: function(event, target) {
@@ -1102,15 +1106,20 @@
                         circular: true,
                         infinite: true,
                         width: '100%',
-                        auto : sliderAuto ? sliderAuto : false,
+                        auto : sliderAuto ? sliderAuto : true,
                         items: {
-                            visible: 'odd+2'
+                            visible: {// 'odd+2'
+                                min: 1,
+                                max: 4
+                            }
                         },
                         scroll: {
                             fx: 'directscroll',
-                            items: 1,
+                           // items: 1,
                             timeoutDuration: instance.options.sliderInterval/2
                         },
+                        prev : $(ribbonPrefix + e).find('.prev'),
+                        next : $(ribbonPrefix + e).find('.next'),
                         pagination : $(ribbonPrefix + e).find('.pagination')
                     }).parent().css('margin', 'auto');
                 });
@@ -1128,7 +1137,6 @@
 
                     slidewrap.carouFredSel({
                         align: 'center',
-                        visible: 3,
                         responsive: true,
                         auto : sliderAuto ? sliderAuto : false,
                         scroll : {
@@ -1173,7 +1181,6 @@
                 });
                 
             }
-           
         },
         chars: function(){
             var instance = this;
@@ -1472,7 +1479,11 @@ $(document).ready(function(){
     $(".byline-social").bind( "clickoutside", function(event){
         $(this).hide();
     });
+    $('.slider.logos ul.sponsor').carouFredSel({
+        responsive: false
+    });
 });
+
 /*------------------------------------------------------------------
  [ DEVELOPER LIFE (only for dev version) ]
  -------------------------------------------------------------------*/

@@ -52,8 +52,8 @@
 
     Share.prototype.init = function() {
         var _this = this;
-        var shareHtml = '<div class="bottom-tool-bar"><ul class="lg-share-list pull-left">';
-        shareHtml += _this.core.s.facebook ? '<li>Share</li><li class="face"><a id="lg-share-facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>' : '';
+        var shareHtml = '<div class="bottom-tool-bar"><ul class="lg-share-list pull-left"><li>Share</li>';
+        shareHtml += _this.core.s.facebook ? '<li class="face"><a id="lg-share-facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>' : '';
         shareHtml += _this.core.s.twitter ? '<li class="twit"><a id="lg-share-twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>' : '';
          shareHtml += '<li class="insta"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>';
         shareHtml += '<li class="more-social"><a href=""><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>';
@@ -83,8 +83,8 @@
         _this.core.$el.on('onAfterSlide.lg.tm', function(event, prevIndex, index) {
 
             setTimeout(function() {
-                $('#lg-share-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + (encodeURIComponent(_this.core.$items.eq(index).attr('data-facebook-share-url') || window.location.href)));
-
+               // $('#lg-share-facebook').attr('href', 'https://www.facebook.com/sharer/sharer.php?u=' + (encodeURIComponent(_this.core.$items.eq(index).attr('data-facebook-share-url') || window.location.href)));
+                $('#lg-share-face').attr('href', 'https://www.facebook.com/sharer/sharer.php?description=' + (encodeURIComponent(_this.core.$items.eq(index).find('img').attr('alt'))) + '&u=' + (encodeURIComponent(_this.core.$items.eq(index).attr('data-facebook-share-url') || window.location.href)) + '&picture=' + (encodeURIComponent(base_url + '/' + (_this.core.$items.eq(index).attr('data-src')))));
                 $('#lg-share-twitter').attr('href', 'https://twitter.com/intent/tweet?text=' + _this.core.$items.eq(index).attr('data-tweet-text') + '&url=' + (encodeURIComponent(_this.core.$items.eq(index).attr('data-twitter-share-url') || window.location.href)));
 
                 $('#lg-share-googleplus').attr('href', 'https://plus.google.com/share?url=' + (encodeURIComponent(_this.core.$items.eq(index).attr('data-googleplus-share-url') || window.location.href)));

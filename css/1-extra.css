@@ -641,7 +641,7 @@ span.more-social:hover {
         margin-top: 50px;
         text-align: right !important;
     }
-    #events. .owl-carousel,
+    #events .owl-carousel,
     #sponsors .owl-carousel {
         width: calc(100% - 30px);
         margin: 0 15px;

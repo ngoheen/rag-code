@@ -7,8 +7,9 @@ $(document).ready(function(){
         zoom: false,
         autoplayControls: false,
         fullScreen: false,
-        appendCounterTo: '.bottom-tool-bar',
-        videojs: true
+        counter: false
+        //appendCounterTo: '.bottom-tool-bar'
+        //videojs: true
     });
     loadedvideo.on('onAfterOpen.lg',function(event){
         var goofie = $('.lg-outer').find('.bottom-tool-bar');
@@ -16,6 +17,8 @@ $(document).ready(function(){
         var vidwords = $('.video .lg-sub-html');
         goofie.append(words);
         words.css('display','inline-block');
+        var arrows = $('.lg-outer').find('.lg-actions');
+        arrows.css('display','none');
     });
     
     var $lg = $('.blightgallery');

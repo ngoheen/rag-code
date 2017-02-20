@@ -9,20 +9,12 @@
     <link href="css/1-style-3.css" rel="stylesheet">
     <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
     <link rel="stylesheet" href="css/1-extra.css">
-<style>
-.slider li.item {
-    float: left;
-    height: 263px;
-    width: auto;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    height: 263px;
-    z-index: 1;
-}
-</style>
-
-
+     <!-- OGraphr v0.8.39 - https://github.com/idleberg/OGraphr -->
+    <meta property="og:title" content="RAGBRAI" />
+    <meta property="og:url" content="http://ragbrai.com" />
+    <meta property="og:site_name" content="RAGBRAI" />
+    <meta property="og:image" content="http://ragbrai.com/wp-content/themes/ragbrai/screenshot.png" />
+    <meta property="og:image:type" content="image/png" />
 </head>
 <body>
 
@@ -242,7 +234,7 @@
     <div class="content">
         
         
-        <!-- CONTAINER -->
+        <!-- CONTAINER: Countdown -->
         <div class="big-container">
             <div class="countdown-row text-center">
                 <h3 class="countdown-title">RAGBRAI XLV Countdown - <br class="visible-xs">July 23-29, 2017</h3>
@@ -252,8 +244,8 @@
         <!-- /.container -->
         
         <!-- CONTAINER: Sponsor Logos -->
-        <div class="container slider logos">
-           <div class="row">
+        <div class="container slider ribbon logos">
+            <div class="row">
                 <h1 class="section-title margin-bottom-20">Friends of RAGBRAI</h1>
                 <ul class="sponsor" data-auto="true" data-fx="slide">
                     <li><a href="clients_1.html"><img src="images/bikelaw.png" alt=""></a></li>
@@ -263,10 +255,10 @@
                     <li><a href="clients_5.html"><img src="images/register.png" alt=""></a></li>
                 </ul>
             </div>
-            <div class="slidebar" style="padding-bottom:50px;">
+            <div class="slidebar">
                 <a href="#" class="arrow prev"><i class="custom-icon custom-icon-arrow-prev"></i></a>
                 <a href="#" class="arrow next"><i class="custom-icon custom-icon-arrow-next"></i></a>
-                <nav class="pagination" style="margin-top:15px;"></nav>
+                <nav class="pagination"></nav>
             </div>
         </div>
         <!-- /.container -->
@@ -369,12 +361,93 @@
         
         <div class="border-top"></div>
         
+        <!-- TABS -->
+        <div class="tabs plain">
+            <ul class="container nav nav-tabs text-center">
+                <li class="active"><a href="#featured" data-toggle="tab"><span>Featured</span></a></li>
+                <li><a href="#new" data-toggle="tab"><span>New</span></a></li>
+                <li><a href="#bestsellers" data-toggle="tab"><span>Best Sellers</span></a></li>
+                <li><a href="#sale" data-toggle="tab"><span>Sale</span></a></li>
+            </ul>
+             <div class="highlight white">
+                <div class="container tab-content">
+                    <div class="tab-pane fade in active" id="featured">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/shirt1.jpg">
+                                <h1 class="shop-item">2017 Women's Logo Tee</h1>
+                                <p class="grey">$15.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                 <img src="images/shirt2.jpg">
+                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
+                                <p class="grey">$20.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-new">new</div>
+                                <img src="images/shirt3.jpg">
+                                <h1 class="shop-item">2017 Women's Logo Tee</h1>
+                                <p class="grey">$15.00</p>
+                            </div>
+                             <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-sale">sale</div>
+                                 <img src="images/shirt4.png">
+                                <h1 class="shop-item">2014 Souvenir T-Shirt</h1>
+                                <p class="grey">$6.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="new">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h2>Our strategy</h2>
+                                <p class="grey">The customer value of cross-selling</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Personal touch</h3>
+                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Opportunities</h3>
+                                <p>Morbi tristique senectus et netus et malesuada famesac turpis egestas. Non enim eleifend felis pretium feugiat. Vivamus quis mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bestsellers">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h2>Our methodology</h2>
+                                <p class="grey">Requirements</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Analysis and design</h3>
+                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Support</h3>
+                                <p>Dummy text of the printing and typesetting industry. Mellentesque habitant morbi tristique senectus et netus et malesuada famesac turpis egestas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="sale">content</div>
+                </div>
+            </div>
+            <div class="container cdescription" style="padding-top: 0;margin-top: 0;padding-bottom: 0;">
+                <div class="row">
+                    <div class="col-sm-2 col-sm-offset-10 more-products" style="padding-bottom: 0;"><a href="">More Products</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- /.tabs -->
+        
+        <div class="border-top"></div>
+        
         <!-- videos -->
         <div class="container popupslider slider magnific-wrap">
             <div class="row">
                 <h1 class="section-title">Videos</h1>
-                <ul id="videos">
-                    <li class="item blightgallery">   
+                <!--<ul id="videos">
+                    <li class="item videogallery">   
                         <img src="photos/gallery17/announce_1.jpg" alt="">
                         <a class="mask" href="photos/gallery17/announce_1.jpg" data-sub-html="The 2017 RAGBRAI route has been announced, and will stop overnight in Orange City, Spencer, Algona, Clear Lake, Charles City, Cresco, Waukon and end in Lansing. BRYON HOULGRAVE/THE REGISTER" data-gallery="#seventeen-1">
                             <h3>Photos from the 2017 Route Announcement Party</h3>
@@ -410,6 +483,48 @@
                         <a href="photos/gallery17/announce_3.jpg" data-gallery="#seventeen-1" data-sub-html="Members of RAGBRAI riding team Team Fohty, from left, Mark Giffin, Suzanne Felix, and Marty MacDonnell, pose for a selfie while dancing to The Nadas during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
                         <a href="photos/gallery17/announce_4.jpg" data-gallery="#seventeen-1" data-sub-html="Members of the COPS team take the stage during the RAGBRAI announcement party at the Iowa Events Center in Des Moines on Saturday, Jan. 21, 2017. BRYON HOULGRAVE/THE REGISTER"></a>
                     </li>
+                </ul>-->
+                <div class="none" id="video1">
+                    <video class="lg-video-object lg-html5" controls preload="auto">
+                        <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video1.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="none" id="video2">
+                    <video class="lg-video-object lg-html5" controls preload="auto">
+                        <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video2.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="none" id="video3">
+                    <video class="lg-video-object lg-html5" controls preload="auto">
+                        <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video3.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <div class="none" id="video4">
+                    <video class="lg-video-object lg-html5" controls preload="auto">
+                        <source src="http://sachinchoolur.github.io/lightGallery/static/videos/video4.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+                <ul id="html5-videos">
+                    <li class="item videogallery"> 
+                        <img src="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video1-poster.jpg">
+                        <a class="mask" data-poster="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video1-poster.jpg" data-sub-html="title" data-html="#video1" data-facebook-share-url="facebook-share.html"><h3>Cartoons</h3></a>
+                    </li>
+                    <li class="item videogallery">
+                        <img src="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video2-poster.jpg">
+                            <a class="mask" data-html="#video2" data-poster="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video2-poster.jpg" data-sub-html="<h4>Rollin`Wild - Short Funny Animated Clips - Film Academy BW</h4>"><h3>Goofy</h3></a>
+                    </li>
+                    <li class="item videogallery">
+                        <img src="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video3-poster.jpg">
+<a class="mask" data-html="#video3" data-poster="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video3-poster.jpg" data-sub-html="<h4>Big Buck Bunny</h4>"><h3>Bunny</h3></a>
+           </li>
+           <li class="item videogallery">
+                    <img src="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video4-poster.jpg">
+                    <a data-html="#video4" data-poster="http://sachinchoolur.github.io/lightGallery/static/img/videos/h-video4-poster.jpg" data-sub-html="<h4>Ninja vs Pirate</h4>"><h3>NINJA</h3></a>
+                    </li>
                 </ul>
             </div>
             <div class="slidebar">
@@ -423,6 +538,31 @@
         </div>
         
         <div class="border-top"></div>
+        
+        <!-- CONTAINER: Event Logos -->
+        <div class="container slider ribbon logos" style="padding-top:15px;">
+            <div class="row">
+                <h1 class="section-title" style="margin-bottom:20px;">Check These Out</h1>
+                <ul class="sponsor" data-auto="false" data-fx="slide">
+                    <li><a href="clients_1.html"><img src="images/party.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/expo-logo.jpg" alt=""></a></li>
+                    <li><a href="clients_1.html"><img src="images/bacon-ride.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/pigtails.jpg" alt=""></a></li>
+                    <li><a href="clients_1.html"><img src="images/party.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/expo-logo.jpg" alt=""></a></li>
+                    <li><a href="clients_1.html"><img src="images/bacon-ride.jpg" alt=""></a></li>
+                    <li><a href="clients_2.html"><img src="images/pigtails.jpg" alt=""></a></li>
+                </ul>
+                <div class="slidebar">
+                    <a href="#" class="arrow prev"><i class="custom-icon custom-icon-arrow-prev"></i></a>
+                    <a href="#" class="arrow next"><i class="custom-icon custom-icon-arrow-next"></i></a>
+                    <nav class="pagination" style="margin-top:5px"></nav>
+                </div>
+            </div>
+           
+        </div>
+        <!-- /.container -->
+        
     </div>
     <!-- /.content -->
 </div>
@@ -584,19 +724,18 @@
 
 <script src="js/jquery-2.1.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.plugins.js"></script>
+<script src="js/jquery-plugins2.js"></script>
 <script src="js/1-custom-3.js"></script>
 <script src="js/jquery.touchSwipe.js"></script>
 
-<script src="lightGallery-master/demo/js/lightgallery.js"></script>
+<script src="lightGallery-master/dist/js/lightgallery.js"></script>
 <script src="lightGallery-master/demo/js/lg-fullscreen.js"></script>
 <script src="lightGallery-master/demo/js/lg-video.js"></script>
 <script src="lightGallery-master/demo/js/lg-zoom.js"></script>
-<!--<script src="lightGallery-master/demo/js/lg-hash.js"></script>-->
+<script src="lightGallery-master/demo/js/lg-hash.js"></script>
 <script src="lightGallery-master/demo/js/lg-share-3.js"></script>
 <script src="js/lightbox-script.js"></script>
-<!--<script src="js/OwlCarousel2-2.2.0/dist/owl.carousel.js"></script>
-<script src="js/OwlCarousel2-2.2.0/src/js/owl.navigation.js"></script>-->
+
 
 
 </body>

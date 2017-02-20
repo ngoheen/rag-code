@@ -415,7 +415,6 @@ body.container .footer .container:last-child{
     opacity:1;
     background-color:rgb(227,220,210);
     background-color: #e3dcd2;
-   
     left:0;
     top:0;
     display:block !important;
@@ -4363,16 +4362,16 @@ label > h4 + input[type=radio] {
 
 .slider li:before,
 .pricing li:before {
-    display:none!important;
+    display:none !important;
 }
 
 .slider li > a {
-    display:block;
+    display: block;
 }
 
 .slider.container .container {
-    padding-bottom:0;
-    padding-top:0;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .slider.highlight {
@@ -4425,7 +4424,7 @@ label > h4 + input[type=radio] {
 /* [ 10.2. Logotypes Slider ] */
 
 .logos {
-    font-size:1px;
+    font-size: 1px;
 }
 
 .logos + .border-top{
@@ -4442,11 +4441,11 @@ label > h4 + input[type=radio] {
 }
 
 .logos li {
-    display:inline-block;
+    display: inline-block;
     vertical-align: middle;
     /*width:24.6%;*/
-    margin-bottom:20px;
-    margin-top:40px;
+    margin-bottom: 20px;
+    margin-top: 40px;
 }
 
 .logos li img {
@@ -4455,17 +4454,17 @@ label > h4 + input[type=radio] {
 }
 
 .slider.logos .row {
-    width:85%;
-    margin:auto;
+    width: 85%;
+    margin: auto;
 }
 
 .slider.logos li {
-    width:auto;
-    margin:0;
+    width: auto;
+    margin: 0;
 }
 
 .slider + .tabs > .container {
-    padding-top:30px;
+    padding-top: 30px;
 }
 
 /* [ 10.3. Oneslider ] */

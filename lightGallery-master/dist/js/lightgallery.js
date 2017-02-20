@@ -40,7 +40,7 @@
 
         useLeft: false,
 
-        closable: true,
+        closable: false,
         loop: true,
         escKey: true,
         keyPress: true,
@@ -1236,7 +1236,7 @@
 
         var _this = this;
         var mousedown = false;
-        this.$outer.find('.lg-close').on('click.lg', function() {
+        this.$outer.find('.lg-close').on('click', function() {
         console.log('clicked close');
             _this.destroy();
         });
