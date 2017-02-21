@@ -1264,3 +1264,8 @@ h5+h5{
         padding-left: 0;
     }
 }
+@media (max-width: 420px) {
+  .hidden-xxs {
+    display: none !important;
+  }
+}
