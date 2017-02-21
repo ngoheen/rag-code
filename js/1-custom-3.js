@@ -1052,12 +1052,14 @@
                         sliderPrefix = '#slider-';
 
                     $this.attr('id', 'slider-'+e);
+                  
 
                     slidewrap.carouFredSel({
                         infinite: (typeof sliderCircular) ? sliderCircular : true,
                         circular: (typeof sliderCircular) ? sliderCircular : true,
                        // responsive: true,
                         width: '100%',
+                        //height: 480,
                         align: 'center',
                         items: 3,
                         /*items: {
@@ -1090,7 +1092,9 @@
                         pagination : {
                             container: $(sliderPrefix + e).find('.pagination')
                         }
-                    }).parent().css('margin', 'auto');
+                    }).parent().css('margin', 'auto').css('height', '480px');
+                  
+                    
                 });
             }
 
@@ -1479,9 +1483,8 @@ $(document).ready(function(){
     $(".byline-social").bind( "clickoutside", function(event){
         $(this).hide();
     });
-    $('.slider.logos ul.sponsor').carouFredSel({
-        responsive: false
-    });
+  
+    
 });
 
 /*------------------------------------------------------------------

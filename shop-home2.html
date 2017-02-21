@@ -15,6 +15,15 @@
     <meta property="og:site_name" content="RAGBRAI" />
     <meta property="og:image" content="http://ragbrai.com/wp-content/themes/ragbrai/screenshot.png" />
     <meta property="og:image:type" content="image/png" />
+    <style>
+    @media (max-width:414px) {
+        .pull-left.inline-block.select {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -239,7 +248,7 @@
         <!-- TABS -->
         <div class="tabs plain">
             <ul class="container nav nav-tabs text-center">
-                <li style="padding: 0 20px;">SORT BY: </li>
+                <li style="padding: 0 20px;font-weight: 600;">SORT BY: </li>
                 <li class="active"><a href="#new" data-toggle="tab"><span>New</span></a></li>
                 <li><a href="#popular" data-toggle="tab"><span>POPULAR</span></a></li>
                 <li><a href="#rating" data-toggle="tab"><span>RATING</span></a></li>
@@ -248,34 +257,36 @@
                 <li><a href="#low-price" data-toggle="tab"><span>Low Price</span></a></li>
                 <li><a href="#high-price" data-toggle="tab"><span>High Price</span></a></li>
             </ul>
-             <!-- CONTAINER: sorting -->
-        <div class="container sorting">
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <div class="pull-left inline-block hidden-xxs" style="transform: translateY(4px);">
-                        CATEGORY:
-                    </div>
-                    <div class="pull-left inline-block">
-                        <select>
-                            <option value="1">RAGBRAI XLV</option>
-                            <option value="2">RAGBRAI XLIV</option>
-                            <option value="3">RAGBRAI XLIII</option>
-                            <option value="4">RAGBRAI XLII</option>
-                            <option value="5">RAGBRAI XLI</option>
-                            <option value="6">COLLECTIBLES</option>
-                            <option value="7">CASUAL APPAREL</option>
-                            <option value="8">CLEARANCR</option>
-                            <option value="9">CYCLING APPAREL</option>
-                            <option value="10">ACCESSORIES</option>
-                        </select>
+            
+            <!-- CONTAINER: sorting -->
+            <div class="container sorting padding-top-small">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <div class="pull-left inline-block hidden-xxs" style="transform: translateY(4px);font-weight: 600;margin-right: 20px;">
+                            CATEGORY:
+                        </div>
+                        <div class="pull-left inline-block select">
+                            <select>
+                                <option value="1">RAGBRAI XLV</option>
+                                <option value="2">RAGBRAI XLIV</option>
+                                <option value="3">RAGBRAI XLIII</option>
+                                <option value="4">RAGBRAI XLII</option>
+                                <option value="5">RAGBRAI XLI</option>
+                                <option value="6">COLLECTIBLES</option>
+                                <option value="7">CASUAL APPAREL</option>
+                                <option value="8">CLEARANCR</option>
+                                <option value="9">CYCLING APPAREL</option>
+                                <option value="10">ACCESSORIES</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- /.container -->
+            <!-- /.container -->
+            
              <div class="highlight white">
                 <div class="container tab-content">
-                    <div class="tab-pane fade in active" id="featured">
+                    <div class="tab-pane fade in active" id="new">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 text-center">
                                 <img src="images/shirt1.jpg">
@@ -290,8 +301,56 @@
                             <div class="col-md-3 col-sm-6 text-center">
                                 <div class="sticker sticker-new">new</div>
                                 <img src="images/shirt3.jpg">
+                                <h1 class="shop-item">2017 Hooded Sweatshirt</h1>
+                                <p class="grey">$45.00</p>
+                            </div>
+                             <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-sale">sale</div>
+                                 <img src="images/shirt4.png">
+                                <h1 class="shop-item">2014 Souvenir T-Shirt</h1>
+                                <p class="grey">$6.00</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/shirt1.jpg">
                                 <h1 class="shop-item">2017 Women's Logo Tee</h1>
                                 <p class="grey">$15.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                 <img src="images/shirt2.jpg">
+                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
+                                <p class="grey">$20.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-new">new</div>
+                                <img src="images/shirt3.jpg">
+                                <h1 class="shop-item">2017 Hooded Sweatshirt</h1>
+                                <p class="grey">$45.00</p>
+                            </div>
+                             <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-sale">sale</div>
+                                 <img src="images/shirt4.png">
+                                <h1 class="shop-item">2014 Souvenir T-Shirt</h1>
+                                <p class="grey">$6.00</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/shirt1.jpg">
+                                <h1 class="shop-item">2017 Women's Logo Tee</h1>
+                                <p class="grey">$15.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                 <img src="images/shirt2.jpg">
+                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
+                                <p class="grey">$20.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <div class="sticker sticker-new">new</div>
+                                <img src="images/shirt3.jpg">
+                                <h1 class="shop-item">2017 Hooded Sweatshirt</h1>
+                                <p class="grey">$45.00</p>
                             </div>
                              <div class="col-md-3 col-sm-6 text-center">
                                 <div class="sticker sticker-sale">sale</div>
@@ -301,23 +360,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="new">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <h2>Our strategy</h2>
-                                <p class="grey">The customer value of cross-selling</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Personal touch</h3>
-                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
-                            </div>
-                            <div class="col-sm-4">
-                                <h3>Opportunities</h3>
-                                <p>Morbi tristique senectus et netus et malesuada famesac turpis egestas. Non enim eleifend felis pretium feugiat. Vivamus quis mi.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="bestsellers">
+                    <div class="tab-pane fade" id="popular">
                         <div class="row">
                             <div class="col-sm-4">
                                 <h2>Our methodology</h2>
@@ -333,7 +376,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="sale">content</div>
+                    
+                    <div class="tab-pane fade" id="rating">content</div>
+                    <div class="tab-pane fade" id="low-price">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h2>Our strategy</h2>
+                                <p class="grey">The customer value of cross-selling</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Personal touch</h3>
+                                <p>Habitant morbi tristique senectus et netus malesuada famesac turpis egestas. Ut non enim eleifend pretium feugiat. Dummy text of the printing and typesetting industry.</p>
+                            </div>
+                            <div class="col-sm-4">
+                                <h3>Opportunities</h3>
+                                <p>Morbi tristique senectus et netus et malesuada famesac turpis egestas. Non enim eleifend felis pretium feugiat. Vivamus quis mi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="high-price">content</div>
                 </div>
             </div>
         </div>
