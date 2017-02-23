@@ -6,18 +6,7 @@ Version:	1.1
 Last change:	10/24/14
 
 -------------------------------------------------------------------*/
-/*
- * Theme Name: Basic
- * Description: Basic is fully responsive, clean and minimal WordPress theme. It has various options in WordPress Customizer to change look of the theme - primary design color, background and header, page layout (left or right sidebar, full or centered content). Clean valid code, semantic markup, markup by Schema.org, full adaptation to mobile devices. Basic is ready to use with child themes and gives for developers simple design change with custom hooks and action. Translation Ready (English, Russian, Ukrainian, French are integrated).
- * Theme URI: http://wp-puzzle.com/basic/
- * Author: WP Puzzle
- * Author URI: http://wp-puzzle.com/
- * Version: 1.2.2
- * License: GNU General Public License v2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Tags: two-columns, one-column, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, sticky-post, threaded-comments, translation-ready, microformats
- * Text Domain: basic
- */
+
 
 /* Import fonts */
 
@@ -412,17 +401,15 @@ body.container .footer .container:last-child{
 }
 
 .overlay:after {
-    opacity:1;
-    background-color:rgb(227,220,210);
-    background-color: #e3dcd2;
+    opacity:.3;
+    background-color:#191919;
     left:0;
     top:0;
-    display:block !important;
+    display:block!important;
     content:"";
     height:100%;
     position:absolute;
     width:100%;
-    z-index:0;
 }
 
 .overlay.grey-bg:after{
@@ -440,7 +427,7 @@ body.container .footer .container:last-child{
 }
 
 .container:last-child {
-    padding-bottom:50px;
+    padding-bottom:110px;
 }
 
 .container .container:last-child{
@@ -463,36 +450,31 @@ body.container .footer .container:last-child{
 .no-margin{
     margin: 0 !important;
 }
-.padding-top-small {
-     padding-top: 30px;
-}
-.padding-bottom-0 {
-    padding-bottom: 0 !important;
-}
+
 .padding-top-0{
     padding-top: 0 !important;
 }
 
 .padding-top-big {
-    margin-top:150px !important;
+    margin-top:150px!important;
     padding-top: 0;
 }
 
 .padding-top {
-    padding-top:90px !important;
+    padding-top:90px!important;
 }
 
 .padding-top-medium{
     padding-top: 60px !important;
 }
 
-.padding-medium {
+.padding-medium{
     padding-top: 90px !important;
     padding-bottom: 90px !important;
 }
 
 .padding-bottom {
-    padding-bottom: 65px !important;
+    padding-bottom:65px!important;
 }
 
 .padding-bottom-big{
@@ -500,20 +482,15 @@ body.container .footer .container:last-child{
 }
 
 .padding-bottom-huge {
-    padding-bottom: 370px !important;
+    padding-bottom:370px!important;
 }
 
 .margin-top {
-    margin-top: 90px !important;
+    margin-top:90px!important;
 }
-.margin-left-0 {
-    margin-left: 0 !important;
-}
-.margin-top-0 {
-    margin-top: 0 !important;
-}
+
 .margin-top-big {
-    margin-top:150px !important;
+    margin-top:150px!important;
 }
 
 .row {
@@ -847,6 +824,7 @@ p.lead {
     margin-bottom:0;
     line-height:50px;
 }
+
 p + .btn {
     margin-top:10px;
 }
@@ -909,7 +887,9 @@ blockquote.lead {
     color:#e7543d;
 }
 
-
+.color-ccc{
+    color: #ccc !important;
+}
 
 .inherit{
     color: inherit;
@@ -1147,20 +1127,8 @@ a img,
 .half-opacity{
     opacity: .5;
 }
-.quarter-opacity {
-    opacity: .25;
-}
-@font-face {
-    font-family: "VideoJS";
-    src:url("../fonts/VideoJS.eot");
-    src:url("../fonts/VideoJS.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/VideoJS.woff") format("woff"),
-    url("../fonts/VideoJS.ttf") format("truetype"),
-    url("../fonts/VideoJS.svg#camaro") format("svg");
-    font-weight: normal;
-    font-style: normal;
 
-}
+
 /* [ 2.3 CAMARO ICONS ] */
 
 @font-face {
@@ -1766,7 +1734,7 @@ a:hover .custom-icon-scrolltop {
     position:absolute;
     left:0;
     top:0;
-    z-index:10;
+    z-index:0;
     content: '\0020';
     background-position: 50% 0;
 }
@@ -1783,67 +1751,67 @@ a:hover .custom-icon-scrolltop {
 }
 
 .bg-faq {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-faq.jpg);
+    background-image:url(../images/bg/bg-faq.jpg);
 }
 
 .bg-pricing {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-pricing.jpg);
+    background-image:url(../images/bg/bg-pricing.jpg);
 }
 
 .bg-testimonials {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-testimonials.jpg);
+    background-image:url(../images/bg/bg-testimonials.jpg);
 }
 
 .bg-sitemap {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-sitemap.jpg);
+    background-image:url(../images/bg/bg-sitemap.jpg);
 }
 
 .bg-contact {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-contact.jpg);
+    background-image:url(../images/bg/bg-contact.jpg);
 }
 
 .bg-text {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-text.jpg);
+    background-image:url(../images/bg/bg-text.jpg);
 }
 
 .bg-works {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-works.jpg);
+    background-image:url(../images/bg/bg-works.jpg);
 }
 
 .bg-shop {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-shop.jpg);
+    background-image:url(../images/bg/bg-shop.jpg);
 }
 
 .bg-blog {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-blog.jpg);
+    background-image:url(../images/bg/bg-blog.jpg);
 }
 
 .bg-services {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-services.jpg);
+    background-image:url(../images/bg/bg-services.jpg);
 }
 
 .bg-history {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-history.jpg);
+    background-image:url(../images/bg/bg-history.jpg);
 }
 
 .bg-team {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-team.jpg);
+    background-image:url(../images/bg/bg-team.jpg);
 }
 
 .bg-gallery {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-gallery.jpg);
+    background-image:url(../images/bg/bg-gallery.jpg);
 }
 
 .bg-about {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-about.jpg);
+    background-image:url(../images/bg/bg-about.jpg);
 }
 
 .bg-aboutme {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-aboutme.jpg);
+    background-image:url(../images/bg/bg-aboutme.jpg);
 }
 
 .bg-video {
-    background-image:url(http://media.aisconverse.com/camaro/bg/bg-video.jpg);
+    background-image:url(../images/bg/bg-video.jpg);
 }
 
 .inverse,
@@ -1870,9 +1838,7 @@ a:hover .custom-icon-scrolltop {
 .highlight.darker {
     background-color:#F2F2F2;
 }
-.home.highlight.darker {
-    background-color:#fff;
-}
+
 .bg-sand{
     background-color: #E3DCD3;
 }
@@ -1924,10 +1890,7 @@ a:hover .custom-icon-scrolltop {
 .def-color{
     color: #666 !important;
 }
-.dkgrey {
-    color: #666;
-}
-a.dkgrey:hover,
+
 a.grey:hover{
     color: #e7543d !important;
 }
@@ -1968,8 +1931,8 @@ a.grey:hover{
 /* [ 2.6. TABS ] */
 
 .tabs {
-    margin-bottom:40px;
-    margin-top:20px;
+    margin-bottom:80px;
+    margin-top:40px;
 }
 
 .nav-tabs {
@@ -1987,11 +1950,7 @@ a.grey:hover{
     border-width:2px 0 0;
     padding:0;
 }
-@media screen and (max-width: 600px) {
-    .nav-tabs > li > a {
-        line-height: 20px;
-    }
-}
+
 .nav-tabs > li > a:hover {
     color:#e7543d;
     background-color:transparent;
@@ -2547,7 +2506,7 @@ ul.pagination li i {
     display:inline-block;
     vertical-align:middle;
     line-height:normal;
-    margin:0;
+    margin:0 7px 0;
     font-size: 1px;
 }
 
@@ -2632,7 +2591,7 @@ a.a-menu {
     line-height:96px;
     padding-top:0;
     padding-bottom:0;
-    color:#444;
+    color:#000;
 }
 
 .mainmenu li.active > a,
@@ -2740,8 +2699,8 @@ a.a-menu {
     float:none;
 }
 
-.dropdown-menu li/*,
-.dropdown-submenu:hover>.dropdown-menu */{
+.dropdown-menu li,
+.dropdown-submenu:hover>.dropdown-menu {
     display:block;
 }
 
@@ -2776,12 +2735,12 @@ a.a-menu {
     text-align: left !important;
     color: #8b8b8b;
     padding-left: 0 !important;
-    border-bottom: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2D2D2D;
     position: relative;
 }
 
 .collapse.in .dropdown-menu a{
-    border-bottom: 1px solid #2d2d2d;
+    border-bottom: 1px solid #2D2D2D;
     padding: 0 !important;
     margin-left: 20px;
     line-height: 36px !important;
@@ -2843,22 +2802,91 @@ a.a-menu {
     position: absolute;
 }
 
+
+/* [ 5.4. SideMenu ] */
+
+.sidemenu {
+    position:fixed;
+    right:0;
+    top:0;
+    overflow:auto;
+    width:300px;
+    box-sizing:border-box;
+    min-height:100%;
+    height:100%;
+    background-color:#212121;
+    z-index:100;
+    color:#fff;
+    display:none;
+    padding:70px 40px 20px;
+}
+
+.sidemenu h4 {
+    margin-bottom:20px;
+}
+
+.sidemenu .sclose {
+    position:absolute;
+    right:20px;
+    top:20px;
+}
+
+.sidemenu ul {
+    margin-bottom:30px;
+}
+
+.sidemenu li a {
+    font-size:15px;
+    color:#8c8c8c;
+}
+
+.sidemenu .hcart {
+    margin:15px 0 42px;
+}
+
+.sidemenu .hcart > a {
+    color:#8c8c8c;
+}
+
+.sidemenu a:hover {
+    color:#e7543d;
+}
+
+.sidemenu .login {
+    margin-bottom:38px;
+}
+
+.sidemenu ul.social li {
+    margin:0 14px 0 0;
+}
+
+.sidemenu .social a,
+.sidemenu .social a i {
+    font-size:24px;
+    color:#4D4C4C;
+}
+
+.sidemenu ul.social li a:hover,
+.sidemenu ul.social li a:hover i {
+    color:#fff;
+}
+
 /* [ 5.5. Menu Table ] */
 
 .menutable {
-    background-color: #252525;
-    display: none;
-    left: 0 !important;
-    margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    position: absolute;
+    background-color:#252525;
+    position:absolute;
+    top:100%;
+    left:0 !important;
     right: 0 !important;
-    text-align: left;
-    top: 97px;
-    width: 100%;
+    width:100%;
     max-width: 1200px;
-    z-index: 9;
+    z-index:9;
+    padding-top:30px;
+    padding-bottom:30px;
+    display:none;
+    margin: auto;
+    text-align: left;
 }
 
 .menutable h4 {
@@ -2872,11 +2900,11 @@ a.a-menu {
 .menushop {
     background-color:#252525;
     position:absolute;
-    top:97px;
+    top:100%;
     left:0 !important;
     right:0 !important;
     margin: auto;
-    width: 100%;
+    width:100%;
     max-width: 1200px;
     z-index:9;
     padding-top:0;
@@ -2904,6 +2932,7 @@ a.a-menu {
     position:relative;
     padding:0 !important;
 }
+
 
 .category-imgs li {
     display:none;
@@ -3007,9 +3036,10 @@ a.a-menu {
 }
 
 .home *{
-    /*opacity: 0;*/
+    opacity: 0;
     color: #f6f6f6;
 }
+
 .home .container *,
 .home .row *,
 .home [class*='slider'] *{
@@ -3017,7 +3047,6 @@ a.a-menu {
 }
 
 .home h1 {
-    color: #000;
     font-size:34px;
     margin:0;
     font-weight: 400;
@@ -3036,26 +3065,36 @@ a.a-menu {
     background-color: transparent;
 }
 
-.home .oneslider {
+.home .oneslider{
     margin: 0;
     position: static;
 }
 
-.home.container .oneslider {
+.home.container .oneslider{
     margin-bottom: 0;
 }
 
-.home .oneslider li {
+.home .oneslider li{
     position: relative;
 }
 
-.oneslider .ytvideo {
+.oneslider .ytvideo{
     min-width: 1px !important;
     min-height: 1px !important;
 }
 
-.oneslider .mbYTP_wrapper iframe {
+.oneslider .mbYTP_wrapper iframe{
     z-index: 6 !important;
+}
+
+.home.container{
+    padding: 0;
+}
+
+.home .container,
+.home .container:last-child{
+    z-index: 1;
+    padding: 0;
 }
 
 /*------------------------------------------------------------------
@@ -4273,28 +4312,28 @@ label > h4 + input[type=radio] {
 #countdown {
     white-space: nowrap;
     margin-bottom: 65px;
-    width: 750px;
 }
 
 #countdown > div {
     display: inline-block;
     vertical-align: top;
-    width: 180px;
-    text-align: center;
 }
 
 #countdown > div:first-child {
-   margin-right: 30px;
+    margin-right: 50px;
 }
 
+#countdown > div:last-child {
+    border-right: 0 none;
+}
 
 #countdown span {
     color: #fff;
     display: block;
-    font-size: 100px;
+    font-size: 135px;
     line-height: 1;
-    font-weight: 600;
-   
+    font-weight: 100;
+    margin-bottom: 20px;
 }
 
 #countdown ins:first-letter{
@@ -4304,22 +4343,24 @@ label > h4 + input[type=radio] {
 #countdown span i {
     display: inline-block;
     width: 1px;
-    height: auto;
-    /*margin: 0 32px;*/
-    background-color: transparent;
+    height: 62px;
+    margin: 0 32px;
+    background-color: #505050;
     vertical-align: middle;
     content: '\0020';
 }
 
 #countdown ins {
-    display: inline-block;
-    color: rgb(204,204,204);
-    font-weight: 400;
-   /* margin-left: 40px;
+    display: block;
+    color: #666;
+    font-weight: 300;
+    margin-left: 40px;
     padding-right: 105px;
-    margin: 0 auto;*/
 }
 
+#countdown div:first-child ins{
+    padding-right: 50px;
+}
 
 
 /*------------------------------------------------------------------
@@ -4330,8 +4371,7 @@ label > h4 + input[type=radio] {
 
 .slider {
     position:relative;
-    /*margin-bottom:100px;*/
-    margin-bottom: 30px;
+    margin-bottom:100px;
     margin-top: 30px;
     padding:0;
 }
@@ -4369,21 +4409,21 @@ label > h4 + input[type=radio] {
     width:auto;
     position:relative;
     text-indent:0;
-    padding-left:0 !important;
+    padding-left:0!important;
 }
 
 .slider li:before,
 .pricing li:before {
-    display:none !important;
+    display:none!important;
 }
 
 .slider li > a {
-    display: block;
+    display:block;
 }
 
 .slider.container .container {
-    padding-bottom: 0;
-    padding-top: 0;
+    padding-bottom:0;
+    padding-top:0;
 }
 
 .slider.highlight {
@@ -4436,7 +4476,7 @@ label > h4 + input[type=radio] {
 /* [ 10.2. Logotypes Slider ] */
 
 .logos {
-    font-size: 1px;
+    font-size:1px;
 }
 
 .logos + .border-top{
@@ -4453,30 +4493,30 @@ label > h4 + input[type=radio] {
 }
 
 .logos li {
-    display: inline-block;
-    vertical-align: middle;
-    /*width:24.6%;*/
-    margin-bottom: 20px;
-    margin-top: 40px;
+    display:inline-block;
+    vertical-align:top;
+    width:24.6%;
+    margin-bottom:20px;
+    margin-top:40px;
 }
 
 .logos li img {
-   /* opacity:.3;*/
+    opacity:.3;
     max-width: 100%;
 }
 
 .slider.logos .row {
-    width: 85%;
-    margin: auto;
+    width:85%;
+    margin:auto;
 }
 
 .slider.logos li {
-    width: auto;
-    margin: 0;
+    width:auto;
+    margin:0;
 }
 
 .slider + .tabs > .container {
-    padding-top: 30px;
+    padding-top:30px;
 }
 
 /* [ 10.3. Oneslider ] */
@@ -4514,11 +4554,11 @@ label > h4 + input[type=radio] {
     display: none !important;
 }
 
-/*.oneslider li img{
+.oneslider li img{
     width: 100%;
     display: block;
 }
-*/
+
 .oneslider img.circle{
     max-width: 250px;
 }
@@ -4570,7 +4610,7 @@ label > h4 + input[type=radio] {
 .mask > * {
     display:table-cell;
     vertical-align:middle;
-    color:#fff !important;
+    color:#fff!important;
     text-decoration:none;
     opacity:0;
     -webkit-transition:opacity .5s 0s ease-in-out;
@@ -4578,11 +4618,10 @@ label > h4 + input[type=radio] {
     transition:opacity .5s 0s ease-in-out;
 }
 
-.mask h3 {
+.mask h3{
+    margin-bottom: 0;
     font-weight: normal;
     letter-spacing: 0;
-    margin-bottom: 0;
-    padding: 0 15px;
 }
 
 .mask .icon{
@@ -4657,14 +4696,11 @@ li:hover .mask > *,
     display:inline-block;
     vertical-align:top;
     float:none;
-    height: 263px;
     max-width:390px;
-    overflow: hidden;
 }
 
 .popupslider li img {
     width:100%;
-    height: auto;
     float:left;
 }
 
@@ -4901,7 +4937,7 @@ li:hover .mask > *,
     font-size:1px;
     width:100%;
     line-height:1;
-    margin: 35px auto 0;
+    margin:45px auto 0;
     position: relative;
 }
 
@@ -4985,12 +5021,13 @@ li:hover .mask > *,
 -------------------------------------------------------------------*/
 
 .gallery {
+    padding-bottom:55px;
+    padding-top:55px;
     overflow:hidden;
-    padding: 55px 0;
 }
 
 .gallery .row {
-    margin:0;
+    margin:0 -15px;
 }
 
 .gallery [class*=col-] {
@@ -6713,9 +6750,7 @@ ul.nav-expand li a:hover {
     line-height: 32px;
     margin-left: -15px;
 }
-.blog-date + .icon {
-    margin-top: 10px;
-}
+
 .blog-date *{
     display: block;
 }
@@ -6725,9 +6760,7 @@ ul.nav-expand li a:hover {
     width: 100%;
     display: block;
 }
-.post img + p {
-    margin-top:25px;
-}
+
 .post-img{
     margin-bottom: 45px;
 }
@@ -6795,17 +6828,7 @@ ul.nav-expand li a:hover {
     padding-top: 60px;
     margin-top: 26px;
 }
-.comment.row:nth-child(even) {
-    background: rgb(236,236,236);
-}
-.comment.row {
-    margin-bottom: 30px;
-    padding: 20px;
-}
-.leaveacomment textarea {
-    height: 200px;
-    margin-bottom: 15px;
-}
+
 .leaveacomment [class*=col-md]{
     padding-left: 0;
     padding-right: 0;
@@ -7784,7 +7807,6 @@ img.mfp-img {
     color:#666;
     font-size:16px;
     line-height:24px;
-    margin: 50px 0 0;
     opacity:0;
 }
 
@@ -8145,7 +8167,7 @@ img.mfp-img {
 }
 
 #panorama{
-    background:url(http://media.aisconverse.com/camaro/imgs/splash.jpg) 0 0 repeat-x;
+    background:url(../images/imgs/splash.jpg) 0 0 repeat-x;
     position: fixed;
     z-index: -1;
     top: 0;
@@ -8263,7 +8285,6 @@ img.mfp-img {
 
     .logos li{
         width: 33%;
-        /*49.5*/
     }
 
     .tag{
@@ -8383,7 +8404,6 @@ img.mfp-img {
 
     #countdown span{
         font-size: 90px;
-        font-weight: 600;
     }
 
     #countdown ins {
@@ -8523,11 +8543,11 @@ img.mfp-img {
         left: 0;
     }
 
- /* .leaveacomment .formwrap,
-    .leaveacomment .btn {
+    .leaveacomment .formwrap,
+    .leaveacomment .btn{
         margin-left: 115px;
     }
-*/
+
     .mfp-arrow {
         -webkit-transform:scale(0.75);
         transform:scale(0.75);
@@ -8552,11 +8572,11 @@ img.mfp-img {
 
 @media only screen and (min-width: 769px) {
 
-  /*  .dropdown:hover > .menutable,
+    .dropdown:hover > .menutable,
     .dropdown:hover > .menushop {
         display: block;
     }
-*/
+
 }
 
 
@@ -8615,7 +8635,7 @@ img.mfp-img {
     }
 
     .logos li{
-        width: auto;
+        width: 49.5%;
         margin: 20px 0;
     }
 
@@ -8692,23 +8712,20 @@ img.mfp-img {
         font-size: 20px;
         text-align: center;
     }
-    #countdown {
-        width: auto;
-    }
+
     #countdown > div:first-child {
-        margin-right: 0;
+        margin-right: 20px;
     }
 
     #countdown span{
-        font-size: 60px;
+        font-size: 46px;
         height: 55px;
-        font-weight: 600;
     }
 
     #countdown ins {
-       font-size: 18px;
+       font-size: 12px;
     }
-    
+
     #countdown div:first-child ins{
         padding-right: 0;
     }
@@ -8720,19 +8737,12 @@ img.mfp-img {
     .container .col-md-3.mix{
         width: 49.5%;
     }
-    
-    .blog-date {
+
+    .blog-date{
         margin: 0 0 15px;
         text-align: left;
-        float: left;
     }
-   .blog-date + .icon {
-        float: left;
-        margin-top: 34px;
-        margin-left: 10px;
-        opacity: .25 !important;
-    }
-   
+
     .displaying{
         text-align: left;
     }
@@ -8980,10 +8990,9 @@ img.mfp-img {
     }
 
     #countdown span{
-        font-size: 50px;
-        font-weight: 600;
-        height: 55px;
-        line-height: 55px;
+        font-size: 35px;
+        height: 45px;
+        line-height: 45px;
         margin: 0;
         padding: 0;
     }
