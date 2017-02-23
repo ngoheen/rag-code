@@ -623,67 +623,7 @@
 
             });
 
-          /*  instance.magnificWrap.each(function() {
-                $(this).find(instance.magnific).magnificPopup({
-                    type: 'image',
-                    tLoading: '',
-                    gallery: {
-                        enabled: true,
-                        navigateByImgClick: false
-                    },
-                    image: {
-                        titleSrc: function (item) {
-                            return item.el.attr('title');
-                        }
-                    }
-                });
-            });
 
-            instance.magnificVideo.magnificPopup({
-                type: 'iframe',
-                fixedContentPos: false
-            });
-
-            instance.magnificGallery.on('click', function(e) {
-                e.preventDefault();
-
-                var $this = $(this),
-                    items = [],
-                    im = $this.data('gallery'),
-                    iT = $this.data('title'),
-                    imA = im.split(','),
-                    imL = imA.length,
-                    titl = $this.attr('title');
-                    for (var i = 0; i < imL; i++){
-                        items.push({
-                            src: imA[i]
-                        });
-                    }
-                //items["title"] = $this.data('titles');
-                $.magnificPopup.open({
-                    items: items,
-                    type: 'image',
-                    //swipe: true,
-                    gallery: {
-                        enabled: true
-                    },
-                    image: {
-                        titleSrc: function () {
-                            return titl;
-                        }
-                    }
-                });
-            });
-            
-            $("body").swipe({
-                swipeLeft: function(event, direction, distance, duration, fingerCount) {
-                    $(".mfp-arrow-left").magnificPopup("prev");
-                },
-                swipeRight: function() {
-                    $(".mfp-arrow-right").magnificPopup("next");
-                },
-                threshold: 50
-            });*/
             // Contact Map();
             if (instance.cntMap.length === 1){
                 instance.contactMap();

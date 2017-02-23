@@ -53,15 +53,24 @@
     Share.prototype.init = function() {
         var _this = this;
         var shareHtml = '<div class="bottom-tool-bar"><ul class="lg-share-list pull-left">';
-        shareHtml += _this.core.s.facebook ? '<li>Share</li><li><a id="lg-share-facebook" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>' : '';
-        shareHtml += _this.core.s.twitter ? '<li><a id="lg-share-twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>' : '';
-        shareHtml += _this.core.s.googlePlus ? '<li><a id="lg-share-googleplus" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>' : '';
-        shareHtml += _this.core.s.pinterest ? '<li><a id="lg-share-pinterest" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>' : '';
+        shareHtml += _this.core.s.facebook ? '<li>Share</li><li class="face"><a id="lg-share-facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>' : '';
+        shareHtml += _this.core.s.twitter ? '<li class="twit"><a id="lg-share-twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>' : '';
+         shareHtml += '<li class="insta"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>';
+        shareHtml += '<li class="more-social"><a href=""><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a></li>';
+       // shareHtml += _this.core.s.googlePlus ? '<li><a id="lg-share-googleplus" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>' : '';
+       // shareHtml += _this.core.s.pinterest ? '<li><a id="lg-share-pinterest" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>' : '';
         shareHtml += '</ul></span></div>';
         //shareHtml += _this.core.s.buy ? '<ul class="buy-share"><li class="buy-btn">Buy</li></ul></div>' : '';
 
 
         this.core.$outer.find('.lg').after(shareHtml);
+        this.core.$outer.find('.lg').append('<ul class="expand-social"><li><a class="grey" href="">Google +</a></li><li><a class="grey" href="">Pinterest</a></li><li><a class="grey" href="">Tumblr</a></li><li><a class="grey" href="">Instagram</a></li><li><a class="grey" href="">Email</a></li><li><a class="grey" href="">Print</a></li></ul>');
+        $('li.more-social').on('click', function(event){
+            event.stopPropagation();
+            event.preventDefault();
+            console.log('clicked');
+            $('.expand-social').slideToggle();
+        });
         //this.core.$outer.find('.lg').append('<div id="lg-dropdown-overlay"></div>');
         //$('#lg-share').on('click.lg', function(){
         //    _this.core.$outer.toggleClass('lg-dropdown-active');

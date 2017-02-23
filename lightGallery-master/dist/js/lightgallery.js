@@ -40,7 +40,7 @@
 
         useLeft: false,
 
-        closable: false,
+        closable: true,
         loop: true,
         escKey: true,
         keyPress: true,
@@ -53,7 +53,6 @@
 
         // .lg-item || '.lg-sub-html'
         appendSubHtmlTo: '.lg-sub-html',
-
         subHtmlSelectorRelative: false,
 
         /**
@@ -521,7 +520,6 @@
             }
 
         } else {
-
             if (subHtmlUrl) {
                 this.$slide.eq(index).load(subHtmlUrl);
             } else {
@@ -1236,8 +1234,8 @@
 
         var _this = this;
         var mousedown = false;
-        this.$outer.find('.lg-close').on('click', function() {
-        console.log('clicked close');
+        this.$outer.find('.lg-close').on('click.lg', function() {
+        console.log('clicked');
             _this.destroy();
         });
 

@@ -475,7 +475,6 @@
         var subHtml = null;
         var subHtmlUrl;
         var $currentEle;
-
         if (this.s.dynamic) {
             if (this.s.dynamicEl[index].subHtmlUrl) {
                 subHtmlUrl = this.s.dynamicEl[index].subHtmlUrl;
@@ -493,6 +492,7 @@
                 }
             }
         }
+
         if (!subHtmlUrl) {
             if (typeof subHtml !== 'undefined' && subHtml !== null) {
 

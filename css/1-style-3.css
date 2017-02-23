@@ -467,6 +467,9 @@ body.container .footer .container:last-child{
 .padding-top-small {
      padding-top: 30px;
 }
+.padding-bottom-0 {
+    padding-bottom: 0 !important;
+}
 .padding-top-0{
     padding-top: 0 !important;
 }
@@ -504,7 +507,12 @@ body.container .footer .container:last-child{
 .margin-top {
     margin-top: 90px !important;
 }
-
+.margin-left-0 {
+    margin-left: 0 !important;
+}
+.margin-top-0 {
+    margin-top: 0 !important;
+}
 .margin-top-big {
     margin-top:150px !important;
 }
@@ -832,9 +840,13 @@ p {
     float: left;
     margin: 0 15px 0 0;
 }
-p.color-ccc {
-    font-size: 20px;
-    line-height: 27px;
+
+p.lead {
+    font-size:26px;
+    color:#666;
+    font-weight:300;
+    margin-bottom:0;
+    line-height:50px;
 }
 p + .btn {
     margin-top:10px;
@@ -4623,7 +4635,6 @@ label > h4 + input[type=radio] {
 .logos li:hover img,
 .work:hover .mask > *,
 li:hover .mask > *,
-/*.blogs [class*=col-]:hover .mask > *,*/
 .gallery [class*=col-]:hover .mask > * {
     opacity:1;
 }
@@ -4635,7 +4646,7 @@ li:hover .mask > *,
     font-size:1px;
 }
 
-/*.blogs [class*=col-]:hover .mask,*/
+
 .popupslider li:hover .mask,
 .related-projects li:hover .mask,
 .gallery [class*=col-]:hover .mask{
@@ -7774,6 +7785,7 @@ img.mfp-img {
     color:#666;
     font-size:16px;
     line-height:24px;
+    margin: 50px 0 0;
     opacity:0;
 }
 
