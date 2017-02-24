@@ -3109,7 +3109,9 @@ a.a-menu {
     font-size: 16px;
     color: #666;
 }
-
+.breadcrumb li.active {
+    color: #e7543d;
+}
 .breadcrumb li:nth-child(2n){
     margin: 0 16px;
 }
@@ -3510,6 +3512,7 @@ ul.social li a:hover i {
 
 /* [ 8.1. General Styles ] */
 
+input[type=number],
 input[type=text],
 input[type=email],
 input[type=password],
