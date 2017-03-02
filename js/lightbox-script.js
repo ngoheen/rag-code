@@ -49,6 +49,17 @@ $(document).ready(function(){
             });
         });
     });
+    var $pg = $('.productgallery');
+ 
+    var loadedproduct = $pg.lightGallery({
+        thumbnail: false,
+        selector: 'a',
+        autoplay: false,
+        index: 0,
+        download: false,
+        actualSize: false,
+        appendCounterTo: '.bottom-tool-bar'
+    });
     
     $('#photos .owl-carousel, #videos .owl-carousel').owlCarousel({
         loop: true,
@@ -107,8 +118,7 @@ $(document).ready(function(){
             },
             576: {
                 items: 2,
-                nav: true,
-                //stagePadding: 10
+                nav: true
             },
             768: {
                 items: 3,
@@ -138,50 +148,32 @@ $(document).ready(function(){
 jQuery( document ).ready(function() {
 	 
   
-        // 1) ASSIGN EACH 'DOT' A NUMBER
-			dotcount = 1;
+    // 1) ASSIGN EACH 'DOT' A NUMBER
+    dotcount = 1;
 	 
-			jQuery('.owl-dot').each(function() {
-			  jQuery( this ).addClass( 'dotnumber' + dotcount);
-			  jQuery( this ).attr('data-info', dotcount);
-			  dotcount=dotcount+1;
-			});
+    jQuery('.product-gallery .owl-dot').each(function() {
+        jQuery( this ).addClass( 'dotnumber' + dotcount);
+        jQuery( this ).attr('data-info', dotcount);
+        dotcount=dotcount+1;
+    });
 			
-			 // 2) ASSIGN EACH 'SLIDE' A NUMBER
-			slidecount = 1;
+    // 2) ASSIGN EACH 'SLIDE' A NUMBER
+    slidecount = 1;
 	 
-			jQuery('.owl-item').not('.cloned').each(function() {
-			  jQuery( this ).addClass( 'slidenumber' + slidecount);
-			  slidecount=slidecount+1;
-			});
+    jQuery('.product-gallery .owl-item').not('.cloned').each(function() {
+        jQuery( this ).addClass( 'slidenumber' + slidecount);
+        slidecount=slidecount+1;
+    });
 			
-			// SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
-			jQuery('.owl-dot').each(function() {
+    // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+    jQuery('.product-gallery .owl-dot').each(function() {
 			
-          grab = jQuery(this).data('info');
+        grab = jQuery(this).data('info');
 
-          slidegrab = jQuery('.slidenumber'+ grab +' img').attr('src');
-          console.log(slidegrab);
+        slidegrab = jQuery('.slidenumber'+ grab +' img').attr('src');
+        console.log(slidegrab);
 
-          jQuery(this).css("background-image", "url("+slidegrab+")");  
+        jQuery(this).css("background-image", "url("+slidegrab+")");  
 
-      });
-			
-      
-			
-			
-	
+    });
 });
-jQuery(window).on("load resize", function () {
-      // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
-        // TO MAKE IT ALL NEAT 
-			amount = jQuery('.owl-dot').length;
-			slidewidth = jQuery('.owl-item').outerWidth();
-			gotowidth = Math.round (slidewidth/amount);
-			gotowidth = gotowidth - ((amount - 1)*10)
-			console.log(gotowidth);
-			jQuery('.owl-dot').css("width", gotowidth+"px");
-			newwidth = jQuery('.owl-dot').outerWidth();
-			console.log(newwidth);
-			jQuery('.owl-dot').css("height", newwidth+"px");
-		});

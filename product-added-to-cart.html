@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>RAGBRAI</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/1-style-4.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
+    <link rel="stylesheet" href="css/1-extra-2.css">
+    <style>
+   .product-info .cost {
+    color: #e7543d;
+    }
+    .product-variation td {
+        padding: 5px 0;
+    }
+    .product-variation td:first-child {
+        padding-right: 15px;
+        width: 100px;
+    }
+    .product-variation td.quantity {
+        padding: 20px 15px 0 0;
+    }
+    .product-variation td.quantity-add {
+        padding-top: 20px;
+    }
+    .product-variation td .btn {
+        line-height: 43px;
+        margin-bottom: 0;
+    }
+    .product-variation tbody tr:last-child td {
+        padding-bottom: 5px;
+    }
+    .product-variation td.available-qty {
+        padding-top: 40px;
+    }
+    table.product-variation tbody tr:first-child td {
+        padding-top: 0;
+    }
+     .product-gallery .owl-carousel .owl-item a img,
+    .product-gallery .owl-carousel .owl-item img {
+        max-height: 95%;
+        width: auto;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+  .product-gallery .owl-carousel {
+    height: 600px;
+    }
+.product-gallery .owl-centered .owl-item {
+        display: table-cell;
+        float: none;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+.product-gallery .owl-centered .owl-item img {
+    height: auto;
+    text-align: center;
+}
+.product-gallery .owl-carousel .owl-dot {float: left; background-size: cover; margin-top: 10px;}
+.product-gallery .owl-dots { 
+    font-size: 1px;
+    line-height:1;
+    margin:35px auto 0;
+    position: relative;
+    text-align: center;
+    width: 350px;
+}
+.product-gallery .owl-dots .owl-dot {   
+    background-color: transparent;
+    border-radius: 0%;
+    display: inline-block;    
+    height: 80px;
+    margin:0 5px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.owl-dots .owl-dot.active,
+.owl-dots .owl-dot:hover {
+    background-color:transparent;
+    border: 1px solid #ddd;
+    width: 80px;
+    height: 80px;
+    margin:0 5px;
+}
+.owl-dots .owl-dot:first-child {
+    margin-left: 0;
+}
+.owl-dots .owl-dot:last-child {
+    margin-right: 0;
+}
+.tab-pane h2 {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 300;
+    padding-left: 15px;
+}
+.highlight .container.tab-content {
+    padding-top: 40px;
+}
+.highlight .container.tab-content h2 {
+    margin-bottom: 40px;
+}
+.container.tab-content img.user-img {
+    float: left;
+    height: 60px;
+    margin-right: 15px;
+    max-width: 60px;
+    width: 60px;
+}
+.checkbox, .checkbox *, .radio, .radio * {
+    line-height: 1.25;
+}
+@media screen and (max-width: 600px) {
+.product-gallery .owl-carousel {
+    height: 380px;
+}
+.product-info {
+    clear: both;
+}
+.product-gallery .owl-dots .owl-dot {
+    margin:0;
+    }
+    .comment.row {
+        padding: 20px 0;
+    }
+}
+.woocommerce-message, .woocommerce-error, .woocommerce-info {
+    padding: 1em 1em 1em 3.5em;
+    margin: 0 15px 2em;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background: #fcfbfc;
+    background: -webkit-gradient(linear,left top,left bottom,from(#fcfbfc),to(#f7f6f7));
+    background: -webkit-linear-gradient(#fcfbfc,#f7f6f7);
+    background: -moz-linear-gradient(center top,#fcfbfc 0,#f7f6f7 100%);
+    background: -moz-gradient(center top,#fcfbfc 0,#f7f6f7 100%);
+    color: #5e5e5e;
+    text-shadow: 0 1px 0 #fff;
+    list-style: none outside;
+    width: auto;
+    -webkit-box-shadow: inset 0 -2px 6px rgba(0,0,0,0.05), inset 0 -2px 30px rgba(0,0,0,0.015), inset 0 1px 0 #fff, 0 1px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 0 -2px 6px rgba(0,0,0,0.05), inset 0 -2px 30px rgba(0,0,0,0.015), inset 0 1px 0 #fff, 0 1px 2px rgba(0,0,0,0.3);
+}
+.woocommerce-message {
+    border-top: 3px solid #8fae1b;
+}
+
+.woocommerce-message .btn {
+    line-height: 36px;
+    height: 40px;
+    font-weight: 300;
+    margin-bottom: 0;
+    transform: translateY(-7px);
+}
+.woocommerce-error:before,
+.woocommerce-info:before,
+.woocommerce-message:before {
+    font-family: WooCommerce;
+    content: "\e015";
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+}
+.woocommerce-message:before {
+    content: "\e015";
+    color: #8fae1b;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+
+<!-- WRAPPER -->
+<div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header sides">
+        <div class="container htop">
+            <div class="col-md-8 col-sm-7">
+                <div class="logo pull-left">
+                    <a href="index.html"><img src="images/header-logo@1x.png"></a>
+                </div>
+                <div class="slogan visible-md">A Des Moines Register tradition since 1973</div>
+            </div>
+            <div class="col-md-4 col-sm-5 text-right">
+                <div class="hcart pull-left">
+                    <a href="cart.html"><i class="custom-icon custom-icon-ico-cart"></i> 3 items - $164,50</a>
+                </div>
+                <a href="" data-popup="login" class="a-login btn btn-primary pull-right">Login</a>
+            </div>
+        </div>
+        <div class="hbottom right-pos border-top">
+            <div class="container">
+                <div class="col-md-1 col-sm-1 iconmenu pull-right text-right">
+                    <a href="" class="a-search"><i class="custom-icon custom-icon-ico-search"></i></a>
+                </div>
+               
+                <div class="col-sm-11 mainmenu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <nav>
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                               
+                                <li class="dropdown dropdown-menutable">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">The Ride</a>
+                                    <div class="menutable dropdown-menu">
+                                        <div class="divtable">
+                                            <div class="col-md-2">
+                                                <h4>General</h4>
+                                                <ul>
+                                                   <li><a href="about_1.html">General Information</a></li>
+                                                    <li><a href="about_2.html">FAQs</a></li>
+                                                    <li><a href="about_3.html">RAGBRAI History</a></li>
+                                                    <li><a href="about_4.html">RAGBRAI Expo</a></li>
+                                                    <li><a href="about_5.html">Contact</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Route</h4>
+                                                <ul>
+                                                    <li><a href="">2016 Host Communities</a></li>
+                                                    <li><a href="">2016 Route Maps</a></li>
+                                                    <li><a href="">2016 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Host Communities</a></li>
+                                                    <li><a href="">2015 Route Maps</a></li>
+                                                    <li><a href="">2015 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Interactive Route Map</a></li>
+                                                    <li><a href="">Past Overnight Towns Grid</a></li>
+                                                    <li><a href="">GeoBike Profiles</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Services</h4>
+                                                <ul>
+                                                     <li><a href="gallery_1.html">Charter Services</a></li>
+                                                    <li><a href="gallery_2.html">Bike and Luggage Shipping</a></li>
+                                                    <li><a href="gallery_3.html">Airport Shuttles</a></li>
+                                                    <li><a href="gallery_4.html">Bike Shops</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Training</h4>
+                                                <ul>
+                                                    <li><a href="services_1.html">Training Blog</a></li>
+                                                    <li><a href="services_2.html">Training</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Safety</h4>
+                                                <ul>
+                                                    <li><a href="team_1.html">RIDE RIGHT Brochures</a></li>
+                                                    <li><a href="team_2.html">Iowa State Patrol</a></li>
+                                                    <li><a href="team_2.html">Rider Safety</a></li>
+                                                    <li><a href="team_2.html">Driver Safety</a></li>
+                                                    <li><a href="team_2.html">Road Signs</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="">Register</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a  href="#">Videos</a></li>
+                                <li><a href="#">Podcasts</a></li>
+                                <li><a href="#">Events/Expo</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form action="/">
+                        <div class="col-sm-6 col-sm-offset-3 col-xs-10">
+                            <input type="text" autofocus placeholder="Start typing...">
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <a href="" class="sclose"><i class="custom-icon custom-icon-lightclose"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /.header -->
+    
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="border-top"></div>
+        
+        <div class="container breadcrumbs">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="start_agency.html"><i class="fa fa-home"></i> Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><a href="catalog_grid.html">Shop</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><a href="catalog_list_sidebar_2.html">RAGBRAI XLV</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                       
+                        <li class="active">2017 Women's Logo Tee</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+       
+        <div class="container product padding-top-small">
+            <div class="woocommerce-message">"2016 Patch" has been added to your cart.<a href="http://ragbrai.com/cart/" class="btn btn-primary wc-forward pull-right">View Cart</a></div>
+            <!-- Product Gallery -->
+            <div class="col-sm-6 product-gallery">
+                 <div class="owl-carousel owl-centered productgallery">
+                    <a href="images/shirt1.jpg"><img src="images/shirt1.jpg" data-gallery="#product"></a>
+                    <a href="images/Red-Back.jpg"><img src="images/Red-Back.jpg" data-gallery="#product"></a>
+                    <a href="images/grey-front.jpg"><img src="images/grey-front.jpg" data-gallery="#product"></a>
+                    <a href="images/grey-back.jpg"><img src="images/grey-back.jpg" data-gallery="#product"></a>
+                </div>
+
+            </div>
+            <!-- /product gallery -->
+            
+            <div class="col-sm-6 product-info">
+                <div class="row">
+                    <h2>2017 Women's Logo Tee</h2>
+                    <div class="cost">
+                        $25.00
+                    </div>
+                </div>
+             
+                <div class="row margin-top-0">
+                    <p>Get ready for summer with this super soft tee, which features the 2017 XLV RAGBRAI logo screened in blue and white. IOWA is screened on the back. Shirt by District Made in heathered red and charcoal.</p>
+                    <p>Heathered Red Available in: Small, Medium, Large, XLarge, 2XLarge</p>
+                    <p>Charcoal Available in: Small, Medium, Large, XLarge, 2XLarge, 3XLarge</p>
+                </div>
+                
+                <div class="row margin-top-0">
+                    <table class="product-variation">
+                        <tr>
+                            <td><b>SIZE:</b></td>
+                            <td>
+                                <select>
+                                    <option value="1">Small</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">Large</option>
+                                    <option value="4">XLarge</option>
+                                    <option value="5">2XLarge</option>
+                                    <option value="6">3XLarge</option>
+                                </select>
+                            </td>
+                        </tr>      
+                        <tr>
+                            <td><b>COLOR:</b></td>
+                   
+                            <td>
+                                <select>
+                                    <option value="1">Heathered Red</option>
+                                    <option value="2">Charcoal</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="quantity"><input type="number" step="1" min="" max="" name="quantity" value="1" title="Qty" class="input-text qty text" pattern="[0-9]*" inputmode="numeric"></td>
+                            <td class="quantity-add"><a class="btn btn-primary add-cart" href="">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="available-qty reddish">6 in stock</td>
+                        </tr>
+                    </table>  
+               
+            </div>
+        </div>
+
+        </div>
+    </div>
+    
+    <div class="tabs">
+        <ul class="container nav nav-tabs text-center">
+            <li class="active"><a href="#related" data-toggle="tab"><span>Related Products</span></a></li>
+            <li><a href="#reviews" data-toggle="tab"><span>Reviews</span></a></li>
+        </ul>
+        <div class="highlight">
+            <div class="container tab-content">
+                    <div class="tab-pane fade in active" id="related">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 text-center">
+                            <img src="images/2017-Long-Sleeve-Tee-300x300.jpg">
+                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
+                                <p class="grey">$20</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/shirt3.jpg">
+                                <h1 class="shop-item">2017 Hooded Sweatshirt</h1>
+                                <p class="grey">$45.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/shirt4.png">
+                               <h1 class="shop-item">2017 Men's Logo Tee</h1>
+                                <p class="grey">$25.00</p>
+                            </div>
+                            <div class="col-md-3 col-sm-6 text-center">
+                                <img src="images/2015SouvenirT_front-300x300.png">
+                                <h1 class="shop-item">2015 Souvenir T-Shirt</h1>
+                                <p class="grey">$8.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews">
+                        <div class="row">
+                            <h2>2 Reviews</h2>
+                            <div  class="border-top"></div>
+                            <div class="col-sm-3" style="padding-top:50px;">
+                                <a href="team_person.html"><img src="images/generic-user.png" alt="" class="user-img"></a>
+                                <p class="grey">Susana Jacobs
+                                <br>Jul. 12, 2016</p>
+                            </div>
+                            <div class="col-sm-9 padding-top-small">
+                                <div class="row comment">
+                                    
+                                    <div class="col-xs-12">
+                                        <div class="comment-line">
+                                           <div class="raty inline-block" data-score="5" data-readonly="true"></div>
+                                        </div>
+                                        <p>Just received it in the mail and it looks great! Awesome shirt!!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <a href="team_person.html"><img src="images/generic-user.png" alt="" class="user-img"></a>
+                                <p class="grey">Aaron Baumann
+                                <br>Aug. 12, 2016</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="row comment">
+                                    <div class="col-xs-12">
+                                        <div class="comment-line">
+                                           <div class="raty inline-block" data-score="2" data-readonly="true"></div>
+                                        </div>
+                                        <p>Was so excited to get my jersey I ordered during registration. Tried it on and was disappointed. Love the jersey! Was too small overall, especially in the arm openings. Going to order the next size up (women’s XL) and keep my fingers crossed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h2 style="margin-left:-15px;margin-bottom: 10px;">Add Your Review</h2>
+                                <p class="grey" style="margin-bottom: 8px;">Choose your rating</p>
+                                 <div class="rating-wrap">
+                                        <div class="raty"></div>
+                                    </div>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="row comment">
+                                    <div class="col-xs-12">
+                                        <div class="comment-line">
+                                            <p>Write your review</p>
+                                            <form class="comment-form">
+                                                <div class="formwrap">
+                                          
+                                                    <div class="form-group">
+                                                        <textarea rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="checkbox margin-bottom-20">
+                                                    <label>
+                                                        <input type="checkbox" value="">
+                                                        Yes, add me to your newsletter mailing list
+                                                    </label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary btn-validation">Submit Review</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1 class="slide-title">About Our Store</h1>
+            </div>
+            <div class="col-sm-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin lobortis mauris. Vivamus cursus mi ac laoreet sagittis. Sed vulputate lectus ut dui aliquet pretium. Quisque elementum elit id ipsum condimentum, id vehicula massa facilisis.</p><p> Mauris rhoncus vulputate tellus tincidunt dapibus. Sed nibh eros, blandit ut tellus eu, semper blandit felis. Suspendisse ut dignissim orci. Praesent commodo dictum lobortis. Cras eget imperdiet ipsum. Donec congue ac nisi id tempus. Pellentesque venenatis eget est eget pretium.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.wrapper -->
+<!-- FOOTER -->
+<footer class="footer">
+    <!-- CONTAINER -->
+    <div class="container foorow-1 foorow">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 fabout">
+                <h3><a href="about_1.html">Facebook Feed</a></h3>
+                <ul class="twitter-list">
+                    <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                        <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="elements_recent_works.html">Twitter Feed</a></h3>
+                <ul class="twitter-list">
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas</p>
+                        <div class="date">June 18, 2014</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Mellentesque habitant morbi tristique senectus et netus et malesuada <a href="">goo.gl/A65qt</a> enim eleifend felis pretium</p>
+                        <div class="date">September 8, 2014</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="sitemap.html">Newsletter</a></h3>
+                <div id="feedback-form">
+                    <form action="http://aisconverse.us8.list-manage.com/subscribe/post?u=86ec31fd6b7533ccaa2435111&amp;id=a1293dd461" method="post">
+                        <input name="EMAIL" placeholder="Your Email" required type="email" class="pull-left">
+                        <button type="submit" class="btn btn-primary pull-right">Ok</button>
+                    </form>
+                    <div class="success-block"></div>
+                    <p>Sign up for the latest RAGBRAI news and notes. (If there is no news in a day, you won't receive an email.)</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- /.container -->   
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="row foorow-2 foorow">
+            <div class="col-sm-4">
+                <h3><a href="events_1.html">Upcoming Events</a></h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">January 21, 2017 - RAGBRAI Route Announcement Party</a></p>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">May 20, 2017 - PIGTAILS at Prairie Trail</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">June 17, 2017 - BACooN Ride 4</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 22, 2017 - RAGBRAI Expo</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 23-29, 2017 - RAGBRAI XLV</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3>Forum Topics</h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle" style="font-size:12px;"></div>
+                        <p><a href="">Best Tenderloin Ever</a></p>
+                        <div class="date">2 days, 17 hours ago</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div><p><a href="">Smartphone App that would be very helpful for RAGBRAI groups</a></p>
+                        <div class="date">11 hours, 50 minutes ago</div>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div><p><a href="">Rides for Partial Route</a></p>
+                        <div class="date">5 days, 22 hours ago</div>
+                    </li>
+                </ul>
+            </div>
+   
+        </div>
+
+        <div class="row foorow-3 foorow">
+            <div class="col-md-6 col-sm-7">
+                <a href="index.html" class="logo">RAGBRAI</a>
+                <p>&copy; 2016 RAGBRAI. <a href="">Terms of Service</a> | <a href="">Privacy Policy</a></p>
+            </div>
+            <div class="col-md-6 col-sm-5">
+                <ul class="social pull-right">
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-tumblr-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+<!-- /.footer -->
+
+<!-- Popup: Login -->
+<div class="block-popup popup plogin" id="login">
+    <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
+    <h3 class="text-center">Login to account</h3>
+    <form action="/" class="loginform">
+        <div class="formwrap">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control login-password" placeholder="Password" id="login-password">
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Remember me
+            </label>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-default block btn-validation">Login</button>
+            <a href="">Forgot password?</a>
+        </div>
+    </form>
+    <div class="footlogin highlight text-center">
+        <ul class="social">
+            <li><a href="" class="fa fa-facebook-square"></a></li>
+            <li><a href="" class="fa fa-twitter"></a></li>
+            <li><a href="" class="fa fa-google-plus-square"></a></li>
+        </ul>
+        <p>Or login with your social account</p>
+    </div>
+    <a href="privacy_policy.html" class="a-privacy text-center">Privacy Policy</a>
+</div>
+<!-- /.popup -->
+
+<!-- ScrollTop Button -->
+<a href="#" class="scrolltop">
+    <i class="custom-icon custom-icon-scrolltop"></i>
+</a>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-plugins.js"></script>
+<script src="js/1-custom-3.js"></script>
+
+
+
+<script src="lightGallery-master/dist/js/lightgallery.js"></script>
+<script src="lightGallery-master/demo/js/lg-fullscreen.js"></script>
+<script src="lightGallery-master/demo/js/lg-video.js"></script>
+<script src="http://vjs.zencdn.net/5.16.0/video.js"></script>
+<script src="lightGallery-master/demo/js/lg-zoom.js"></script>
+<script src="lightGallery-master/demo/js/lg-hash.js"></script>
+<script src="lightGallery-master/demo/js/1-lg-share-2.js"></script>
+
+<script src="js/lightbox-script.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+
+
+</body>
+</html>
+
+<!--
+<img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/10/Womens-Tee-Charcoal.jpg" style="height: 700px; width: 700px;">
+<img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/10/Womens-Tee-Charcoal-Back.jpg" style="height: 700px; width: 700px;">
+<img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/10/Womens-Tee-Red-Back.jpg" style="height: 700px; width: 700px;">
+<img id="fullResImage" src="http://ragbrai.com/wp-content/uploads/2016/10/Womens-Tee-Red.jpg" style="height: 700px; width: 700px;">
+-->
