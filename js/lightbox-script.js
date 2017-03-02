@@ -167,17 +167,3 @@ jQuery( document ).ready(function() {
 
     });
 });
-
-/*jQuery(window).on("load resize", function () {
-        // THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
-        // TO MAKE IT ALL NEAT 
-			amount = jQuery('.owl-dot').length;
-			slidewidth = jQuery('.owl-item').outerWidth();
-			gotowidth = Math.round (slidewidth/amount);
-			gotowidth = gotowidth - ((amount - 1)*10);
-			console.log('gpwowidth '+gotowidth);
-			jQuery('.owl-dot').css("width", gotowidth+"px");
-			newwidth = jQuery('.owl-dot').outerWidth();
-			console.log(newwidth);
-			jQuery('.owl-dot').css("height", newwidth+"px");
-		});*/

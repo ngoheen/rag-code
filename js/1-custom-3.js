@@ -143,7 +143,7 @@
             this.addCart = $('.add-cart');
             this.jslider = $('.jslider');
             this.rating = $('.raty');
-            this.thumbsSlider = $('.thumbs-slider');
+            this.thumbsSlider = $('.owl-slider');
             this.mediumSlider = $('.medium-slider');
             this.counting = $('.counting');
             this.aLess = $('.a-less');
