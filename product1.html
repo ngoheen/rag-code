@@ -39,6 +39,64 @@
     table.product-variation tbody tr:first-child td {
         padding-top: 0;
     }
+    .product-gallery .owl-carousel .owl-item img {
+        max-height: 95%;
+        width: auto;
+        max-width: 100%;
+        margin-top:20px;
+    }
+    
+  .product-gallery .owl-carousel {
+    height: 600px;
+    }
+.product-gallery .owl-centered .owl-item {
+        display: table-cell;
+        float: none;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+.product-gallery .owl-centered .owl-item > img {
+  text-align: center;
+  height: auto;
+}
+.product-gallery .owl-carousel .owl-dot {float: left; background-size: cover; margin-top: 10px;}
+.product-gallery .owl-dots { 
+    font-size: 1px;
+    line-height:1;
+    margin:35px auto 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.product-gallery .owl-dots .owl-dot {   
+    background-color: transparent;
+    border-radius: 0%;
+    display: inline-block;    
+    height: 80px;
+    margin:0 5px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-indent:- 9999px;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.owl-dots .owl-dot.active,
+.owl-dots .owl-dot:hover {
+    background-color:transparent;
+    border: 1px solid #ddd;
+    width: 80px;
+    height: 80px;
+    margin:0 5px;
+}
+.owl-dots .owl-dot:first-child {
+    margin-left: 0;
+}
+.owl-dots .owl-dot:last-child {
+    margin-right: 0;
+}
     </style>
 </head>
 
@@ -196,33 +254,15 @@
         <div class="container product padding-top">
 
             <!-- Product Gallery -->
-            <div class="col-sm-6 product-gallery magnific-wrap">
-                <div class="img-medium text-center">
-                    <div class="medium-slider">
-                        <a href="http://media.aisconverse.com/camaro/imgs/cart-big-1.jpg" title="Garment Bag in Tan Atlantic Leather" class="magnific"><img src="http://media.aisconverse.com/camaro/imgs/cart-medium-1.jpg" alt=""></a>
-                    <a href="images/shirt1.jpg" title="red shirt" class="magnific"><img src="images/shirt1.jpg"></a>
-                    </div>
+            <div class="col-sm-6 product-gallery">
+                 <div class="owl-carousel owl-centered" style="background:red;">
+                    <img src="images/shirt1.jpg">
+                    <img src="images/red-back.jpg">
+                    <img src="images/grey-front.jpg">
+                    <img src="images/grey-back.jpg">
                 </div>
+                
 
-                <!-- Thumbs Slider -->
-                <div class="thumbs-wrap">
-                    <a href="" class="th-prev th-arrow pull-left" style="display: block;">
-                        <i class="custom-icon custom-icon-arrow-prev"></i>
-                    </a>
-                    <a href="" class="th-next th-arrow pull-right" style="display: block;">
-                        <i class="custom-icon custom-icon-arrow-next"></i>
-                    </a>
-                    <div class="thwrap">
-                        <div class="caroufredsel_wrapper" style="display: block; text-align: start; float: none; position: relative; top: auto; right: auto; bottom: auto; left: auto; z-index: auto; width: 385px; height: 80px; margin: 0px; overflow: hidden;"><div class="thumbs-slider" style="text-align: left; float: none; position: absolute; top: 0px; right: auto; bottom: auto; left: 21px; margin: 0px; width: 1417px; height: 80px;">
-                            <a href="images/imgs/cart-medium-1.jpg" data-bigimg="images/imgs/cart-big-1.jpg" class="itm0 selected"><img src="images/imgs/cart-thumb-1.jpg" alt=""></a>
-                            <a href="images/imgs/cart-medium-2.jpg" data-bigimg="images/imgs/cart-big-2.jpg" class="itm1"><img src="images/imgs/cart-thumb-2.jpg" alt=""></a>
-                            <a href="images/imgs/cart-medium-3.jpg" data-bigimg="images/imgs/cart-big-3.jpg" class="itm2"><img src="images/imgs/cart-thumb-3.jpg" alt=""></a>
-                            <a href="images/imgs/cart-medium-4.jpg" data-bigimg="images/imgs/cart-big-4.jpg" class="itm3" style="margin-right: 23px;"><img src="images/imgs/cart-thumb-4.jpg" alt=""></a>
-                            <a href="images/imgs/cart-medium-2.jpg" data-bigimg="images/imgs/cart-big-2.jpg" class="itm4"><img src="images/imgs/cart-thumb-2.jpg" alt=""></a>
-                            <a href="images/imgs/cart-medium-3.jpg" data-bigimg="images/imgs/cart-big-3.jpg" class="itm5"><img src="images/imgs/cart-thumb-3.jpg" alt=""></a>
-                        </div></div>
-                    </div>
-                </div>
             </div>
             <!-- /product gallery -->
             

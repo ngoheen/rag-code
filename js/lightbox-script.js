@@ -151,7 +151,9 @@ jQuery( document ).ready(function() {
     // 1) ASSIGN EACH 'DOT' A NUMBER
     dotcount = 1;
 	 
+
     jQuery('.product-gallery .owl-dot').each(function() {
+
         jQuery( this ).addClass( 'dotnumber' + dotcount);
         jQuery( this ).attr('data-info', dotcount);
         dotcount=dotcount+1;
@@ -160,13 +162,17 @@ jQuery( document ).ready(function() {
     // 2) ASSIGN EACH 'SLIDE' A NUMBER
     slidecount = 1;
 	 
+
     jQuery('.product-gallery .owl-item').not('.cloned').each(function() {
+
         jQuery( this ).addClass( 'slidenumber' + slidecount);
         slidecount=slidecount+1;
     });
 			
     // SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+
     jQuery('.product-gallery .owl-dot').each(function() {
+
 			
         grab = jQuery(this).data('info');
 
