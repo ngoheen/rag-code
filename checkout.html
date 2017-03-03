@@ -538,7 +538,7 @@ Wyoming-->
                             Ship to different address?
                         <input type="checkbox" name="optionsCheckbox2" id="optionsChackbox2" value="option1">
                     </label>
-                    <div id="shipto" class="collapse padding-top-small">
+                    <div id="shipto" class="collapse">
                         <form action="/">
                             <div class="formwrap">
                                 <div class="form-group">
@@ -845,7 +845,21 @@ Wyoming-->
                 </div>
             </div>
             <!-- /.row -->
-
+            
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4 col-sm-7 col-md-offset-8 text-right">
+                    <form class="form-inline">
+                        <input type="text" class="form-control border" id="couponInput" placeholder="Coupon code">
+                        <button type="submit" class="btn btn-default btn-sm">Apply</button>
+                    </form>
+                </div>
+             
+            </div>
+            <!-- /.row -->
+           
+            <h3 class="padding-left-15">Items Purchased</h3>
+            
             <!-- TABLE -->
             <div class="table-responsive">
                 <table class="cart-table border-bottom">
@@ -856,57 +870,83 @@ Wyoming-->
                         <th>Price</th>
                         <th>Quantity</th>
                         <th>Subtotal</th>
+                        <th>&nbsp;</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="text-center">
-                                <a href="product.html"><img src="http://media.aisconverse.com/camaro/imgs/cart-table-1.jpg" alt=""></a>
+                                <a href="product.html"><img src="images/cart-cap.jpg" alt=""></a>
                             </td>
                             <td class="td-descr">
-                                <a href="product.html">Garment Bag in Tan Atlantic Leather </a>
+                                <a href="product.html">Classic Blue & Red Striped Cycling Cap</a>
+                                <br> Size: X-Large
                             </td>
                             <td>
-                                <div class="cost">$ 59,00</div>
+                                <div class="cost">$ 20.00</div>
                             </td>
                             <td>
-                                <div class="counting">1</div>
+                                <div class="counting inline-block">
+                                    <a href="" class="a-less disabled">-</a>
+                                    <input type="text" value="1">
+                                    <a href="" class="a-more">+</a>
+                                </div>
                             </td>
                             <td>
-                                <div class="cost">$ 59,00</div>
+                                <div class="cost">$ 20.00</div>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="pclose small tr-remove"><i class="custom-icon custom-icon-close-s"></i></a>
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <a href="product.html"><img src="http://media.aisconverse.com/camaro/imgs/cart-table-2.jpg" alt=""></a>
+                                <a href="product.html"><img src="images/cart-shirts.jpg" alt=""></a>
                             </td>
                             <td class="td-descr">
-                                <a href="product.html">Buckingham Leather 3-Bellows<br> Briefcase in Tan Miret Bridle</a>
+                                <a href="product.html">2017 Riverboat Logo Cycling Cap</a>
+                                <br>Size: X-Large
                             </td>
                             <td>
-                                <div class="cost">$ 1 060,00</div>
+                                <div class="cost">$ 20.00</div>
                             </td>
                             <td>
-                                <div class="counting">2</div>
+                                <div class="counting inline-block">
+                                    <a href="" class="a-less disabled">-</a>
+                                    <input type="text" value="1">
+                                    <a href="" class="a-more">+</a>
+                                </div>
                             </td>
                             <td>
-                                <div class="cost"> 1 060,00</div>
+                                <div class="cost">$ 20.00</div>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="pclose small tr-remove"><i class="custom-icon custom-icon-close-s"></i></a>
                             </td>
                         </tr>
                         <tr>
                             <td class="text-center">
-                                <a href="product.html"><img src="http://media.aisconverse.com/camaro/imgs/cart-table-3.jpg" alt=""></a>
+                                <a href="product.html"><img src="images/cart-shirt.jpg" alt=""></a>
                             </td>
                             <td class="td-descr">
-                                <a href="product.html">Grafton Laptop Briefcase in Sundance</a>
+                                <a href="product.html">2017 Men's Logo Tee</a>
+                                <br>Size: X-Large
                             </td>
                             <td>
-                                <div class="cost">$ 170,00</div>
+                                <div class="cost">$ 120.00</div>
                             </td>
                             <td>
-                                <div class="counting">1</div>
+                                <div class="counting inline-block">
+                                    <a href="" class="a-less disabled">-</a>
+                                    <input type="text" value="1">
+                                    <a href="" class="a-more">+</a>
+                                </div>
+                            </td>
                             <td>
-                                <div class="cost">$ 170,00</div>
+                                <div class="cost">$ 120.00</div>
+                            </td>
+                            <td class="text-center">
+                                <a href="" class="pclose small tr-remove"><i class="custom-icon custom-icon-close-s"></i></a>
                             </td>
                         </tr>
                     </tbody>
@@ -920,8 +960,8 @@ Wyoming-->
                     <h3 class="normal">Cart Totals</h3>
                     <table class="cart-total">
                         <tr>
-                            <th>Cart Subtotal</th>
-                            <td>$ 2 349,00</td>
+                            <th>Subtotal</th>
+                            <td>$ 2,349.00</td>
                         </tr>
                         <tr>
                             <th>Shipping</th>
@@ -929,7 +969,7 @@ Wyoming-->
                         </tr>
                         <tr>
                             <th>Order Total</th>
-                            <td>$ 2 349,00</td>
+                            <td>$ 2,349.00</td>
                         </tr>
                     </table>
                 </div>
@@ -937,175 +977,19 @@ Wyoming-->
             <!-- /.row -->
 
             <!-- row -->
-            <div class="row border-bottom">
-                <div class="panel-group" id="payment">
-                    <div class="panel panel-default">
-                        <div class="radio">
-                            <label data-toggle="collapse" data-target="#payment-1" data-parent="#payment">
-                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                Direct Bank Transfer
-                            </label>
-                        </div>
-                        <div id="payment-1" class="collapse in payment col-md-7">
-                            <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="radio">
-                            <label data-toggle="collapse" data-target="#payment-2" data-parent="#payment">
-                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                Cheque Payment
-                            </label>
-                        </div>
-                        <div id="payment-2" class="collapse payment col-md-7" data-parent="true">
-                            <p>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="radio">
-                            <label data-toggle="collapse" data-target="#payment-3" data-parent="#payment">
-                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-                                PayPal
-                                <img src="http://media.aisconverse.com/camaro/imgs/paypal.jpg" alt="">
-                            </label>
-                        </div>
-                        <div id="payment-3" class="collapse payment col-md-7">
-                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          
             <!-- /.row -->
 
             <!-- row -->
             <div class="row">
                 <div class="col-md-12 text-right">
-                    <a href="confirmation.html" class="btn btn-default">Place Order</a>
+                    <a href="checkout2.html" class="btn btn-primary">Continue to Payment</a>
                 </div>
             </div>
             <!-- /.row -->
 
         </div>
         <!-- /.container -->
-    </div>
-    
-    <div class="tabs">
-        <ul class="container nav nav-tabs text-center">
-            <li class="active"><a href="#related" data-toggle="tab"><span>Related Products</span></a></li>
-            <li><a href="#reviews" data-toggle="tab"><span>Reviews</span></a></li>
-        </ul>
-        <div class="highlight">
-            <div class="container tab-content">
-                    <div class="tab-pane fade in active" id="related">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6 text-center">
-                            <img src="images/2017-Long-Sleeve-Tee-300x300.jpg">
-                                <h1 class="shop-item">2017 Long-sleeve Logo Tee</h1>
-                                <p class="grey">$20</p>
-                            </div>
-                            <div class="col-md-3 col-sm-6 text-center">
-                                <img src="images/shirt3.jpg">
-                                <h1 class="shop-item">2017 Hooded Sweatshirt</h1>
-                                <p class="grey">$45.00</p>
-                            </div>
-                            <div class="col-md-3 col-sm-6 text-center">
-                                <img src="images/shirt4.png">
-                               <h1 class="shop-item">2017 Men's Logo Tee</h1>
-                                <p class="grey">$25.00</p>
-                            </div>
-                            <div class="col-md-3 col-sm-6 text-center">
-                                <img src="images/2015SouvenirT_front-300x300.png">
-                                <h1 class="shop-item">2015 Souvenir T-Shirt</h1>
-                                <p class="grey">$8.00</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="reviews">
-                        <div class="row">
-                            <h2>2 Reviews</h2>
-                            <div  class="border-top"></div>
-                            <div class="col-sm-3" style="padding-top:50px;">
-                                <a href="team_person.html"><img src="images/generic-user.png" alt="" class="user-img"></a>
-                                <p class="grey">Susana Jacobs
-                                <br>Jul. 12, 2016</p>
-                            </div>
-                            <div class="col-sm-9 padding-top-small">
-                                <div class="row comment">
-                                    
-                                    <div class="col-xs-12">
-                                        <div class="comment-line">
-                                           <div class="raty inline-block" data-score="5" data-readonly="true"></div>
-                                        </div>
-                                        <p>Just received it in the mail and it looks great! Awesome shirt!!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <a href="team_person.html"><img src="images/generic-user.png" alt="" class="user-img"></a>
-                                <p class="grey">Aaron Baumann
-                                <br>Aug. 12, 2016</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="row comment">
-                                    <div class="col-xs-12">
-                                        <div class="comment-line">
-                                           <div class="raty inline-block" data-score="2" data-readonly="true"></div>
-                                        </div>
-                                        <p>Was so excited to get my jersey I ordered during registration. Tried it on and was disappointed. Love the jersey! Was too small overall, especially in the arm openings. Going to order the next size up (women’s XL) and keep my fingers crossed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                     
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h2 style="margin-left:-15px;margin-bottom: 10px;">Add Your Review</h2>
-                                <p class="grey" style="margin-bottom: 8px;">Choose your rating</p>
-                                 <div class="rating-wrap">
-                                        <div class="raty"></div>
-                                    </div>
-                            </div>
-                            <div class="col-sm-9">
-                                <div class="row comment">
-                                    <div class="col-xs-12">
-                                        <div class="comment-line">
-                                            <p>Write your review</p>
-                                            <form class="comment-form">
-                                                <div class="formwrap">
-                                          
-                                                    <div class="form-group">
-                                                        <textarea rows="4"></textarea>
-                                                    </div>
-                                                </div>
-                                               
-                                                <div class="checkbox margin-bottom-20">
-                                                    <label>
-                                                        <input type="checkbox" value="">
-                                                        Yes, add me to your newsletter mailing list
-                                                    </label>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary btn-validation">Submit Review</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-4">
-                <h1 class="slide-title">About Our Store</h1>
-            </div>
-            <div class="col-sm-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin lobortis mauris. Vivamus cursus mi ac laoreet sagittis. Sed vulputate lectus ut dui aliquet pretium. Quisque elementum elit id ipsum condimentum, id vehicula massa facilisis.</p><p> Mauris rhoncus vulputate tellus tincidunt dapibus. Sed nibh eros, blandit ut tellus eu, semper blandit felis. Suspendisse ut dignissim orci. Praesent commodo dictum lobortis. Cras eget imperdiet ipsum. Donec congue ac nisi id tempus. Pellentesque venenatis eget est eget pretium.</p>
-            </div>
-        </div>
     </div>
 </div>
 <!-- /.wrapper -->
@@ -1225,14 +1109,14 @@ Wyoming-->
 <!-- Popup: Login -->
 <div class="block-popup popup plogin" id="login">
     <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
-    <h3 class="text-center">Login to account</h3>
+    <h3 class="text-center">Log In to Account</h3>
     <form action="/" class="loginform">
         <div class="formwrap">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username">
+            <div class="form-group" style="margin-top:20px;">
+                <input type="text" class="form-control" placeholder="Username or Email" style="padding-bottom:10px;">
             </div>
             <div class="form-group has-feedback">
-                <input type="password" class="form-control login-password" placeholder="Password" id="login-password">
+                <input type="password" class="form-control login-password" placeholder="Password" id="login-password" style="padding-top:6px;">
             </div>
         </div>
         <div class="checkbox">
@@ -1242,19 +1126,18 @@ Wyoming-->
             </label>
         </div>
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-default block btn-validation">Login</button>
+            <button type="submit" class="btn btn-primary block btn-validation">Login</button>
+        </div>
+        <div class="form-group text-center padding-top-10">
             <a href="">Forgot password?</a>
         </div>
+        <div class="form-group text-center">
+            <a href="">Create an Account?</a>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Register for The Ride</a>
+        </div>
     </form>
-    <div class="footlogin highlight text-center">
-        <ul class="social">
-            <li><a href="" class="fa fa-facebook-square"></a></li>
-            <li><a href="" class="fa fa-twitter"></a></li>
-            <li><a href="" class="fa fa-google-plus-square"></a></li>
-        </ul>
-        <p>Or login with your social account</p>
-    </div>
-    <a href="privacy_policy.html" class="a-privacy text-center">Privacy Policy</a>
 </div>
 <!-- /.popup -->
 

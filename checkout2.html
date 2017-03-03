@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>RAGBRAI</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/1-style-4.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
+    <link rel="stylesheet" href="css/1-extra-2.css">
+<style>
+table[role=presentation] tr td.main:first-child {
+    width: 30% !important;
+    box-sizing: border-box;
+}
+table[role=presentation] tr td.main:last-child {
+ width: 70% !important;
+ box-sizing: border-box;
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+}
+table[role=presentation] td.main  {
+    height: 43px !important;
+    padding: 0;
+    width: 100%;
+}
+table[role=presentation] td.main select {
+    -webkit-appearance: none;
+    -moz-appearance : none;
+    background-color: #fff;
+    border:solid 1px #B3B3B3;
+    border-radius:3px;
+    font-size: 16px;
+    height: 43px !important;
+    padding:0 18px;
+    width: 100%;
+ }
+table[role=presentation] td.main select[name = cresecure_cc_expires_month],
+table[role=presentation] td.main select[name = cresecure_cc_expires_year] {
+    height: 43px;
+    padding-left: 18px;
+    border-radius: 0;
+    border-bottom: none;
+    border-top: none;
+    float: left;
+
+}
+table[role=presentation] td.main select[name = cresecure_cc_expires_month] {
+    width: calc(100% - 109px);
+    float: left;
+}
+table[role=presentation] td.main select[name = cresecure_cc_expires_year] {
+   
+    border-left: none;
+    font-weight: 400;
+    width: 105px;
+    float: right;
+}
+table[role=presentation] td.main select:after {
+    background: url(images/icons.png) -312px -61px no-repeat;
+    width: 9px;
+    display: inline-block;
+    top: -2px;
+    height: 5px;
+}
+table[role=presentation] td.main label {
+    font-size: 14px;
+}
+input.submitButton,
+a#cancelButton {
+    background: #B3B3B3;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 48px;
+    padding: 15px;
+}
+input.submitButton {
+    background:#e7543d;
+    border-style: none;
+    border-width: 0;
+    color: #fff;
+    font-weight: 400;
+    padding: 1px 15px;
+}
+table[role=presentation] td.main div {
+    margin-top: 20px;
+}
+input#name {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+input#PAN {
+    border-radius: 0;
+}
+select#card_type {
+    border-bottom: none;
+    border-radius: 0;
+}
+input#cv_data {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    margin-top: -32px;
+    width: 388px;
+    max-width: 100%;
+}
+label a u {
+    text-decoration: none;
+}
+label a {
+    display: block;
+}
+label a u i {
+    font-style: normal;
+color:#e7543d;
+font-size: 14px;
+    
+}
+</style>
+</head>
+
+<body>
+
+
+
+<!-- WRAPPER -->
+<div class="wrapper">
+
+    <!-- HEADER -->
+    <header class="header sides">
+        <div class="container htop">
+            <div class="col-md-8 col-sm-7">
+                <div class="logo pull-left">
+                    <a href="index.html"><img src="images/header-logo@1x.png"></a>
+                </div>
+                <div class="slogan visible-md">A Des Moines Register tradition since 1973</div>
+            </div>
+            <div class="col-md-4 col-sm-5 text-right">
+                <div class="hcart pull-left">
+                    <a href="cart.html"><i class="custom-icon custom-icon-ico-cart"></i> 3 items - $160.00</a>
+                </div>
+                <a href="" data-popup="login" class="a-login btn btn-primary pull-right">Login</a>
+            </div>
+        </div>
+        <div class="hbottom right-pos border-top">
+            <div class="container">
+                <div class="col-md-1 col-sm-1 iconmenu pull-right text-right">
+                    <a href="" class="a-search"><i class="custom-icon custom-icon-ico-search"></i></a>
+                </div>
+               
+                <div class="col-sm-11 mainmenu">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <nav>
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Home</a></li>
+                               
+                                <li class="dropdown dropdown-menutable">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">The Ride</a>
+                                    <div class="menutable dropdown-menu">
+                                        <div class="divtable">
+                                            <div class="col-md-2">
+                                                <h4>General</h4>
+                                                <ul>
+                                                   <li><a href="about_1.html">General Information</a></li>
+                                                    <li><a href="about_2.html">FAQs</a></li>
+                                                    <li><a href="about_3.html">RAGBRAI History</a></li>
+                                                    <li><a href="about_4.html">RAGBRAI Expo</a></li>
+                                                    <li><a href="about_5.html">Contact</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Route</h4>
+                                                <ul>
+                                                    <li><a href="">2016 Host Communities</a></li>
+                                                    <li><a href="">2016 Route Maps</a></li>
+                                                    <li><a href="">2016 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Host Communities</a></li>
+                                                    <li><a href="">2015 Route Maps</a></li>
+                                                    <li><a href="">2015 Overnight Town Map</a></li>
+                                                    <li><a href="">2015 Interactive Route Map</a></li>
+                                                    <li><a href="">Past Overnight Towns Grid</a></li>
+                                                    <li><a href="">GeoBike Profiles</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Services</h4>
+                                                <ul>
+                                                     <li><a href="gallery_1.html">Charter Services</a></li>
+                                                    <li><a href="gallery_2.html">Bike and Luggage Shipping</a></li>
+                                                    <li><a href="gallery_3.html">Airport Shuttles</a></li>
+                                                    <li><a href="gallery_4.html">Bike Shops</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Training</h4>
+                                                <ul>
+                                                    <li><a href="services_1.html">Training Blog</a></li>
+                                                    <li><a href="services_2.html">Training</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <h4>Safety</h4>
+                                                <ul>
+                                                    <li><a href="team_1.html">RIDE RIGHT Brochures</a></li>
+                                                    <li><a href="team_2.html">Iowa State Patrol</a></li>
+                                                    <li><a href="team_2.html">Rider Safety</a></li>
+                                                    <li><a href="team_2.html">Driver Safety</a></li>
+                                                    <li><a href="team_2.html">Road Signs</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="">Register</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a  href="#">Videos</a></li>
+                                <li><a href="#">Podcasts</a></li>
+                                <li><a href="#">Events/Expo</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="container">
+                    <form action="/">
+                        <div class="col-sm-6 col-sm-offset-3 col-xs-10">
+                            <input type="text" autofocus placeholder="Start typing...">
+                        </div>
+                        <div class="col-md-1 col-xs-2">
+                            <a href="" class="sclose"><i class="custom-icon custom-icon-lightclose"></i></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /.header -->
+    <div class="overlay home small-size">
+        <div class="bg bg-about"></div>
+        <div class="container vmiddle">
+            <div class="row text-center">
+                <h1>Checkout</h1>
+            </div>
+        </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="border-top"></div>
+        
+          <!-- CONTAINER: cart -->
+        <div class="container cart">
+            <a href="checkout.html" class="normal margin-bottom-20 block">Back to Order Details</a>
+            <div class="checkout-step"><h3>2. Payment Information</h3></div>
+            <!-- row -->
+            <div class="row padding-bottom">
+                <div class="col-sm-6">
+                    <h3 class="normal">Enter your payment information</h3>
+                   
+                   <form id="hpp1" name="hpp1" accept-charset="ISO-8859-1" method="post" action="https://safe.chasepaymentechhostedpay.com/securepayments/a1/cc_collection.php?sid=nfc1oqsjni0076nasl9b9o3h57&amp;action=process&amp;t=1488557216">
+        <table width="100%" border="0" role="presentation">
+          <tbody><tr><td class="main" colspan="2"><div id="error_message" style="display:none;"><span class="error_message"></span></div></td></tr>
+          <tr>
+            <td class="main" width="148"><label for="name">Card Holder Name:</label></td>
+            <td class="main" width="200"><input type="text" name="name" id="name" autocomplete="off" value="Sue Blue"></td>
+          </tr>
+          <tr>
+            <td class="main" width="148" height="31"><label for="card_type">Credit Card Type:</label></td>
+            <td class="main" width="200"><select name="card_type" id="card_type" class="creTypeField"><option value="American Express">American Express</option><option value="Discover">Discover</option><option value="MasterCard">MasterCard</option><option value="Visa">Visa</option></select>
+            </td>
+          </tr>    
+          <tr>
+            <td class="main"><label for="PAN">Credit Card Number:</label></td>
+            <td class="main"><input type="text" name="PAN" id="PAN" autocomplete="off"></td>
+          </tr>
+          <tr>
+            <td class="main"><label for="cresecure_cc_expires_month">Expiration Date:</label></td>
+            <td class="main"><select name="cresecure_cc_expires_month" id="cresecure_cc_expires_month"><option value="01">January</option><option value="02">February</option><option value="03">March</option><option value="04">April</option><option value="05">May</option><option value="06">June</option><option value="07">July</option><option value="08">August</option><option value="09">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select>&nbsp;<label for="cresecure_cc_expires_year"><select name="cresecure_cc_expires_year" id="cresecure_cc_expires_year" aria-label="select year"><option value="17">2017</option><option value="18">2018</option><option value="19">2019</option><option value="20">2020</option><option value="21">2021</option><option value="22">2022</option><option value="23">2023</option><option value="24">2024</option><option value="25">2025</option><option value="26">2026</option><option value="27">2027</option><option value="28">2028</option></select></label></td>
+          </tr>
+          
+          <tr>
+            <td class="main"><nobr><label for="cv_data">CVC Number:  <a href="javascript:CVVPopUpWindow('https://safe.chasepaymentechhostedpay.com/securepayments/a1/popup.php?sid=nfc1oqsjni0076nasl9b9o3h57')"><u><i>What is this?</i></u></a></label></nobr></td>
+            <td class="main"><input name="cv_data" type="text" id="cv_data" size="5" maxlength="4" autocomplete="off"></td>
+          </tr>
+          <tr id="paymentButtons">
+            <td class="main" height="83"><span class="main"></span></td>
+            <td class="main">
+              <div><span class="main">
+              <a id="cancelButton" href="https://safe.chasepaymentechhostedpay.com/securepayments/cancel.php?sid=nfc1oqsjni0076nasl9b9o3h57&amp;orderId=1223770&amp;t=1488557216">Cancel</a>&nbsp;&nbsp;
+                            <input type="submit" class="submitButton" name="submitButton" id="submitButton" value="Submit">&nbsp;&nbsp;</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="main"><span class="main"></span></td>
+                                    <td>
+                                        <div id="dws_btn_container"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+</div>
+<!-- /.wrapper -->
+<!-- FOOTER -->
+<footer class="footer">
+    <!-- CONTAINER -->
+    <div class="container foorow-1 foorow">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 fabout">
+                <h3><a href="about_1.html">Facebook Feed</a></h3>
+                <ul class="twitter-list">
+                    <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                        <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
+                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="elements_recent_works.html">Twitter Feed</a></h3>
+                <ul class="twitter-list">
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas</p>
+                        <div class="date">June 18, 2014</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-twitter"></div><p><a href="">@camaro:</a> Mellentesque habitant morbi tristique senectus et netus et malesuada <a href="">goo.gl/A65qt</a> enim eleifend felis pretium</p>
+                        <div class="date">September 8, 2014</div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="col-md-4 col-sm-6">
+                <h3><a href="sitemap.html">Newsletter</a></h3>
+                <div id="feedback-form">
+                    <form action="http://aisconverse.us8.list-manage.com/subscribe/post?u=86ec31fd6b7533ccaa2435111&amp;id=a1293dd461" method="post">
+                        <input name="EMAIL" placeholder="Your Email" required type="email" class="pull-left">
+                        <button type="submit" class="btn btn-primary pull-right">Ok</button>
+                    </form>
+                    <div class="success-block"></div>
+                    <p>Sign up for the latest RAGBRAI news and notes. (If there is no news in a day, you won't receive an email.)</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- /.container -->   
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <div class="row foorow-2 foorow">
+            <div class="col-sm-4">
+                <h3><a href="events_1.html">Upcoming Events</a></h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">January 21, 2017 - RAGBRAI Route Announcement Party</a></p>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">May 20, 2017 - PIGTAILS at Prairie Trail</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">June 17, 2017 - BACooN Ride 4</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 22, 2017 - RAGBRAI Expo</a></p>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div>
+                        <p><a href="">July 23-29, 2017 - RAGBRAI XLV</a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h3>Forum Topics</h3>
+                <ul class="footer-list">
+                    <li>
+                        <div class="fa fa-circle" style="font-size:12px;"></div>
+                        <p><a href="">Best Tenderloin Ever</a></p>
+                        <div class="date">2 days, 17 hours ago</div>
+                    </li>
+                    <li>
+                        <div class="fa fa-circle"></div><p><a href="">Smartphone App that would be very helpful for RAGBRAI groups</a></p>
+                        <div class="date">11 hours, 50 minutes ago</div>
+                    </li>
+                     <li>
+                        <div class="fa fa-circle"></div><p><a href="">Rides for Partial Route</a></p>
+                        <div class="date">5 days, 22 hours ago</div>
+                    </li>
+                </ul>
+            </div>
+   
+        </div>
+
+        <div class="row foorow-3 foorow">
+            <div class="col-md-6 col-sm-7">
+                <a href="index.html" class="logo">RAGBRAI</a>
+                <p>&copy; 2016 RAGBRAI. <a href="">Terms of Service</a> | <a href="">Privacy Policy</a></p>
+            </div>
+            <div class="col-md-6 col-sm-5">
+                <ul class="social pull-right">
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa fa-tumblr-square"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</footer>
+<!-- /.footer -->
+
+<!-- Popup: Login -->
+<div class="block-popup popup plogin" id="login">
+    <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
+    <h3 class="text-center">Log In to Account</h3>
+    <form action="/" class="loginform">
+        <div class="formwrap">
+            <div class="form-group" style="margin-top:20px;">
+                <input type="text" class="form-control" placeholder="Username or Email" style="padding-bottom:10px;">
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control login-password" placeholder="Password" id="login-password" style="padding-top:6px;">
+            </div>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Remember me
+            </label>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary block btn-validation">Login</button>
+        </div>
+        <div class="form-group text-center padding-top-10">
+            <a href="">Forgot password?</a>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Create an Account?</a>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Register for The Ride</a>
+        </div>
+    </form>
+</div>
+<!-- /.popup -->
+
+<!-- ScrollTop Button -->
+<a href="#" class="scrolltop">
+    <i class="custom-icon custom-icon-scrolltop"></i>
+</a>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-plugins.js"></script>
+<script src="js/1-custom-3.js"></script>
+
+
+
+<script src="lightGallery-master/dist/js/lightgallery.js"></script>
+<script src="lightGallery-master/demo/js/lg-fullscreen.js"></script>
+<script src="lightGallery-master/demo/js/lg-video.js"></script>
+<script src="http://vjs.zencdn.net/5.16.0/video.js"></script>
+<script src="lightGallery-master/demo/js/lg-zoom.js"></script>
+<script src="lightGallery-master/demo/js/lg-hash.js"></script>
+<script src="lightGallery-master/demo/js/1-lg-share-2.js"></script>
+
+<script src="js/lightbox-script.js"></script>
+<script src="js/owl.carousel.js"></script>
+
+
+
+</body>
+</html>

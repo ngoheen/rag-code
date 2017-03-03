@@ -259,7 +259,7 @@ table:last-child{
     border: 0;
 }
 
-.table-responsive table{
+.table-responsive table {
     margin-bottom: 20px;
 }
 
@@ -478,6 +478,12 @@ body.container .footer .container:last-child{
 }
 .padding-bottom-0 {
     padding-bottom: 0 !important;
+}
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.padding-top-10 {
+    padding-top: 10px !important;
 }
 .padding-top-0{
     padding-top: 0 !important;
@@ -3560,7 +3566,9 @@ input[type=search].border-bottom,
 textarea.border-bottom {
     border-bottom:1px solid #ECECEC;
 }
-
+#shipto {
+    padding-top: 45px;
+}
 label {
     font-weight:400;
     cursor:pointer;
@@ -3679,9 +3687,9 @@ label > h4 + input[type=radio] {
 }
 
 .formwrap {
-    border:1px solid #B3B3B3;
-    border-radius:4px;
-    margin-bottom:25px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    margin-bottom: 25px;
 }
 
 .formwrap input {
@@ -4057,7 +4065,9 @@ label > h4 + input[type=radio] {
 .chosen-container-single .chosen-single-with-deselect span {
     margin-right:38px;
 }
+select#card_type {
 
+}
 .chosen-container-single .chosen-single abbr {
     position:absolute;
     top:6px;
@@ -7377,12 +7387,14 @@ a.sclose {
 }
 
 .plogin h3 {
-    font-weight:400;
-    margin-bottom:30px;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
-
+.loginform {
+    padding-bottom: 30px;
+}
 .loginform .checkbox {
-    margin-bottom:40px;
+    margin-bottom: 30px;
 }
 
 .footlogin {

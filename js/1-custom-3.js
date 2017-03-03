@@ -742,7 +742,7 @@
 
                 if ($popup.hasClass('block-popup')){
                     $('.layer').fadeIn(instance.options.speedAnimation/2);
-                    $popup.css('top', winTop + 50).fadeIn(instance.options.speedAnimation/2);
+                    $popup.fadeIn(instance.options.speedAnimation/2);
                 } else {
                     $popup.show(instance.options.speedAnimation / 2, function () {
                         instance.body.css('position', 'fixed');
