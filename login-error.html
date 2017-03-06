@@ -10,41 +10,134 @@
     <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
     <link rel="stylesheet" href="css/1-extra-2.css">
 <style>
-.loginform table,
-.loginform td {
-    font-size: 16px;
-    font-weight: 400;
-    list-style: none;
+table[role=presentation] tr td.main:first-child {
+    width: 30% !important;
+    box-sizing: border-box;
 }
-.loginform td {
-    padding: 8px 0;
-    border-top: 1px solid #ddd;
+table[role=presentation] tr td.main:last-child {
+ width: 70% !important;
+ box-sizing: border-box;
+ padding-left: 0 !important;
+ padding-right: 0 !important;
 }
-.loginform td a {
+table[role=presentation] td.main  {
+    height: 43px !important;
+    padding: 0;
+    width: 100%;
+}
+table[role=presentation] td.main select {
+    -webkit-appearance: none;
+    -moz-appearance : none;
+    background-color: #fff;
+    border:solid 1px #B3B3B3;
+    border-radius:3px;
     font-size: 16px;
-    display: inline-block;
-    color: #e7543d;
+    height: 43px !important;
+    padding:0 18px;
+    width: 100%;
+ }
+table[role=presentation] td.main select[name = cresecure_cc_expires_month],
+table[role=presentation] td.main select[name = cresecure_cc_expires_year] {
+    border-bottom: none;
+    border-radius: 0;
+    border-top: none;
     float: left;
+    height: 43px;
+    padding-left: 18px;s
+}
+table[role=presentation] td.main select[name = cresecure_cc_expires_month] {
+    width: calc(100% - 109px);
+    float: left;
+}
+table[role=presentation] td.main select[name = cresecure_cc_expires_year] {
+   
+    border-left: none;
     font-weight: 400;
+    width: 105px;
+    float: right;
 }
-.loginform table tbody tr:first-child td {
-    padding-top: 8px;
+table[role=presentation] td.main select:after {
+    background: url(images/icons.png) -312px -61px no-repeat;
+    width: 9px;
+    display: inline-block;
+    top: -2px;
+    height: 5px;
 }
-i.fa-square-o {
-    color: #ccc;
+table[role=presentation] td.main label {
+    font-size: 14px;
 }
-i.fa-check-square {
-     color: #e7543d;
-    }
+input.submitButton,
+a#cancelButton {
+    background: #B3B3B3;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 48px;
+    padding: 15px;
+}
+input.submitButton {
+    background:#e7543d;
+    border-style: none;
+    border-width: 0;
+    color: #fff;
+    font-weight: 400;
+    padding: 1px 15px;
+}
+table[role=presentation] td.main div {
+    margin-top: 20px;
+}
+input#name {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+input#PAN {
+    border-radius: 0;
+}
+select#card_type {
+    border-bottom: none;
+    border-radius: 0;
+}
+input#cv_data {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    margin-top: -32px;
+    width: 388px;
+    max-width: 100%;
+}
+label a u {
+    text-decoration: none;
+}
+label a {
+    display: block;
+}
+label a u i {  
+    color:#e7543d;
+    font-size: 14px;
+    font-style: normal;   
+}
+.error {
+    background:#E7543D;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 15px 18px;
+    width: 100%;
+}
+.error a {
+    color: #fff;
+    text-decoration: underline;
+}
 </style>
 </head>
 
 <body>
-
 <!-- Preloader -->
 <div id="preloader">
     <div id="status">&nbsp;</div>
 </div>
+
 
 <!-- WRAPPER -->
 <div class="wrapper">
@@ -52,18 +145,17 @@ i.fa-check-square {
     <!-- HEADER -->
     <header class="header sides">
         <div class="container htop">
-            <div class="col-md-7 col-sm-7">
+            <div class="col-md-8 col-sm-7">
                 <div class="logo pull-left">
                     <a href="index.html"><img src="images/header-logo@1x.png"></a>
                 </div>
                 <div class="slogan visible-md">A Des Moines Register tradition since 1973</div>
             </div>
-            <div class="col-md-5 col-sm-5 text-right">
-                <a href="" data-popup="login" class="a-login btn btn-primary pull-right">My Account</a>
-                <div class="hcart pull-right">
+            <div class="col-md-4 col-sm-5 text-right">
+                <div class="hcart pull-left">
                     <a href="cart.html"><i class="custom-icon custom-icon-ico-cart"></i> 3 items - $160.00</a>
                 </div>
-                
+                <a href="" data-popup="login" class="a-login btn btn-primary pull-right">Login</a>
             </div>
         </div>
         <div class="hbottom right-pos border-top">
@@ -179,42 +271,90 @@ i.fa-check-square {
         </div>
     </div>
     <!-- CONTENT -->
-    <div class="content">
+ <div class="content">
         <div class="border-top"></div>
-       
-        <!-- CONTAINER -->
-        <div class="container text-center">
-            <h2 style="font-weight: 300">Thank you! Your order has been received.</h2>
         
-        <!-- /.container -->
-        <div class="row text-left">
-            <div class="col-md-12">
-            <h2>Shipping Address</h2>
-            <p>Random Name
-            <br>
-            45 W. Lincoln St.
-            <br> Morganton, NC 28655-28655
-            </p>
+        <div class="container breadcrumbs">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="start_agency.html"><i class="fa fa-home"></i> Home</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><a href="catalog_grid.html">Shop</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li><a href="catalog_list_sidebar_2.html">RAGBRAI XLV</a></li>
+                        <li><i class="fa fa-angle-right"></i></li>
+                        <li class="active">2017 Women's Logo Tee</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="container product padding-top">
+
+            <!-- Product Gallery -->
+            <div class="col-sm-6 product-gallery">
+                 <div class="owl-carousel owl-centered productgallery">
+                    <a href="images/shirt1.jpg"><img src="images/shirt1.jpg" data-gallery="#product"></a>
+                    <a href="images/Red-Back.jpg"><img src="images/Red-Back.jpg" data-gallery="#product"></a>
+                    <a href="images/grey-front.jpg"><img src="images/grey-front.jpg" data-gallery="#product"></a>
+                    <a href="images/grey-back.jpg"><img src="images/grey-back.jpg" data-gallery="#product"></a>
+                </div>
+            </div>
+            <!-- /product gallery -->
             
-            <h2>Payment Address</h2>
-            <p>Random Name
-            <br>
-            45 W. Lincoln St.
-            <br> Morganton, NC 28655-28655
-            </p>
-            <h2>Payment Information</h2>
-            <p><b>Order Number:</b> 1205135
-            <br><b>Date:</b> February 9th, 2017
-            <br><b>Total:</b> $27.53
-            <br><b>Payment Method:</b> Chase Paymentech HPP
-            </p>
+            <div class="col-sm-6 product-info">
+                <div class="row">
+                    <h2>2017 Women's Logo Tee</h2>
+                    <div class="cost">
+                        $25.00
+                    </div>
+                </div>
+             
+                <div class="row margin-top-0">
+                    <p>Get ready for summer with this super soft tee, which features the 2017 XLV RAGBRAI logo screened in blue and white. IOWA is screened on the back. Shirt by District Made in heathered red and charcoal.</p>
+                    <p>Heathered Red Available in: Small, Medium, Large, XLarge, 2XLarge</p>
+                    <p>Charcoal Available in: Small, Medium, Large, XLarge, 2XLarge, 3XLarge</p>
+                </div>
+                
+                <div class="row margin-top-0">
+                    <table class="product-variation">
+                        <tr>
+                            <td><b>SIZE:</b></td>
+                            <td>
+                                <select>
+                                    <option value="1">Small</option>
+                                    <option value="2">Medium</option>
+                                    <option value="3">Large</option>
+                                    <option value="4">XLarge</option>
+                                    <option value="5">2XLarge</option>
+                                    <option value="6">3XLarge</option>
+                                </select>
+                            </td>
+                        </tr>      
+                        <tr>
+                            <td><b>COLOR:</b></td>
+                   
+                            <td>
+                                <select>
+                                    <option value="1">Heathered Red</option>
+                                    <option value="2">Charcoal</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="quantity"><input type="number" step="1" min="" max="" name="quantity" value="1" title="Qty" class="input-text qty text" pattern="[0-9]*" inputmode="numeric"></td>
+                            <td class="quantity-add"><a class="btn btn-primary add-cart" href="">Add to Cart</a></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="available-qty reddish">6 in stock</td>
+                        </tr>
+                    </table>  
+                </div>
             </div>
         </div>
     </div>
 </div>
-</div>
 <!-- /.wrapper -->
-
 <!-- FOOTER -->
 <footer class="footer">
     <!-- CONTAINER -->
@@ -224,9 +364,9 @@ i.fa-check-square {
                 <h3><a href="about_1.html">Facebook Feed</a></h3>
                 <ul class="twitter-list">
                     <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
-                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                        <div class="date">June 18, 2014</div></li>
                         <li><a href="">@camaro:</a> Utnon enim eleifend felis pretium feugiat <a href="">goo.gl/56Rt78</a> famesac turpis egestas
-                        <div class="date" style="margin-left: 0;">June 18, 2014</div></li>
+                        <div class="date">June 18, 2014</div></li>
                 </ul>
             </div>
             
@@ -292,7 +432,7 @@ i.fa-check-square {
                 <h3>Forum Topics</h3>
                 <ul class="footer-list">
                     <li>
-                        <div class="fa fa-circle" style="font-size:12px;"></div>
+                        <div class="fa fa-circle"></div>
                         <p><a href="">Best Tenderloin Ever</a></p>
                         <div class="date">2 days, 17 hours ago</div>
                     </li>
@@ -328,31 +468,30 @@ i.fa-check-square {
 </footer>
 <!-- /.footer -->
 
-<!-- Popup: My Account -->
+<!-- Popup: Login -->
 <div class="block-popup popup plogin" id="login">
     <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
-    <h3 class="text-center">My Account</h3>
+    <div class="error text-center">Invalid email address.<br>Need to <a href="">Create an Account?</a></div>
     <form action="/" class="loginform">
-       <table>
-          <tr><td><a href="">My Profile</a></td> </tr>
-                <tr><td><a href="">My Group</a></td> </tr>
-                <tr><td><a href="">Pay for Ride</a></td> </tr>
-                <tr><td><a href="">Register a Minor</a></td> </tr>
-                <tr><td><a href="">Entry Submitted</a><div class="pull-right text-right"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></div></td> </tr>
-                <tr><td><a href="">Waiver Submitted</a><div class="pull-right text-right"><i class="fa fa-check-square fa-lg" aria-hidden="true"></i></div></td></tr>
-                <tr><td><a href="">Payment not Submitted</a><div class="pull-right text-right"><i class="fa fa-square-o fa-lg" aria-hidden="true"></i></div></td></tr>
-                <tr><td><a href="">Log Out</a></td> </tr>
-    </table>
+        <div class="formwrap">
+            <div class="form-group" style="margin-top:20px;">
+                <input type="text" class="form-control" placeholder="Username or Email" style="padding-bottom:10px;">
+            </div>
+            <div class="form-group has-feedback">
+                <input type="password" class="form-control login-password" placeholder="Password" id="login-password" style="padding-top:6px;">
+            </div>
         </div>
-     
-   
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="">
+                Remember me
+            </label>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary block btn-validation">Login</button>
+        </div>
+        <div class="form-group text-center padding-top-10">
             <a href="">Forgot password?</a>
-        </div>
-        <div class="form-group text-center">
-            <a href="">Create an Account?</a>
-        </div>
-        <div class="form-group text-center">
-            <a href="">Register for The Ride</a>
         </div>
     </form>
 </div>

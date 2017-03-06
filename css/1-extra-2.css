@@ -629,6 +629,9 @@ ul.buy-share:hover {
    opacity: .5;
 }
 */
+.content [class*=col] ul.nodot li:before{
+    content: none !important;
+}
 span.face:hover,
 span.twit:hover,
 span.more-social:hover {
@@ -968,7 +971,7 @@ span.more-social:hover {
     text-align: center;  
     top: 0;
 }
-.popup{
+/*.popup{
     position: fixed;
     left: 50%; 
 }
@@ -976,6 +979,7 @@ span.more-social:hover {
     position:relative; 
     left:-50%;
 }
+*/
 .seventeen, .sixteen, .fifteen, .fourteen, .thirteen, .twelve, .eleven, .ten, .nine, .early {
     height: 290px;
     overflow: hidden;
