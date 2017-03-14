@@ -76,11 +76,11 @@ p.lead {
     margin-bottom: 20px;
 }
 .nav > li > a {
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
 }
-.nav > li:first-child > a {
+/*.nav > li:first-child > a {
     padding-left: 0;
-}
+}*/
 .home h1 + .btn, 
 .home h1 + p {
     margin-top: 20px;
@@ -622,6 +622,9 @@ ul.buy-share:hover {
    opacity: .5;
 }
 */
+.content [class*=col] ul.nodot li:before{
+    content: none !important;
+}
 span.face:hover,
 span.twit:hover,
 span.more-social:hover {
@@ -673,12 +676,16 @@ span.more-social:hover {
         font-weight: 500;
         line-height: 44px;
     }
-    
+   
+
     .countdown-row .container.vmiddle {
         margin: 0 auto !important;
     }
     .bg {
         max-width: 1070px;
+    }
+     .bg.bg-section {
+        max-width: none;
     }
 }
 @media (max-width: 1200px) {
@@ -914,26 +921,6 @@ span.more-social:hover {
     top: 50px;
     right: 48%;
 }
-.bg-about {
-    background-image: url(../bike-bg-2.png);
-    opacity: 0.9;
-    background-color: #727272;
-    background-position: -1200px -50px;
-    width: 100%;
-    max-width: 100%;
-    height: 270px;
-    position: absolute;
-    background-size: cover;
-    z-index: 20;
-}
-.bg-about:after {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(200,0,0,0.65);
-    z-index:30
-}
-    
 
 .mix-list .col-md-4.ad {
     height: 290px;
@@ -961,7 +948,7 @@ span.more-social:hover {
     text-align: center;  
     top: 0;
 }
-.popup{
+/*.popup{
     position: fixed;
     left: 50%; 
 }
@@ -969,6 +956,7 @@ span.more-social:hover {
     position:relative; 
     left:-50%;
 }
+*/
 .seventeen, .sixteen, .fifteen, .fourteen, .thirteen, .twelve, .eleven, .ten, .nine, .early {
     height: 290px;
     overflow: hidden;

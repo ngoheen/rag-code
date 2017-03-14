@@ -34,30 +34,30 @@
 
         // onLoad function
         $win.load(function(){
-            $('#status').fadeOut(defaults.speedAnimation);
-            $('#preloader').delay(defaults.speedAnimation)
-                .fadeOut(defaults.speedAnimation/2, function() {
-                that.fSize();
+           $('#status').fadeOut(defaults.speedAnimation);
+           $('#preloader').delay(defaults.speedAnimation)
+               .fadeOut(defaults.speedAnimation/2, function() {
+               that.fSize();
                 that.activate();
-                that.sliders();
+               that.sliders();
 
-                setTimeout(function(){
-                    that.fMiddle();
+               setTimeout(function(){
+                   that.fMiddle();
                 }, 10);
-                setTimeout( function(){
-                    that.fNum();
-                    $('.layer').height(
-                        $doc.height()
-                    );
-                }, defaults.speedAnimation/2);
+              setTimeout( function(){
+                  that.fNum();
+                   $('.layer').height(
+                       $doc.height()
+                 );
+               }, defaults.speedAnimation/2);
 
                 that.chars();
-                that.bars();
-                that.histLine();
-                that.headerScroll();
-                that.ytVideo();
+               that.bars();
+               that.histLine();
+               that.headerScroll();
+               that.ytVideo();
 
-                if (!onMobile){
+             if (!onMobile){
                     $win.stellar({
                         horizontalScrolling: false
                     });

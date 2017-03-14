@@ -1537,7 +1537,7 @@ a img,
 -------------------------------------------------------------------*/
 
 [class*=custom-icon] {
-    background-image: url(../images/icons.png);
+    background-image: url(../images/iconic.png);
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
@@ -2699,7 +2699,7 @@ a.a-menu {
     position:absolute;
     right:29px;
     top:11px;
-    background:url(../images/icons.png) -367px -61px no-repeat;
+    background:url(../images/iconic.png) -367px -61px no-repeat;
 }
 
 .dropdown-submenu:hover>a:after {
@@ -2832,7 +2832,7 @@ a.a-menu {
 .collapse.in .dropdown > a:after,
 .collapse.in .dropdown-submenu > a:after,
 .collapse.in .dropdown-menushop > a:after{
-    background: url(../images/icons.png) -312px -61px;
+    background: url(../images/iconic.png) -312px -61px;
     width: 9px;
     height: 5px;
     top: 50%;
@@ -4065,7 +4065,7 @@ label > h4 + input[type=radio] {
 }
 
 .chosen-container-single .chosen-single div strong {
-    background:url(../images/icons.png) -312px -61px no-repeat;
+    background:url(../images/iconic.png) -312px -61px no-repeat;
     display:inline-block;
     vertical-align: middle;
     width:9px;
@@ -4136,7 +4136,7 @@ label > h4 + input[type=radio] {
 }
 
 .search-choice-close{
-    background: url(../images/icons.png) -496px -58px no-repeat;
+    background: url(../images/iconic.png) -496px -58px no-repeat;
     width: 7px;
     height: 7px;
     margin-left: 7px;
@@ -4170,7 +4170,7 @@ label > h4 + input[type=radio] {
 }
 
 .chosen-container-multi .chosen-choices:after{
-    background: url("../images/icons.png") no-repeat scroll -312px -61px rgba(0, 0, 0, 0);
+    background: url("../images/iconic.png") no-repeat scroll -312px -61px rgba(0, 0, 0, 0);
     display: inline-block;
     height: 5px;
     position: absolute;
@@ -4827,7 +4827,7 @@ li:hover .mask > *,
 }
 
 .mfp-arrow-left {
-    background-image: url(../images/icons.png);
+    background-image: url(../images/iconic.png);
     background-position:-93px -10px;
 }
 
@@ -4837,7 +4837,7 @@ li:hover .mask > *,
 }
 
 .mfp-arrow-right {
-    background-image: url(../images/icons.png);
+    background-image: url(../images/iconic.png);
     background-position:-12px -10px;
 }
 
@@ -5576,13 +5576,13 @@ table.cart-total{
 }
 
 .mejs-controls .mejs-play button {
-    background: url(../images/icons.png) -371px -15px no-repeat;
+    background: url(../images/iconic.png) -371px -15px no-repeat;
     width: 13px;
     height: 15px;
 }
 
 .mejs-controls .mejs-pause button {
-    background: url(../images/icons.png) -328px -13px no-repeat;
+    background: url(../images/iconic.png) -328px -13px no-repeat;
     width: 13px;
     height: 15px;
 }
@@ -5685,13 +5685,13 @@ table.cart-total{
 }
 
 .mejs-controls .mejs-mute button {
-    background: url(../images/icons.png) -460px -15px no-repeat;
+    background: url(../images/iconic.png) -460px -15px no-repeat;
     width: 16px;
     height: 16px;
 }
 
 .mejs-controls .mejs-unmute button {
-    background: url(../images/icons.png) -414px -15px no-repeat;
+    background: url(../images/iconic.png) -414px -15px no-repeat;
     width: 16px;
     height: 16px;
 }
@@ -6440,7 +6440,7 @@ ul.nav-expand li a:hover {
 }
 
 .img figure:after {
-    background:url(../images/icons.png) -1150px -15px no-repeat;
+    background:url(../images/iconic.png) -1150px -15px no-repeat;
     width:40px;
     height:22px;
     position:absolute;
@@ -7239,18 +7239,19 @@ ul.nav-expand li a:hover {
 
 /* [ 21.1. Popup General ] */
 
-.pclose {
+/*.pclose {
     content:'\0020';
     display:inline-block;
     margin:80px auto;
     text-align: center;
 }
-
+*/
 .pclose.small {
-    position:absolute;
-    right:15px;
-    top:13px;
-    margin:0;
+    margin: 0;
+    position: absolute;
+    right: 25px;
+    top: 23px;
+    z-index: 9000
 }
 
 .popup .container {
@@ -7279,43 +7280,6 @@ a.sclose {
     background-position:-20px 0;
 }
 
-/* [ 21.2 Popup: Team ] */
-
-.team-popup {
-    position:fixed;
-    left:50%;
-    margin-left:-50%;
-    top:0;
-    width:100%;
-    height:0;
-    min-height:100%;
-    overflow-y:scroll;
-    background-color:#F2F2F2;
-}
-
-.team-popup .row:first-child {
-    padding-bottom:40px;
-}
-
-.team-popup figure {
-    width:290px;
-    height:290px;
-    line-height:290px;
-    display:inline-block;
-    vertical-align:middle;
-    margin-bottom:50px;
-    font-size:1px;
-}
-
-.team-popup figure img {
-    vertical-align:middle;
-    max-width:290px;
-}
-
-.team-popup p {
-    margin-top:40px;
-    margin-bottom:50px;
-}
 
 /* [ 21.3. Popup Login ] */
 
@@ -7496,7 +7460,7 @@ button::-moz-focus-inner {
     text-align:center;
     border:0;
     text-indent:-9999px;
-    background:url(../images/icons.png) -181px -15px no-repeat;
+    background:url(../images/iconic.png) -181px -15px no-repeat;
     width:22px;
     height:22px;
     -webkit-transition:all 0s ease;
