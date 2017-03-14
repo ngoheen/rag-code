@@ -576,8 +576,11 @@ span.more-social:hover {
     .countdown-row .container.vmiddle {
         margin: 0 auto !important;
     }
-    .bg {
+   .bg {
         max-width: 1070px;
+    }
+    .bg.bg-about {
+        max-width: 100%;
     }
 }
 @media (max-width: 1200px) {
@@ -618,6 +621,9 @@ span.more-social:hover {
     }
     .bg {
         max-width: 960px;
+    }
+    .bg.bg-about {
+        max-width: 100%;
     }
     #maincarousel .arrow.prev {
         left: 10px;
@@ -813,7 +819,7 @@ span.more-social:hover {
     top: 50px;
     right: 48%;
 }
-.bg-about {
+/*.bg-about {
     background-image: url(../bike-bg-2.png);
     opacity: 0.9;
     background-color: #727272;
@@ -824,7 +830,7 @@ span.more-social:hover {
     position: absolute;
     background-size: cover;
     z-index: 20;
-}
+}*/   
 .bg-about:after {
     display: block;
     width: 100%;
@@ -832,7 +838,7 @@ span.more-social:hover {
     background-color:rgba(200,0,0,0.65);
     z-index:30
 }
-    
+ 
 
 .mix-list .col-md-4.ad {
     height: 290px;
@@ -860,14 +866,14 @@ span.more-social:hover {
     text-align: center;  
     top: 0;
 }
-.popup{
+/*.popup{
     position: fixed;
     left: 50%; 
 }
 .popup .wrapper{
     position:relative; 
     left:-50%;
-}
+}*/
 .seventeen, .sixteen, .fifteen, .fourteen, .thirteen, .twelve, .eleven, .ten, .nine, .early {
     height: 290px;
     overflow: hidden;

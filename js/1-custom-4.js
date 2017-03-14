@@ -2,9 +2,9 @@
     'use strict';
     var pluginName = "Camaro",
         defaults = {
-            sliderFx: 'crossfade',		// Slider effect. Can be 'slide', 'fade', 'crossfade'
-            sliderInterval: 8000,		// Interval
-            speedAnimation: 600,        // Default speed of the animation
+            sliderFx: 'slide',		// Slider effect. Can be 'slide', 'fade', 'crossfade'
+            sliderInterval: 15000,		// Interval
+            speedAnimation: 1000,        // Default speed of the animation
             countdownTo: '2017/07/23',          // Change this in the format: 'YYYY/MM/DD'
             successText: 'You have successfully subscribed', // text after successful subscribing
             errorText: 'Please, enter a valid email', // text, if email is invalid
@@ -34,29 +34,41 @@
 
         // onLoad function
         $win.load(function(){
-            that.fSize();
-            that.activate();
+           $('#status').fadeOut(defaults.speedAnimation);
+           $('#preloader').delay(defaults.speedAnimation)
+               .fadeOut(defaults.speedAnimation/2, function() {
+               that.fSize();
+                that.activate();
+               that.sliders();
 
-            setTimeout(function(){
-                    that.fMiddle();
+               setTimeout(function(){
+                   that.fMiddle();
                 }, 10);
-            setTimeout( function(){
-                    that.fNum();
-                    $('.layer').height(
-                        $doc.height()
-                    );
-                }, defaults.speedAnimation/2);
+              setTimeout( function(){
+                  that.fNum();
+                   $('.layer').height(
+                       $doc.height()
+                 );
+               }, defaults.speedAnimation/2);
 
-            that.headerScroll();
+                that.chars();
+               that.bars();
+               that.histLine();
+               that.headerScroll();
+               that.ytVideo();
 
-            if (!onMobile){
+             if (!onMobile){
                     $win.stellar({
                         horizontalScrolling: false
                     });
                 }
 
+            });
         }).scroll(function(){  // onScroll function
             that.fNum();
+            that.chars();
+            that.bars();
+            that.histLine();
             that.headerScroll();
         }).resize(function(){  // onResize function
             $('.layer').height(
@@ -107,13 +119,8 @@
             this.audio = $('audio');
             this.num = $('[data-num]');
             this.dataPopup = $('[data-popup]');
-            this.chart = $('.chart');
             this.estimateshipping = $('.estimate-shipping');
             this.timer = $('#countdown');
-            this.barDiagramm = $('.bar');
-            this.skillLine = $('.progresses');
-            this.team = $('.team');
-            this.expandTeam = $('.expandteam');
             this.history = $('.history');
             this.histEvent = this.history.find('.row');
             this.newsletter = $('#feedback-form').find('form');
@@ -123,15 +130,15 @@
             this.select = $('select');
             this.scrTop = $('.scrolltop');
             this.mask = $('.mask');
-            this.magnific = $('.magnific');
-            this.magnificWrap = $('.magnific-wrap');
-            this.magnificGallery = $('.magnific-gallery');
-            this.magnificVideo = $('.magnific-video');
+           // this.magnific = $('.magnific');
+           // this.magnificWrap = $('.magnific-wrap');
+           // this.magnificGallery = $('.magnific-gallery');
+           // this.magnificVideo = $('.magnific-video');
             this.citem = $('.catalog-square .citem');
             this.addCart = $('.add-cart');
             this.jslider = $('.jslider');
             this.rating = $('.raty');
-            this.thumbsSlider = $('.thumbs-slider');
+            this.thumbsSlider = $('.owl-slider');
             this.mediumSlider = $('.medium-slider');
             this.counting = $('.counting');
             this.aLess = $('.a-less');
@@ -174,6 +181,14 @@
                 $this.height(realHeight);
 
             });
+
+            // Starting animation
+            if (instance.home.length > 0){
+                instance.home.children().animate({'opacity': 1}, instance.options.speedAnimation, 'easeOutSine');
+            }
+
+            $('.content, .footer').delay(instance.options.speedAnimation/2)
+                .animate({'opacity': 1}, instance.options.speedAnimation, 'easeInOutQuad');
 
             if (instance.audio.length > 0){
                 instance.audio.mediaelementplayer();
@@ -262,6 +277,7 @@
                 }
             });
 
+
             // scrollTop function
             if (instance.scrTop.length === 1) {
                 instance.scrTop.click(function(e){
@@ -302,6 +318,13 @@
                 $(this).removeClass('invalid');
             });
 
+            instance.vacRow.find('[data-toggle]').on('click', function(){
+                var self = $(this),
+                    txt  = self.text();
+                txt = (txt == 'Details') ? 'Hide' : 'Details';
+                self.text(txt);
+            });
+
             // navbar dropdown
             $('.navbar-nav .dropdown').hover(function() {
                 if (!$(this).parents('.navbar-collapse').hasClass('in')) {
@@ -339,6 +362,13 @@
                 }
             });
 
+            // hcart dropdown
+            $('.hcart').hover(function() {
+                $(this).find('.dropdown').first().stop(true, true).delay(300).slideDown(instance.options.speedAnimation/4);
+            }, function() {
+                $(this).find('.dropdown').first().stop(true, true).slideUp(instance.options.speedAnimation/4);
+            });
+
             $('.a-search').on('click', function(e){
                 e.preventDefault();
                 instance.search.fadeIn(instance.options.speedAnimation/4);
@@ -353,6 +383,11 @@
             instance.aMenu.on('click', function(e){
                 e.preventDefault();
                 instance.sidemenu.fadeIn(instance.options.speedAnimation/4);
+            });
+
+            instance.sidemenu.find('.sclose').on('click', function(e){
+                e.preventDefault();
+                instance.sidemenu.fadeOut(instance.options.speedAnimation/4);
             });
 
             instance.dataToggleTab.on('shown.bs.tab', function () {
@@ -505,68 +540,15 @@
 
             });
 
-            instance.magnificWrap.each(function() {
-                $(this).find(instance.magnific).magnificPopup({
-                    type: 'image',
-                    tLoading: '',
-                    gallery: {
-                        enabled: true,
-                        navigateByImgClick: true
-                    },
-                    image: {
-                        titleSrc: function (item) {
-                            return item.el.attr('title');
-                        }
-                    }
-                });
-            });
 
-            instance.magnificVideo.magnificPopup({
-                type: 'iframe',
-                fixedContentPos: false
-            });
+            // Contact Map();
+            if (instance.cntMap.length === 1){
+                instance.contactMap();
+            }
 
-            instance.magnificGallery.on('click', function(e) {
-                e.preventDefault();
-
-                var $this = $(this),
-                    items = [],
-                    im = $this.data('gallery'),
-                    imA = im.split(','),
-                    imL = imA.length,
-                    titl = $this.attr('title');
-console.log(imA);
-                    for (var i = 0; i < imL; i++){
-                        items.push({
-                            src: imA[i]
-                        });
-                    }
-                items["title"] = $this.data('titles');
-                $.magnificPopup.open({
-                    items: items,
-                    type: 'image',
-                    //swipe: true,
-                    gallery: {
-                        enabled: true
-                    },
-                    image: {
-                        titleSrc: function () {
-                            return titl;
-                        }
-                    }
-                });
-            });
-            
-            $("body").swipe({
-        swipeLeft: function(event, direction, distance, duration, fingerCount) {
-            $(".mfp-arrow-left").magnificPopup("prev");
-        },
-        swipeRight: function() {
-            $(".mfp-arrow-right").magnificPopup("next");
-        },
-        threshold: 50
-    });
-
+            if (instance.cntMapFix.length === 1){
+                instance.contactMapFix();
+            }
 
             if (instance.passw.length > 0){
                 instance.passw.each(function(){
@@ -677,7 +659,7 @@ console.log(imA);
 
                 if ($popup.hasClass('block-popup')){
                     $('.layer').fadeIn(instance.options.speedAnimation/2);
-                    $popup.css('top', winTop + 50).fadeIn(instance.options.speedAnimation/2);
+                    $popup.fadeIn(instance.options.speedAnimation/2);
                 } else {
                     $popup.show(instance.options.speedAnimation / 2, function () {
                         instance.body.css('position', 'fixed');
@@ -710,51 +692,7 @@ console.log(imA);
                 }
             });
 
-            // Product Thumbs
-            if (instance.thumbsSlider.length > 0) {
-
-                instance.thumbsSlider.find('a').each(function(i) {
-                    $(this).addClass( 'itm'+i );
-                    $(this).click(function() {
-                        instance.mediumSlider.trigger( 'slideTo', [i, 0, true] );
-                    });
-                });
-                instance.thumbsSlider.find('.itm0').addClass( 'selected' );
-
-                instance.mediumSlider.carouFredSel({
-                    responsive: true,
-                    circular: false,
-                    infinite: false,
-                    items : {
-                        visible     : 1,
-                        height       : 'auto',
-                        width      : 870
-                    },
-                    auto: false,
-                    scroll: {
-                        fx: 'crossfade',
-                        onBefore: function() {
-                            var pos = $(this).triggerHandler( 'currentPosition' );
-                            instance.thumbsSlider.find('a').removeClass( 'selected' );
-                            instance.thumbsSlider.find('a.itm'+pos).addClass('selected');
-                        }
-                    }
-                });
-
-                instance.thumbsSlider.carouFredSel({
-                    auto: false,
-                    width: '100%',
-                    scroll:{
-                        items: 1
-                    },
-                    prev: ".th-prev",
-                    next: ".th-next"
-                });
-            }
-
-            instance.thumbsSlider.find('a').on('click', function(e){
-                e.preventDefault();
-            });
+            
 
             // Product counting more
             instance.aMore.on('click',function(e){
@@ -882,8 +820,153 @@ console.log(imA);
                 });
             }
         },
+        sliders: function(){
+            var instance = this;
+            if (instance.slider.length > 0){
+                instance.slider.each(function(e){
+                    var $this = $(this),
+                        slidewrap = $this.find('ul:first'),
+                        sliderFx = slidewrap.data('fx'),
+                        sliderAuto = slidewrap.data('auto'),
+                        sliderCircular = slidewrap.data('circular'),
+                        sliderPrefix = '#slider-';
 
-      
+                    $this.attr('id', 'slider-'+e);
+                  
+
+                    slidewrap.carouFredSel({
+                        infinite: (typeof sliderCircular) ? sliderCircular : true,
+                        circular: (typeof sliderCircular) ? sliderCircular : true,
+                       // responsive: true,
+                        width: '100%',
+                        //height: 480,
+                        align: 'center',
+                        items: 3,
+                        /*items: {
+                           visible:{
+                            min: 1,
+                            max: 4
+                            }
+                        },*/
+                        auto : sliderAuto ? sliderAuto : false,
+                        scroll : {
+                            fx : sliderFx ? sliderFx : 'slide',
+                            duration : instance.options.speedAnimation,
+                            timeoutDuration : instance.options.sliderInterval//,
+                            //items: 3
+                        },
+                         swipe: {
+                            onMouse: true,
+                            onTouch: true,
+                            options: {
+                                //excluded element list, less <a>
+                                excludedElements: "button, input, select, textarea, .noSwipe",
+                                //trigger <a> on tap
+                                tap: function(event, target) {
+                                    $(target).parent().trigger('click');
+                                }
+                            }
+                        },
+                        prev : $(sliderPrefix + e).find('.prev'),
+                        next : $(sliderPrefix + e).find('.next'),
+                        pagination : {
+                            container: $(sliderPrefix + e).find('.pagination')
+                        }
+                    }).parent().css('margin', 'auto').css('height', '480px');
+                  
+                    
+                });
+            }
+
+            if (instance.ribbon.length > 0){
+                instance.ribbon.each(function(e){
+                    var $this = $(this),
+                        sliderAuto = $this.find('ul').data('auto'),
+                        ribbonPrefix = '#ribbonslider-';
+
+                    $this.attr('id', 'ribbonslider-' + e);
+
+                    $this.find('ul').carouFredSel({
+                        circular: true,
+                        infinite: true,
+                        width: '100%',
+                        auto : sliderAuto ? sliderAuto : true,
+                        items: {
+                            visible: {// 'odd+2'
+                                min: 1,
+                                max: 4
+                            }
+                        },
+                        scroll: {
+                            fx: 'directscroll',
+                           // items: 1,
+                            timeoutDuration: instance.options.sliderInterval/2
+                        },
+                        prev : $(ribbonPrefix + e).find('.prev'),
+                        next : $(ribbonPrefix + e).find('.next'),
+                        pagination : $(ribbonPrefix + e).find('.pagination')
+                    }).parent().css('margin', 'auto');
+                });
+            }
+
+            if (instance.oneslider.length > 0){
+                instance.oneslider.each(function(e){
+                    var $this = $(this),
+                        slidewrap = $this.find('ul'),
+                        sliderFx = slidewrap.data('fx'),
+                        sliderAuto = slidewrap.data('auto'),
+                        onesliderPrefix = '#oneslider-';
+
+                    $this.attr('id', 'oneslider-'+e);
+
+                    slidewrap.carouFredSel({
+                        align: 'center',
+                        responsive: true,
+                        auto : sliderAuto ? sliderAuto : false,
+                        scroll : {
+                            fx : sliderFx ? sliderFx : 'slide',
+                            duration : instance.options.speedAnimation,
+                            easing: 'swing',
+                            timeoutDuration : 10000
+                        },
+                        items : {
+                            visible : 1,
+                            height  : 'auto',
+                            width   : 870
+                        },
+                        swipe: {
+                            onMouse: true,
+                            onTouch: true,
+                            options: {
+                                //exluded element list, less <a>
+                                excludedElements: "button, input, select, textarea, .noSwipe",
+                                //trigger <a> on tap
+                                tap: function(event, target) {
+                                    $(target).parent().trigger('click');
+                                }
+                            }
+                        },
+                        //swipe : {
+                         //   onTouch : true,
+                         //   onMouse : false
+                        //},
+                        prev : $(onesliderPrefix + e).find('.prev'),
+                        next : $(onesliderPrefix + e).find('.next'),
+                        pagination : {
+                            container: $(onesliderPrefix + e).find('.pagination'),
+                            anchorBuilder: function () {
+                                if ($(this).parents(instance.slider.hasClass('pricing'))) {
+                                    var per = $(this).data('period');
+                                    return '<a href="#"><span>' + per + '</span></a>';
+                                }
+                            }
+                        }
+                    }).parent().css('margin', 'auto');
+                });
+                
+            }
+        },
+        
         headerScroll: function(){
             var instance = this,
                 winTop = $win.scrollTop(),
@@ -932,8 +1015,8 @@ console.log(imA);
                 }
             }
         },
-
-
+       
+      
         fNum: function(){
             var instance = this,
                 numbS;
@@ -990,22 +1073,9 @@ console.log(imA);
 
             }
         },
-     
-        fMiddle: function(){
-            this.vmiddle.each(function(){
-                var $this = $(this);
-                if ( !$this.prev().length ){
-                    $this.css({
-                        'marginTop' : ($this.parent().outerHeight() - $this.outerHeight())/2
-                    });
-                } else{
-                    $this.css({
-                        'marginTop' : ($this.parent().outerHeight() - $this.outerHeight())/2 - $this.prev().css('paddingTop').replace('px','')
-                    });
-                }
-
-            });
-        },
+       
+       
+       
         fSize: function(){
             this.fullsize.height($win.height());
             this.fullsize.find('li').height($win.height());

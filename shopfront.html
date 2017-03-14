@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/1-style-4.css" rel="stylesheet">
     <link rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-2.css">
-    <link rel="stylesheet" href="css/1-extra-2.css">
+    <link rel="stylesheet" href="css/1-extra.css">
 
 
     <style>
@@ -19,7 +20,7 @@
             width: 100%;
         }
     }
-    .shop-1 {
+    .my-about {
         background-image: url(images/shop1.png);
         background-position: right center;
         background-size: 60%
@@ -202,13 +203,13 @@
          <div class="owl-carousel">
             
                 <div class="large-size overlay">
-                    <div class="bg shop-1"></div>
+                    <div class="bg my-about"></div>
                     <div class="container">
                         <div class="row rowtop">
                             <div class="col-md-4 col-sm-12 col-md-offset-1">
                                 <h1 class="slide-title">Pre-order your jersey today</h1>
                                 <p class="color-ccc">Get the official 2017 RAGBRAI jersey. Available now for pre-order in women's sleeveless, or men's or women's sleeved.</p>
-                                <button type="button" class="btn btn-primary btn-lg">Shop Jerseys</button>
+                                <button type="button" class="btn btn-default btn-lg">Shop Jerseys</button>
                             </div>
                         </div>
                     </div>
@@ -220,7 +221,7 @@
                             <div class="col-md-4 col-sm-12 col-md-offset-1">
                                 <h1 class="slide-title">All Aboard!</h1>
                                 <p class="color-ccc">Join us on our cruise from Missouri to Mississippi! Click the button, below, to get started!</p>
-                                <button type="button" class="btn btn-primary btn-lg">Register Now</button>
+                                <button type="button" class="btn btn-default btn-lg">Register Now</button>
                             </div>
                         </div>
                     </div>
@@ -485,7 +486,7 @@
     <!-- /.content -->
 </div>
 <!-- /.wrapper -->
-
+</div>
 <!-- FOOTER -->
 <footer class="footer">
     <!-- CONTAINER -->
@@ -602,11 +603,11 @@
 <!-- Popup: Login -->
 <div class="block-popup popup plogin" id="login">
     <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
-    <h3 class="text-center">Login to account</h3>
+    <h3 class="text-center">Log In to Account</h3>
     <form action="/" class="loginform">
         <div class="formwrap">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Username">
+            <div class="form-group margin-top-20">
+                <input type="text" class="form-control padding-bottom-10" placeholder="Username or Email">
             </div>
             <div class="form-group has-feedback">
                 <input type="password" class="form-control login-password" placeholder="Password" id="login-password">
@@ -619,21 +620,40 @@
             </label>
         </div>
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-default block btn-validation">Login</button>
-            <a href="">Forgot password?</a>
+            <button type="submit" class="btn btn-primary block btn-validation">Login</button>
+        </div>
+        <div class="form-group text-center padding-top-10">
+            <a href="" data-popup="forgot">Forgot password?</a>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Create an Account?</a>
+        </div>
+        <div class="form-group text-center">
+            <a href="">Register for The Ride</a>
         </div>
     </form>
-    <div class="footlogin highlight text-center">
-        <ul class="social">
-            <li><a href="" class="fa fa-facebook-square"></a></li>
-            <li><a href="" class="fa fa-twitter"></a></li>
-            <li><a href="" class="fa fa-google-plus-square"></a></li>
-        </ul>
-        <p>Or login with your social account</p>
-    </div>
-    <a href="privacy_policy.html" class="a-privacy text-center">Privacy Policy</a>
 </div>
 <!-- /.popup -->
+
+<!-- Popup: Forgot Password -->
+<div class="block-popup popup plogin" id="forgot">
+    <a href="" class="pclose small"><i class="custom-icon custom-icon-close-s"></i></a>
+    <h3 class="text-center">Forgot Password</h3>
+    <div class="text-center">
+        <p>Please enter your username or email address. You will receive a link to create a new password via email.</p>
+    </div>
+    <form action="/" class="loginform">
+        <div class="formwrap">
+            <div class="form-group margin-top-20">
+                <input type="text" class="form-control" placeholder="Username or Email">
+                
+           </div>
+        </div>
+        <a href="" data-popup="login" class="btn btn-primary block">Login</a>
+    </form>
+</div>
+<!-- /.popup -->
+
 
 <!-- ScrollTop Button -->
 <a href="#" class="scrolltop">
