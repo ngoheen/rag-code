@@ -1233,7 +1233,18 @@ a img,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "camaro" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 .icon-big,
 .fa-big{
@@ -1264,7 +1275,12 @@ a img,
 .fa-extra-small{
     font-size: 32px;
 }
-
+.icon-picture-streamline-1:before {
+    content: "\e003";
+}
+.icon-ipod-streamline:before {
+    content: "`";
+}
 /*------------------------------------------------------------------
 [ 2.4. Custom Themes icons ]
 -------------------------------------------------------------------*/
@@ -6477,7 +6493,6 @@ ul.footer-list li p {
     }
 }
 @media only screen and (max-width: 991px) {
-
     .mask h3 {
         font-size: 20px;
     }
@@ -7196,16 +7211,13 @@ ul.footer-list li p {
 
 
 @media only screen and (max-width: 360px) {
-
     .sorting .chosen-container{
         max-width: 180px !important;
         min-width: 69px !important;
     }
-
     .popupslider li{
         max-width: 320px;
     }
-
 }
 
 .container.posts {
@@ -7630,13 +7642,7 @@ table .td-descr a {
     width: 100%;
     height: 100%;
 }
-/*
-li.face:hover,
-li.twit:hover,
-ul.buy-share:hover {
-   opacity: .5;
-}
-*/
+
 .content [class*=col] ul.nodot li:before{
     content: none !important;
 }
@@ -7674,10 +7680,7 @@ span.more-social:hover {
 .visible-xxs {
     display: none;
 }
-/*.iconmenu.pull-right.text-right {
-    padding-right: 15px;
-}
-*/
+
 .gallery [class*=col-]:focus .mask{
     opacity:.9;
 }
@@ -7690,9 +7693,7 @@ span.more-social:hover {
         font-size: 42px;
         font-weight: 500;
         line-height: 44px;
-    }
-   
-
+    }  
     .countdown-row .container.vmiddle {
         margin: 0 auto !important;
     }
@@ -7752,21 +7753,6 @@ span.more-social:hover {
         right: 10px;
     }
 }
-
-/*@media (min-width: 992px) and (max-width: 1200px) {
-    .bg {
-        max-width: 840px;
-    }
-    .my-about {
-        background-size:contain;
-         background-position: 100% 0;
-    }
-    .large-size {
-        height: 440px;
-    }  
-   
-}
-*/
 
 @media (max-width: 991px) {
      .col-fixed-300 {
